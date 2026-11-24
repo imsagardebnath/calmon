@@ -1,4 +1,4 @@
-import { Sparkline } from '@calmon/react/sparkline'
+import { Sparkline } from '@openvanta/calmon-react/sparkline'
 
 /** The line stretches to the width of its container. Give it a width with the parent. */
 export function Basic() {

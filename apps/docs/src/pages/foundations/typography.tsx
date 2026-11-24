@@ -1,4 +1,4 @@
-import { Code } from '@calmon/react/code'
+import { Code } from '@openvanta/calmon-react/code'
 import { A, B, Bullets, C, H2, Lead, Page, Specimen } from './_kit.tsx'
 import { useLive } from './_tokens.ts'
 

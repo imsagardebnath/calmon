@@ -4,8 +4,8 @@
 // in, a live demo on a framed stage, Do and Don't pairs, a checklist, and links to neighbouring principles. The page
 // files (alarm-fatigue.tsx and the rest) hold only what is specific to them: the demo, the previews and the component list.
 import { useState, type ComponentType, type ReactNode } from 'react'
-import { Button } from '@calmon/react/button'
-import { Checkbox } from '@calmon/react/checkbox'
+import { Button } from '@openvanta/calmon-react/button'
+import { Checkbox } from '@openvanta/calmon-react/checkbox'
 import {
   BellOffIcon,
   CheckIcon,
@@ -19,7 +19,7 @@ import {
   TimelineIcon,
   XIcon,
   type IconProps,
-} from '@calmon/react/icons'
+} from '@openvanta/calmon-react/icons'
 import { DASHBOARDS_SECTION, STATIC_SECTIONS } from '../../nav.ts'
 import { entries } from '../../registry.ts'
 

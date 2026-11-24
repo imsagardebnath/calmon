@@ -2,7 +2,7 @@
 name: StationGrid
 category: Monitoring
 principle: alarm-fatigue
-import: "@calmon/react/station-grid"
+import: "@openvanta/calmon-react/station-grid"
 status: stable
 related: [HealthScore, VitalTile, Banner, Toast]
 description: A worst-first grid of entity tiles for overview screens, where only critical tiles draw the eye.

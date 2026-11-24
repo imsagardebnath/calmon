@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Button } from '@calmon/react/button'
-import { Dialog } from '@calmon/react/dialog'
-import { IconButton } from '@calmon/react/icon-button'
-import { BellOffIcon, ChevronDownIcon, CopyIcon, DownloadIcon, MoreIcon, TimelineIcon, TrashIcon } from '@calmon/react/icons'
-import { Menu, MenuItem, MenuSeparator } from '@calmon/react/menu'
+import { Button } from '@openvanta/calmon-react/button'
+import { Dialog } from '@openvanta/calmon-react/dialog'
+import { IconButton } from '@openvanta/calmon-react/icon-button'
+import { BellOffIcon, ChevronDownIcon, CopyIcon, DownloadIcon, MoreIcon, TimelineIcon, TrashIcon } from '@openvanta/calmon-react/icons'
+import { Menu, MenuItem, MenuSeparator } from '@openvanta/calmon-react/menu'
 
 /** Row actions. The destructive item comes last, after a separator, and its ellipsis says it will ask first. */
 export function RowActions() {

@@ -5,8 +5,8 @@
     "allowImportingTsExtensions": true,
     "types": ["vite/client"],
     "paths": {
-      "@calmon/react": ["../../packages/ui/src/index.ts"],
-      "@calmon/react/*": ["../../packages/ui/src/*/index.ts"]
+      "@openvanta/calmon-react": ["../../packages/ui/src/index.ts"],
+      "@openvanta/calmon-react/*": ["../../packages/ui/src/*/index.ts"]
     }
   },
   "include": ["src"]

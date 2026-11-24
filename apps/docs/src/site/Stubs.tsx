@@ -1,6 +1,6 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react'
-import { Button } from '@calmon/react/button'
-import { InfoIcon, SearchIcon } from '@calmon/react/icons'
+import { Button } from '@openvanta/calmon-react/button'
+import { InfoIcon, SearchIcon } from '@openvanta/calmon-react/icons'
 import { docsHref } from './router.ts'
 import { sections } from './pages.ts'
 

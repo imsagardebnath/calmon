@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Search } from '@calmon/react/search'
-import { SeverityIcon, UserIcon } from '@calmon/react/icons'
+import { Search } from '@openvanta/calmon-react/search'
+import { SeverityIcon, UserIcon } from '@openvanta/calmon-react/icons'
 
 /** Live suggestions grouped by type, with recent searches on focus. Press / to focus the field. */
 export function LiveSuggestions() {

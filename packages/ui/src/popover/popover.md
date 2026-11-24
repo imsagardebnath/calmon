@@ -2,7 +2,7 @@
 name: Popover
 category: Overlays
 principle: none
-import: "@calmon/react/popover"
+import: "@openvanta/calmon-react/popover"
 status: stable
 related: [Tooltip, Dialog, Menu]
 description: Rich content anchored to a trigger, such as an explanation of a number or a small form. Opens on click and closes on Escape or an outside click.

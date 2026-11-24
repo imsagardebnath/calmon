@@ -1,7 +1,7 @@
 // A default body for the Safety patterns pages (ids match design/extracted/principles.json), used until a page
 // file for that pattern exists at src/pages/<group>/<id>.tsx. It follows the design's pattern page: why it
 // matters, what to do in your software, the rules, and the components that implement the pattern.
-import { GridIcon } from '@calmon/react/icons'
+import { GridIcon } from '@openvanta/calmon-react/icons'
 import principles from '../../../../design/extracted/principles.json'
 import { Bullets, Callout, LinkCard, LinkCards } from './doc.tsx'
 import { PatternIcon } from './icons.tsx'

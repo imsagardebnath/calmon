@@ -1,7 +1,7 @@
-import { Button } from '@calmon/react/button'
-import { IconButton } from '@calmon/react/icon-button'
-import { CopyIcon } from '@calmon/react/icons'
-import { Tooltip } from '@calmon/react/tooltip'
+import { Button } from '@openvanta/calmon-react/button'
+import { IconButton } from '@openvanta/calmon-react/icon-button'
+import { CopyIcon } from '@openvanta/calmon-react/icons'
+import { Tooltip } from '@openvanta/calmon-react/tooltip'
 
 /** Explain why something is disabled. Use `aria-disabled` rather than `disabled` so the button stays focusable. */
 export function DisabledReason() {

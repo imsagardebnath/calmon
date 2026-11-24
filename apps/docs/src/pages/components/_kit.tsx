@@ -2,7 +2,7 @@
 // example, an error boundary so one broken example never breaks the page, and the card around them.
 // Underscore files are not routes.
 import { Component, useEffect, useLayoutEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
-import { Badge } from '@calmon/react/badge'
+import { Badge } from '@openvanta/calmon-react/badge'
 import type { DocEntry } from '../../registry.ts'
 
 /** Categories whose components carry the safety patterns. They get a "Signature" badge and a filter. */

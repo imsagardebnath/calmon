@@ -2,7 +2,7 @@
  * Calmon styles. Import once, after Tailwind:
  *
  *   @import "tailwindcss";
- *   @import "@calmon/react/styles.css";
+ *   @import "@openvanta/calmon-react/styles.css";
  *
  * Contents: design tokens (light + dark), the tone system, density, the Tailwind v4
  * theme mapping, and a small base layer. Tokens are plain CSS variables: override any of

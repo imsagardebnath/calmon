@@ -1,12 +1,25 @@
 {
-  "name": "@calmon/react",
+  "name": "@openvanta/calmon-react",
   "version": "0.1.0",
   "description": "React + Tailwind CSS v4 components for operational software, built on safety principles.",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "tailwind-v4",
+    "components",
+    "design-system",
+    "ui",
+    "accessibility",
+    "dashboard",
+    "monitoring"
+  ],
   "type": "module",
   "sideEffects": [
     "**/*.css"
   ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -193,12 +206,14 @@
   },
   "files": [
     "dist",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
-    "build": "node ../../scripts/sync-exports.mjs && node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json && node -e \"require('fs').copyFileSync('src/styles.css','dist/styles.css')\" && node -e \"require('fs').copyFileSync('../../LICENSE','LICENSE')\"",
+    "build": "node ../../scripts/sync-exports.mjs && node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.build.json && node -e \"require('fs').copyFileSync('src/styles.css','dist/styles.css')\" && node -e \"require('fs').copyFileSync('../../LICENSE','LICENSE')\" && node -e \"require('fs').copyFileSync('../../README.md','README.md')\"",
     "typecheck": "node ../../scripts/sync-exports.mjs && tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepublishOnly": "node -e \"if (require('./package.json').license !== 'MIT') { console.error('Publish from the public repository (MIT edition), not the private one.'); process.exit(1) }\" && npm run build"
   },
   "peerDependencies": {
     "react": ">=19",
@@ -222,5 +237,17 @@
     "typescript": "^5.8.3",
     "vitest": "^3.2.0",
     "@testing-library/user-event": "^14.6.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imsagardebnath/calmon.git",
+    "directory": "packages/ui"
+  },
+  "homepage": "https://imsagardebnath.github.io/calmon/",
+  "bugs": {
+    "url": "https://github.com/imsagardebnath/calmon/issues"
   }
 }

@@ -1,8 +1,8 @@
 // The seven safety habits: the design's `.principles` (a sticky heading and a ruled list), with every row a link to its
 // pattern page. The ids match nav.ts and design/extracted/principles.json.
 import type { ComponentType, SVGProps } from 'react'
-import { Button } from '@calmon/react/button'
-import { ArrowRIcon, BellOffIcon, GaugeIcon, LimitsIcon, PauseIcon, RoomIcon, TargetIcon, TimelineIcon } from '@calmon/react/icons'
+import { Button } from '@openvanta/calmon-react/button'
+import { ArrowRIcon, BellOffIcon, GaugeIcon, LimitsIcon, PauseIcon, RoomIcon, TargetIcon, TimelineIcon } from '@openvanta/calmon-react/icons'
 import { docsHref } from '../../site/router.ts'
 import { Section, SectionHead } from './_ui.tsx'
 

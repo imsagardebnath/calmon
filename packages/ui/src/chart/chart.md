@@ -2,7 +2,7 @@
 name: Chart
 category: Data display
 principle: limits
-import: "@calmon/react/chart"
+import: "@openvanta/calmon-react/chart"
 status: stable
 related: [Sparkline, VitalTile, Table]
 description: Line, area and bar charts with a threshold band, a hover and keyboard readout, and a legend. A generated summary and a hidden data table make it readable without sight.

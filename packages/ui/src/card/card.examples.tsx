@@ -1,6 +1,6 @@
-import { Button } from '@calmon/react/button'
-import { Card, CardBody, CardFooter, CardHeader } from '@calmon/react/card'
-import { CautionIcon, NormalIcon, PulseIcon } from '@calmon/react/icons'
+import { Button } from '@openvanta/calmon-react/button'
+import { Card, CardBody, CardFooter, CardHeader } from '@openvanta/calmon-react/card'
+import { CautionIcon, NormalIcon, PulseIcon } from '@openvanta/calmon-react/icons'
 
 /** A title, a status on the right and a short body. Keep one topic per card. */
 export function Panel() {

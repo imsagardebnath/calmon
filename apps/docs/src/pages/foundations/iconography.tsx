@@ -1,8 +1,8 @@
 import { useMemo, useState, type ComponentType } from 'react'
-import { Code } from '@calmon/react/code'
-import * as icons from '@calmon/react/icons'
-import { Input } from '@calmon/react/input'
-import { SeverityIcon, SearchIcon, type IconProps } from '@calmon/react/icons'
+import { Code } from '@openvanta/calmon-react/code'
+import * as icons from '@openvanta/calmon-react/icons'
+import { Input } from '@openvanta/calmon-react/input'
+import { SeverityIcon, SearchIcon, type IconProps } from '@openvanta/calmon-react/icons'
 import { B, Bullets, C, H2, H3, Lead, Page, Specimen, announce, useCopy } from './_kit.tsx'
 
 type IconComponent = ComponentType<IconProps>
@@ -107,12 +107,12 @@ export default function Iconography() {
 
       <h2 id="icon-set" className={H2}>Icon set</h2>
       <Lead>
-        {ICONS.length} icons. Click one to copy its JSX. Import each by name from <C>@calmon/react/icons</C>.
+        {ICONS.length} icons. Click one to copy its JSX. Import each by name from <C>@openvanta/calmon-react/icons</C>.
       </Lead>
       <IconSet />
 
       <h2 id="usage" className={H2}>Usage</h2>
-      <Code language="tsx" label="Icons">{`import { CopyIcon, SeverityIcon } from '@calmon/react/icons'
+      <Code language="tsx" label="Icons">{`import { CopyIcon, SeverityIcon } from '@openvanta/calmon-react/icons'
 
 // Decorative by default: hidden from screen readers
 <CopyIcon />

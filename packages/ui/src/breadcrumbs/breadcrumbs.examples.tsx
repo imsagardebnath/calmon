@@ -1,4 +1,4 @@
-import { Breadcrumbs } from '@calmon/react/breadcrumbs'
+import { Breadcrumbs } from '@openvanta/calmon-react/breadcrumbs'
 
 /** The last item is the current page. It has no link and is marked with aria-current. */
 export function Path() {

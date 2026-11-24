@@ -2,7 +2,7 @@
 name: Table
 category: Data display
 principle: alarm-fatigue
-import: "@calmon/react/table"
+import: "@openvanta/calmon-react/table"
 status: stable
 related: [Pagination, Checkbox, Badge, IconButton, EmptyState]
 description: Rows of records with sorting, selection and bulk actions. Rows are sorted worst first by default, and every severity is shown with a bar, an icon and a word.

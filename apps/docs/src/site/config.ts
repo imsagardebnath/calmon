@@ -6,7 +6,7 @@ export const BASE = import.meta.env.BASE_URL
 /** Library version shown in the header and on component pages. */
 export const VERSION: string = pkg.version
 
-export const PACKAGE = '@calmon/react'
+export const PACKAGE = '@openvanta/calmon-react'
 export const INSTALL_COMMAND = `npm install ${PACKAGE}`
 
 /** Where the source lives. Override with VITE_REPO_URL when building. */

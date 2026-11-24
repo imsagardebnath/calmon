@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { marked, type Token, type Tokens } from 'marked'
-import { Code } from '@calmon/react/code'
+import { Code } from '@openvanta/calmon-react/code'
 
 type TokenList = Parameters<typeof marked.parser>[0]
 

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { Badge } from '@calmon/react/badge'
-import { Card } from '@calmon/react/card'
+import { Badge } from '@openvanta/calmon-react/badge'
+import { Card } from '@openvanta/calmon-react/card'
 import {
   A,
   B,

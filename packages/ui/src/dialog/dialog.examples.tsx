@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Button } from '@calmon/react/button'
-import { Dialog } from '@calmon/react/dialog'
+import { Button } from '@openvanta/calmon-react/button'
+import { Dialog } from '@openvanta/calmon-react/dialog'
 
 /** Confirm a destructive action. The intent shows the critical icon, and the confirm button names what it does. */
 export function ConfirmDelete() {

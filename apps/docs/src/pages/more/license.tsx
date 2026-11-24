@@ -1,4 +1,4 @@
-import { CheckIcon, InfoIcon } from '@calmon/react/icons'
+import { CheckIcon, InfoIcon } from '@openvanta/calmon-react/icons'
 import { Callout, Lead } from '../../site/doc.tsx'
 // The canonical license text. Importing the real file means this page can never drift from it.
 import licenseText from '../../../../../LICENSE?raw'

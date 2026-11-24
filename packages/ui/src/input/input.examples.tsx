@@ -1,6 +1,6 @@
-import { Field } from '@calmon/react/field'
-import { Input } from '@calmon/react/input'
-import { SearchIcon } from '@calmon/react/icons'
+import { Field } from '@openvanta/calmon-react/field'
+import { Input } from '@openvanta/calmon-react/input'
+import { SearchIcon } from '@openvanta/calmon-react/icons'
 
 /** Wrap an Input in a Field for a visible label. A placeholder is not a label. */
 export function Basic() {

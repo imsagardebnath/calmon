@@ -2,7 +2,7 @@
 name: Banner
 category: Feedback
 principle: alarm-fatigue
-import: "@calmon/react/banner"
+import: "@openvanta/calmon-react/banner"
 status: stable
 related: [Toast, Badge, Button]
 description: A message across a page or section that stays until it is resolved or dismissed.

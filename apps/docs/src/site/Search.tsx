@@ -4,9 +4,9 @@
 // groups: with an empty query it shows Recent and Suggested pages; while typing it shows matches only, grouped
 // by section, with a small cap per group so the list stays short.
 import { useEffect, useMemo, useState } from 'react'
-import { CommandPalette, type CommandGroup, type CommandItem } from '@calmon/react/command-palette'
-import { useCalmon } from '@calmon/react/provider'
-import { CmdIcon, GridIcon, HashIcon } from '@calmon/react/icons'
+import { CommandPalette, type CommandGroup, type CommandItem } from '@openvanta/calmon-react/command-palette'
+import { useCalmon } from '@openvanta/calmon-react/provider'
+import { CmdIcon, GridIcon, HashIcon } from '@openvanta/calmon-react/icons'
 import { BASE, INSTALL_COMMAND } from './config.ts'
 import { readRecent } from './hooks.ts'
 import { SectionIcon } from './icons.tsx'

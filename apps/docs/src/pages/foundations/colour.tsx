@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react'
-import { Badge, type BadgeProps } from '@calmon/react/badge'
-import { Banner } from '@calmon/react/banner'
-import { Button, type ButtonProps } from '@calmon/react/button'
-import { LayersIcon, SeverityIcon, TrashIcon } from '@calmon/react/icons'
+import { Badge, type BadgeProps } from '@openvanta/calmon-react/badge'
+import { Banner } from '@openvanta/calmon-react/banner'
+import { Button, type ButtonProps } from '@openvanta/calmon-react/button'
+import { LayersIcon, SeverityIcon, TrashIcon } from '@openvanta/calmon-react/icons'
 import { A, C, Chip, DoDont, H2, H3, HexButton, Lead, Page, Ratio, Specimen, Td, TableWrap, Th } from './_kit.tsx'
 import { NEUTRALS, contrast, showValue, useLive, useThemeTokens, type Family, type ThemeTokens } from './_tokens.ts'
 

@@ -2,7 +2,7 @@
 name: ConfirmTarget
 category: Safety
 principle: confirm-target
-import: "@calmon/react/confirm-target"
+import: "@openvanta/calmon-react/confirm-target"
 status: stable
 related: [Dialog, Button, PausePoint, Banner]
 description: Type the exact name to delete, with the environment shown beside it.

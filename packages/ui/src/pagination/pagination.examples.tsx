@@ -1,4 +1,4 @@
-import { Pagination } from '@calmon/react/pagination'
+import { Pagination } from '@openvanta/calmon-react/pagination'
 import { useState } from 'react'
 
 /** Shows the range and the total next to the page buttons. Uncontrolled: it keeps its own page. */

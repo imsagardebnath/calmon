@@ -1,5 +1,5 @@
-import { Button } from '@calmon/react/button'
-import { PlusIcon, TrashIcon } from '@calmon/react/icons'
+import { Button } from '@openvanta/calmon-react/button'
+import { PlusIcon, TrashIcon } from '@openvanta/calmon-react/icons'
 
 /** Primary action. Use one primary button per view. */
 export function Primary() {

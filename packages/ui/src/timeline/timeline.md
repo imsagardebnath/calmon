@@ -2,7 +2,7 @@
 name: Timeline
 category: Monitoring
 principle: timeline
-import: "@calmon/react/timeline"
+import: "@openvanta/calmon-react/timeline"
 status: stable
 related: [Badge, Card, Drawer, HealthScore]
 description: One ordered record per entity of alerts, changes, deploys, notes and who did them, grouped by day.

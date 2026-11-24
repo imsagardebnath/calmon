@@ -1,9 +1,9 @@
 // "Agent-ready from the first commit": the design's `.agent` section. The llms.txt excerpt is the first lines of the
 // real file served next to the site (fetched, with a fallback while it loads), shown in the library's Code component.
 import type { ReactNode } from 'react'
-import { Button } from '@calmon/react/button'
-import { Code } from '@calmon/react/code'
-import { ArrowRIcon, BotIcon, FileIcon, LayersIcon, ListCheckIcon } from '@calmon/react/icons'
+import { Button } from '@openvanta/calmon-react/button'
+import { Code } from '@openvanta/calmon-react/code'
+import { ArrowRIcon, BotIcon, FileIcon, LayersIcon, ListCheckIcon } from '@openvanta/calmon-react/icons'
 import { PACKAGE, siteUrl } from '../../site/config.ts'
 import { useTextFile } from '../../site/hooks.ts'
 import { docsHref } from '../../site/router.ts'

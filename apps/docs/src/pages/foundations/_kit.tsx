@@ -1,10 +1,10 @@
 // Shared building blocks for the Foundations pages: headings, copy, callouts, specimen frames, tables,
 // link cards and colour swatches. Underscore files are not routes.
 import { useEffect, useRef, useState, type ComponentPropsWithoutRef, type ReactNode } from 'react'
-import { Badge } from '@calmon/react/badge'
-import { Button } from '@calmon/react/button'
-import { Code } from '@calmon/react/code'
-import { CheckIcon, CopyIcon, GridIcon, XIcon } from '@calmon/react/icons'
+import { Badge } from '@openvanta/calmon-react/badge'
+import { Button } from '@openvanta/calmon-react/button'
+import { Code } from '@openvanta/calmon-react/code'
+import { CheckIcon, CopyIcon, GridIcon, XIcon } from '@openvanta/calmon-react/icons'
 import { entries } from '../../registry.ts'
 import { formatRatio, showValue } from './_tokens.ts'
 

@@ -1,4 +1,4 @@
-import { Kbd } from '@calmon/react/kbd'
+import { Kbd } from '@openvanta/calmon-react/kbd'
 
 /** One key. It renders a native kbd element. */
 export function Key() {

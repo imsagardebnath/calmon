@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@calmon/react/styles.css";
+@import "@openvanta/calmon-react/styles.css";
 
 /*
  * Docs site styles, ported from the approved design (design/calmon-design.html, "Site chrome, landing,

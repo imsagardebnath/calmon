@@ -1,7 +1,7 @@
 // "Forty-two components. Seven built for safety.": the design's bento, every card a live component.
 // The seven are the Monitoring and Safety components (StationGrid is the hero above, the rest are here).
 import { useCallback, useState } from 'react'
-import type { TimelineEvent } from '@calmon/react/timeline'
+import type { TimelineEvent } from '@openvanta/calmon-react/timeline'
 import {
   BannerDemo,
   ChartDemo,

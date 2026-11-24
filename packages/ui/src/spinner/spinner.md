@@ -1,7 +1,7 @@
 ---
 name: Spinner
 category: Feedback
-import: "@calmon/react/spinner"
+import: "@openvanta/calmon-react/spinner"
 status: stable
 related: [Skeleton, ProgressBar, Button]
 description: Shows a short wait of under a few seconds. For longer work, show progress.

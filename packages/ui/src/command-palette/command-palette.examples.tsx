@@ -1,6 +1,6 @@
-import { Button } from '@calmon/react/button'
-import { CommandPalette } from '@calmon/react/command-palette'
-import { BellOffIcon, BookIcon, GridIcon, PulseIcon, SettingsIcon, TimelineIcon, TrashIcon } from '@calmon/react/icons'
+import { Button } from '@openvanta/calmon-react/button'
+import { CommandPalette } from '@openvanta/calmon-react/command-palette'
+import { BellOffIcon, BookIcon, GridIcon, PulseIcon, SettingsIcon, TimelineIcon, TrashIcon } from '@openvanta/calmon-react/icons'
 import { useState } from 'react'
 
 /** Controlled: open it from a button, and also with Ctrl K (Cmd K on macOS). Enter runs the highlighted command. */

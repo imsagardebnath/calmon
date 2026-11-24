@@ -1,7 +1,7 @@
 ---
 name: EmptyState
 category: Feedback
-import: "@calmon/react/empty-state"
+import: "@openvanta/calmon-react/empty-state"
 status: stable
 related: [Button, Skeleton, Banner]
 description: Fills an empty area with what happened and what to do next.

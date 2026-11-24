@@ -2,7 +2,7 @@
 name: IconButton
 category: Actions
 principle: none
-import: "@calmon/react/icon-button"
+import: "@openvanta/calmon-react/icon-button"
 status: stable
 related: [Button, Tooltip]
 description: A button that shows only an icon. It always has an accessible label, shown as a tooltip on hover.

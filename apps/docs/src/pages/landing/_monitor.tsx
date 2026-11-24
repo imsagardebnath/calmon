@@ -2,11 +2,11 @@
 // StationGrid (worst first, with Sparkline tiles), Badge, Tabs and the severity icons. The clock ticks every second,
 // and the sparklines take a new point every five seconds unless the visitor asked for reduced motion.
 import { useState } from 'react'
-import { Badge } from '@calmon/react/badge'
-import { scoreSeverity } from '@calmon/react/health-score'
-import { RoomIcon, SeverityIcon } from '@calmon/react/icons'
-import { StationGrid, type StationItem } from '@calmon/react/station-grid'
-import { Tab, Tabs } from '@calmon/react/tabs'
+import { Badge } from '@openvanta/calmon-react/badge'
+import { scoreSeverity } from '@openvanta/calmon-react/health-score'
+import { RoomIcon, SeverityIcon } from '@openvanta/calmon-react/icons'
+import { StationGrid, type StationItem } from '@openvanta/calmon-react/station-grid'
+import { Tab, Tabs } from '@openvanta/calmon-react/tabs'
 import { ENVIRONMENT_SCORE, SERVICES } from './_data.ts'
 import { seeded, useInterval, useReducedMotion, useUtcClock } from './_hooks.ts'
 import { cx } from './_util.ts'

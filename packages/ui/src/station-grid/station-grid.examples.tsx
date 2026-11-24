@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { StationGrid, StationTile, type StationItem } from '@calmon/react/station-grid'
+import { StationGrid, StationTile, type StationItem } from '@openvanta/calmon-react/station-grid'
 
 /** Tiles are sorted worst first, whatever order the data arrives in. The top-left tile is the one to look at. */
 export function Grid() {

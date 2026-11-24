@@ -1,4 +1,4 @@
-import { VitalTile } from '@calmon/react/vital-tile'
+import { VitalTile } from '@openvanta/calmon-react/vital-tile'
 
 /** A metric over its limit. The tile takes the threshold's severity and says so with an icon and a word. */
 export function Tile() {

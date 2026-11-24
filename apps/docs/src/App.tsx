@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { Drawer } from '@calmon/react/drawer'
+import { Drawer } from '@openvanta/calmon-react/drawer'
 import { ComponentPage } from './site/ComponentPage.tsx'
 import { DocsLayout } from './site/DocsLayout.tsx'
 import { Footer } from './site/Footer.tsx'

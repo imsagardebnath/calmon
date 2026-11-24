@@ -2,7 +2,7 @@
 name: Sparkline
 category: Data display
 principle: none
-import: "@calmon/react/sparkline"
+import: "@openvanta/calmon-react/sparkline"
 status: stable
 related: [VitalTile, Chart]
 description: A word-sized trend line, with an optional dashed threshold, a soft area fill and a dot on the latest value.

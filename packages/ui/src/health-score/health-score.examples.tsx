@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { HealthScore, type HealthFactor } from '@calmon/react/health-score'
+import { HealthScore, type HealthFactor } from '@openvanta/calmon-react/health-score'
 
 /** A score with its factors. The ring, the band word and the biggest factor all say the same thing. */
 export function Ring() {

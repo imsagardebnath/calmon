@@ -2,7 +2,7 @@
 name: Avatar
 category: Data display
 principle: none
-import: "@calmon/react/avatar"
+import: "@openvanta/calmon-react/avatar"
 status: stable
 related: [Table, Card]
 description: A person or team, shown as an image or as initials on a soft tint, with an optional presence dot. AvatarGroup stacks several.

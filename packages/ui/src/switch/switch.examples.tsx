@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Switch } from '@calmon/react/switch'
+import { Switch } from '@openvanta/calmon-react/switch'
 
 /** Settings that take effect at once, with no save step. */
 export function Settings() {

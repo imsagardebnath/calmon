@@ -1,4 +1,4 @@
-import { Chart } from '@calmon/react/chart'
+import { Chart } from '@openvanta/calmon-react/chart'
 
 /** One series with a threshold. The limit is drawn as a dashed line and a band, and named in words. */
 export function LineWithThreshold() {

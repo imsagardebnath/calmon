@@ -1,5 +1,5 @@
-import { FileIcon, LayersIcon, ListCheckIcon, UserIcon } from '@calmon/react/icons'
-import { Timeline, type TimelineEvent } from '@calmon/react/timeline'
+import { FileIcon, LayersIcon, ListCheckIcon, UserIcon } from '@openvanta/calmon-react/icons'
+import { Timeline, type TimelineEvent } from '@openvanta/calmon-react/timeline'
 
 /** Alerts, deploys, notes and people in one ordered record, grouped by day. Each node has a severity shape. */
 export function EntityTimeline() {

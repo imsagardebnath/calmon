@@ -2,7 +2,7 @@
 name: NumberInput
 category: Forms
 principle: none
-import: "@calmon/react/number-input"
+import: "@openvanta/calmon-react/number-input"
 status: stable
 related: [Field, Input, LimitedNumberInput]
 description: Numeric entry with steppers, units and tabular figures. For values with safe ranges, use LimitedNumberInput.

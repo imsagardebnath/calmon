@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PausePoint } from '@calmon/react/pause-point'
+import { PausePoint } from '@openvanta/calmon-react/pause-point'
 
 /** Plain strings are enough. The action unlocks when every box is checked. */
 export function Basic() {

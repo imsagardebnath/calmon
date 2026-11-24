@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-npm install @calmon/react
+npm install @openvanta/calmon-react
 ```
 
 Peer dependencies: `react >= 19`, `react-dom >= 19`, `tailwindcss >= 4.1`.
@@ -16,7 +16,7 @@ In your app's main CSS file, import Calmon once, after Tailwind. The tokens arri
 
 ```css
 @import "tailwindcss";
-@import "@calmon/react/styles.css";
+@import "@openvanta/calmon-react/styles.css";
 ```
 
 Optional: load the fonts (Instrument Sans for the interface, Azeret Mono for code and numerals) from Google Fonts. Without them the system fonts are used.
@@ -24,7 +24,7 @@ Optional: load the fonts (Instrument Sans for the interface, Azeret Mono for cod
 ## Add the provider
 
 ```tsx
-import { CalmonProvider, Button } from '@calmon/react'
+import { CalmonProvider, Button } from '@openvanta/calmon-react'
 
 export default function App() {
   return (
@@ -42,9 +42,9 @@ export default function App() {
 Import from the package root, or from one entry per component:
 
 ```tsx
-import { Button, Badge } from '@calmon/react'
-import { Button } from '@calmon/react/button'
-import { CheckIcon } from '@calmon/react/icons'
+import { Button, Badge } from '@openvanta/calmon-react'
+import { Button } from '@openvanta/calmon-react/button'
+import { CheckIcon } from '@openvanta/calmon-react/icons'
 ```
 
 ## Rules for writing UI with Calmon

@@ -2,7 +2,7 @@
 name: ComponentName
 category: Actions | Forms | Feedback | Overlays | Navigation | Data display | Monitoring | Safety
 principle: none | alarm-fatigue | composite-score | limits | pause-points | confirm-target | timeline | station-display
-import: "@calmon/react/component-name"
+import: "@openvanta/calmon-react/component-name"
 status: beta
 related: [OtherComponent]
 description: One sentence an agent can use to decide whether this is the right component.

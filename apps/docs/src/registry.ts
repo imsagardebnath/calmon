@@ -100,7 +100,7 @@ export const entries: DocEntry[] = Object.entries(docs)
       name: String(data.name ?? slug),
       category: String(data.category ?? 'other'),
       description: String(data.description ?? ''),
-      importPath: String(data.import ?? `@calmon/react/${slug}`),
+      importPath: String(data.import ?? `@openvanta/calmon-react/${slug}`),
       status: String(data.status ?? 'beta'),
       principle: String(data.principle ?? 'none'),
       related: asList(data.related),

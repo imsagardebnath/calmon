@@ -1,6 +1,6 @@
 # Contributing to Calmon
 
-Thanks for helping. Calmon (`@calmon/react`) is a React 19 + Tailwind CSS v4 component library with a "Clinical monitor"
+Thanks for helping. Calmon (`@openvanta/calmon-react`) is a React 19 + Tailwind CSS v4 component library with a "Clinical monitor"
 look. The visual design lives in `design/` and is the reference for styles and props.
 
 ## Setup

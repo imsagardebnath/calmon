@@ -2,7 +2,7 @@
 name: Kbd
 category: Data display
 principle: none
-import: "@calmon/react/kbd"
+import: "@openvanta/calmon-react/kbd"
 status: stable
 related: [Code]
 description: A keyboard key cap. Pass a shortcut as "Ctrl+K" or as several children and each key gets its own cap.

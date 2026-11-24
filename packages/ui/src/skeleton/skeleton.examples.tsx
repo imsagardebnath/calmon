@@ -1,4 +1,4 @@
-import { Skeleton } from '@calmon/react/skeleton'
+import { Skeleton } from '@openvanta/calmon-react/skeleton'
 
 /** An avatar and two lines, in the shape of a list row. */
 export function Row() {

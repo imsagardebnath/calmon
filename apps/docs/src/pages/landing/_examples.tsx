@@ -1,14 +1,14 @@
 // "Build any dashboard": four small, inert compositions of real library components. Each card links to the example
 // dashboards page. The previews are laid out at 167% width and scaled to 60%, so they fit any card width.
 import type { ReactNode } from 'react'
-import { Avatar } from '@calmon/react/avatar'
-import { Badge } from '@calmon/react/badge'
-import { Banner } from '@calmon/react/banner'
-import { Button } from '@calmon/react/button'
-import { Chart } from '@calmon/react/chart'
-import { ArrowRIcon, GaugeIcon, PulseIcon, RoomIcon, SettingsIcon } from '@calmon/react/icons'
-import { StationGrid, type StationItem } from '@calmon/react/station-grid'
-import { VitalTile } from '@calmon/react/vital-tile'
+import { Avatar } from '@openvanta/calmon-react/avatar'
+import { Badge } from '@openvanta/calmon-react/badge'
+import { Banner } from '@openvanta/calmon-react/banner'
+import { Button } from '@openvanta/calmon-react/button'
+import { Chart } from '@openvanta/calmon-react/chart'
+import { ArrowRIcon, GaugeIcon, PulseIcon, RoomIcon, SettingsIcon } from '@openvanta/calmon-react/icons'
+import { StationGrid, type StationItem } from '@openvanta/calmon-react/station-grid'
+import { VitalTile } from '@openvanta/calmon-react/vital-tile'
 import { docsHref } from '../../site/router.ts'
 import { Section, SectionHead } from './_ui.tsx'
 

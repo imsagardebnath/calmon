@@ -11,7 +11,7 @@ import {
   RoomIcon,
   TargetIcon,
   TimelineIcon,
-} from '@calmon/react/icons'
+} from '@openvanta/calmon-react/icons'
 import type { NavIcon } from '../nav.ts'
 
 const SECTION_ICONS = {

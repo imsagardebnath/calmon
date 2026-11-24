@@ -2,7 +2,7 @@
 name: VitalTile
 category: Monitoring
 principle: composite-score
-import: "@calmon/react/vital-tile"
+import: "@openvanta/calmon-react/vital-tile"
 status: stable
 related: [Sparkline, HealthScore, StationGrid, Badge]
 description: A metric with its unit, a trend line and the threshold it is judged against, with the severity as an icon and a word.

@@ -2,7 +2,7 @@
 name: Toast
 category: Feedback
 principle: alarm-fatigue
-import: "@calmon/react/toast"
+import: "@openvanta/calmon-react/toast"
 status: stable
 related: [Banner, Badge, Button]
 description: A brief confirmation in the corner that leaves on its own. Critical toasts stay until dismissed.
@@ -25,7 +25,7 @@ description: A brief confirmation in the corner that leaves on its own. Critical
 Render one `ToastProvider` near the root of your app, then call `useToast()` anywhere under it. `ToastProvider` accepts `limit` (toasts shown at once, default 3), `label` (name of the notification area) and `className`.
 
 ```tsx
-import { ToastProvider, useToast } from '@calmon/react/toast'
+import { ToastProvider, useToast } from '@openvanta/calmon-react/toast'
 
 function PublishButton() {
   const { toast } = useToast()

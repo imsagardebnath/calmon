@@ -2,7 +2,7 @@
 name: HealthScore
 category: Monitoring
 principle: composite-score
-import: "@calmon/react/health-score"
+import: "@openvanta/calmon-react/health-score"
 status: stable
 related: [VitalTile, StationGrid, Badge]
 description: One 0 to 100 number from many signals, shown as a ring with its band, the biggest factor and a breakdown of every factor.

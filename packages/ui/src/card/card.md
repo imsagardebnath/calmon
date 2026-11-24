@@ -2,7 +2,7 @@
 name: Card
 category: Data display
 principle: none
-import: "@calmon/react/card"
+import: "@openvanta/calmon-react/card"
 status: stable
 related: [Dialog, VitalTile]
 description: Groups related content on a raised surface, with an optional header and footer.

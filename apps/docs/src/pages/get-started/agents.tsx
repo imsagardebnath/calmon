@@ -1,5 +1,5 @@
-import { Code } from '@calmon/react/code'
-import { BotIcon, FileIcon } from '@calmon/react/icons'
+import { Code } from '@openvanta/calmon-react/code'
+import { BotIcon, FileIcon } from '@openvanta/calmon-react/icons'
 import { Bullets, Callout, Lead } from '../../site/doc.tsx'
 import { BASE, PACKAGE, siteUrl } from '../../site/config.ts'
 import { useTextFile } from '../../site/hooks.ts'

@@ -2,7 +2,7 @@
 name: Button
 category: Actions
 principle: positive-identification
-import: "@calmon/react/button"
+import: "@openvanta/calmon-react/button"
 status: stable
 related: [IconButton, ConfirmTarget]
 description: Starts an action. Use one primary button per view, and let severity say how serious the action is.

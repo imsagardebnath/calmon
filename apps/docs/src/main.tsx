@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { CalmonProvider, type Density } from '@calmon/react/provider'
+import { CalmonProvider, type Density } from '@openvanta/calmon-react/provider'
 import { App } from './App.tsx'
 import { DENSITY_KEY } from './site/config.ts'
 import './styles.css'

@@ -180,9 +180,9 @@ const full = [usage.trim(), '', ...components.map((c) => '\n---\n\n' + component
 const snippet = [
   '## UI components: Calmon',
   '',
-  `This project uses Calmon (\`@calmon/react\`). Docs for agents: ${url('llms.txt')}`,
+  `This project uses Calmon (\`@openvanta/calmon-react\`). Docs for agents: ${url('llms.txt')}`,
   '',
-  '- Import per component: `import { Button } from \'@calmon/react/button\'`.',
+  '- Import per component: `import { Button } from \'@openvanta/calmon-react/button\'`.',
   '- Status is always `severity`: `normal | info | advisory | caution | critical`. Use tokens (`bg-critical`, `text-caution-fg`), never raw `red-*`/`amber-*`.',
   '- Colour is never the only signal; pair it with text.',
   '- Shared prop names: `variant`, `size`, `severity`, `value/defaultValue/onValueChange`, `open/defaultOpen/onOpenChange`.',
@@ -191,7 +191,7 @@ const snippet = [
 ].join('\n')
 
 const catalogue = {
-  name: '@calmon/react',
+  name: '@openvanta/calmon-react',
   version: uiPkg.version,
   generatedAt: new Date().toISOString(),
   severities: ['normal', 'info', 'advisory', 'caution', 'critical'],

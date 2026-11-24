@@ -1,10 +1,10 @@
 import { useState, type CSSProperties } from 'react'
-import { Badge } from '@calmon/react/badge'
-import { Button } from '@calmon/react/button'
-import { Code } from '@calmon/react/code'
-import { Input } from '@calmon/react/input'
-import { useCalmon, type Density, type Theme } from '@calmon/react/provider'
-import { Tab, Tabs, TabsList } from '@calmon/react/tabs'
+import { Badge } from '@openvanta/calmon-react/badge'
+import { Button } from '@openvanta/calmon-react/button'
+import { Code } from '@openvanta/calmon-react/code'
+import { Input } from '@openvanta/calmon-react/input'
+import { useCalmon, type Density, type Theme } from '@openvanta/calmon-react/provider'
+import { Tab, Tabs, TabsList } from '@openvanta/calmon-react/tabs'
 import { Callout, ExampleBox, Lead } from '../../site/doc.tsx'
 import { DENSITIES, useDensityChoice } from '../../site/Header.tsx'
 import { docsHref } from '../../site/router.ts'
@@ -54,7 +54,7 @@ const block = (selector: string, a: Accent) =>
   `${selector} {\n  --accent: ${a.accent}; --accent-on: ${a.on};\n  --accent-soft: ${a.soft}; --accent-fg: ${a.fg}; --accent-border: ${a.border};\n}`
 
 const TAILWIND = `@import "tailwindcss";
-@import "@calmon/react/styles.css";
+@import "@openvanta/calmon-react/styles.css";
 
 /* styles.css already maps every token to Tailwind. To expose your own, do the same: */
 @custom-variant dark (&:where(.dark, .dark *));

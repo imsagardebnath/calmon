@@ -2,7 +2,7 @@
 name: Breadcrumbs
 category: Navigation
 principle: none
-import: "@calmon/react/breadcrumbs"
+import: "@openvanta/calmon-react/breadcrumbs"
 status: stable
 related: [SideNav, Tabs]
 description: Shows where the current page sits in a hierarchy. Start with the environment so people always know where they are.

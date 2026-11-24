@@ -20,17 +20,17 @@ npm run ci       # typecheck, tests, build, size budgets
 ## Use it in an app
 
 ```bash
-npm install @calmon/react
+npm install @openvanta/calmon-react
 ```
 
 ```css
 /* app.css */
 @import "tailwindcss";
-@import "@calmon/react/styles.css";
+@import "@openvanta/calmon-react/styles.css";
 ```
 
 ```tsx
-import { CalmonProvider, Button } from '@calmon/react'
+import { CalmonProvider, Button } from '@openvanta/calmon-react'
 
 export default function App() {
   return (

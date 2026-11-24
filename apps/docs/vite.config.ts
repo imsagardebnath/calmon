@@ -12,9 +12,9 @@ export default defineConfig({
   resolve: {
     alias: [
       // The docs render the library from source, so edits show up instantly.
-      { find: /^@calmon\/react$/, replacement: lib('index.ts') },
-      { find: /^@calmon\/react\/styles\.css$/, replacement: lib('styles.css') },
-      { find: /^@calmon\/react\/(.*)$/, replacement: lib('$1/index.ts') },
+      { find: /^@openvanta\/calmon-react$/, replacement: lib('index.ts') },
+      { find: /^@openvanta\/calmon-react\/styles\.css$/, replacement: lib('styles.css') },
+      { find: /^@openvanta\/calmon-react\/(.*)$/, replacement: lib('$1/index.ts') },
     ],
   },
   server: { fs: { allow: ['../..'] } },

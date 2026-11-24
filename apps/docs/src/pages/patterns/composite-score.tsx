@@ -1,8 +1,8 @@
 // One composite score: a HealthScore built from the same metrics the VitalTiles show, each with its limit.
 import { useState } from 'react'
-import { HealthScore, type HealthFactor } from '@calmon/react/health-score'
-import { Tab, Tabs } from '@calmon/react/tabs'
-import { VitalTile } from '@calmon/react/vital-tile'
+import { HealthScore, type HealthFactor } from '@openvanta/calmon-react/health-score'
+import { Tab, Tabs } from '@openvanta/calmon-react/tabs'
+import { VitalTile } from '@openvanta/calmon-react/vital-tile'
 import { Panel, PatternPage, PRINCIPLES, type DoDontPair, type PatternComponent } from './_pattern.tsx'
 
 type Key = 'latency' | 'error' | 'cpu' | 'alerts'

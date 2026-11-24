@@ -2,7 +2,7 @@
 name: LimitedNumberInput
 category: Safety
 principle: limits
-import: "@calmon/react/limited-number-input"
+import: "@openvanta/calmon-react/limited-number-input"
 status: stable
 related: [NumberInput, Field, Textarea, Timeline]
 description: Number entry with a soft limit that asks for a reason and a hard limit that blocks.

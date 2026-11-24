@@ -1,4 +1,4 @@
-import { Badge } from '@calmon/react/badge'
+import { Badge } from '@openvanta/calmon-react/badge'
 import { Bullets } from '../../site/doc.tsx'
 import { VERSION } from '../../site/config.ts'
 import { pages } from '../../site/pages.ts'

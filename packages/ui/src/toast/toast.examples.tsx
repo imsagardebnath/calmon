@@ -1,5 +1,5 @@
-import { Button } from '@calmon/react/button'
-import { Toast, ToastProvider, useToast } from '@calmon/react/toast'
+import { Button } from '@openvanta/calmon-react/button'
+import { Toast, ToastProvider, useToast } from '@openvanta/calmon-react/toast'
 
 /** Wrap the app in a ToastProvider once, then call toast() from useToast(). The toast leaves after 5 seconds; hovering pauses it. */
 export function Basic() {

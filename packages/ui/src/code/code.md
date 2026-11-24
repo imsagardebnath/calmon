@@ -2,7 +2,7 @@
 name: Code
 category: Data display
 principle: none
-import: "@calmon/react/code"
+import: "@openvanta/calmon-react/code"
 status: stable
 related: [Kbd]
 description: Inline code and copyable code blocks, with light syntax colours for tsx, ts, js, json, css and bash.
@@ -39,13 +39,13 @@ description: Inline code and copyable code blocks, with light syntax colours for
 Wrong: a long line that forces people to scroll to read the important part.
 
 ```tsx
-<Code language="bash">{'npm install @calmon/react @floating-ui/react-dom class-variance-authority clsx tailwind-merge'}</Code>
+<Code language="bash">{'npm install @openvanta/calmon-react @floating-ui/react-dom class-variance-authority clsx tailwind-merge'}</Code>
 ```
 
 Right: break the command over lines, so it reads without scrolling.
 
 ```tsx
-<Code language="bash">{'npm install @calmon/react \\\n  class-variance-authority clsx tailwind-merge'}</Code>
+<Code language="bash">{'npm install @openvanta/calmon-react \\\n  class-variance-authority clsx tailwind-merge'}</Code>
 ```
 
 Wrong: a block for one word in a sentence.

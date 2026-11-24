@@ -1,7 +1,7 @@
 ---
 name: Skeleton
 category: Feedback
-import: "@calmon/react/skeleton"
+import: "@openvanta/calmon-react/skeleton"
 status: stable
 related: [Spinner, ProgressBar]
 description: A placeholder in the shape of content that is loading, so layout doesn't jump.

@@ -1,11 +1,11 @@
-import { Code, CodeBlock } from '@calmon/react/code'
+import { Code, CodeBlock } from '@openvanta/calmon-react/code'
 
 /** A terminal command. The header label can be anything, here a name for the place to run it. The `$ ` prompt is shown but not copied. */
 export function Block() {
   return (
     <div className="w-96">
       <CodeBlock language="bash" label="Terminal" copyable>
-        {'$ npm install @calmon/react'}
+        {'$ npm install @openvanta/calmon-react'}
       </CodeBlock>
     </div>
   )
@@ -16,7 +16,7 @@ export function Tsx() {
   return (
     <div className="w-[34rem] max-w-full">
       <Code label="Save.tsx">
-        {`import { Button } from '@calmon/react/button'
+        {`import { Button } from '@openvanta/calmon-react/button'
 
 // One primary action per view.
 export const Save = () => (
@@ -49,7 +49,7 @@ export function Css() {
     <div className="w-96 max-w-full">
       <Code language="css" label="app.css">
         {`@import "tailwindcss";
-@import "@calmon/react/styles.css";
+@import "@openvanta/calmon-react/styles.css";
 
 :root { --accent: #4F46E5; }
 .card { border-radius: 14px; }`}
@@ -63,7 +63,7 @@ export function NoCopy() {
   return (
     <div className="w-72">
       <Code language="bash" copyable={false}>
-        {'pnpm add @calmon/react'}
+        {'pnpm add @openvanta/calmon-react'}
       </Code>
     </div>
   )

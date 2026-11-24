@@ -1,4 +1,4 @@
-import { BotIcon, GridIcon, InfoIcon, LayersIcon, RoomIcon } from '@calmon/react/icons'
+import { BotIcon, GridIcon, InfoIcon, LayersIcon, RoomIcon } from '@openvanta/calmon-react/icons'
 import { Callout, Lead, LinkCard, LinkCards } from '../../site/doc.tsx'
 import { PatternIcon } from '../../site/icons.tsx'
 import { docsHref } from '../../site/router.ts'

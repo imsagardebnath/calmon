@@ -2,7 +2,7 @@
 name: Textarea
 category: Forms
 principle: none
-import: "@calmon/react/textarea"
+import: "@openvanta/calmon-react/textarea"
 status: stable
 related: [Field, Input]
 description: Multi-line text, such as notes, reasons and descriptions. Grows with content up to a maximum height.

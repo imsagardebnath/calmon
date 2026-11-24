@@ -1,5 +1,5 @@
-import { BellOffIcon, GridIcon, PulseIcon, SettingsIcon, TimelineIcon, UserIcon } from '@calmon/react/icons'
-import { SideNav, SideNavGroup, SideNavItem } from '@calmon/react/side-nav'
+import { BellOffIcon, GridIcon, PulseIcon, SettingsIcon, TimelineIcon, UserIcon } from '@openvanta/calmon-react/icons'
+import { SideNav, SideNavGroup, SideNavItem } from '@openvanta/calmon-react/side-nav'
 import { useState, type ComponentPropsWithRef } from 'react'
 
 /** A group with a heading, icons, and an alert count on the item that needs action. The current page has aria-current. */

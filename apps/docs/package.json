@@ -1,5 +1,5 @@
 {
-  "name": "@calmon/docs",
+  "name": "@openvanta/calmon-docs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +13,7 @@
     "marked": "^15.0.12",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "@calmon/react": "*",
+    "@openvanta/calmon-react": "*",
     "sugar-high": "^0.9.3"
   },
   "devDependencies": {
