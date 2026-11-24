@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rewriteRelativeImportExtensions": true,
+    "types": ["vitest/globals"],
+    "paths": {
+      "@calmon/react": ["./src/index.ts"],
+      "@calmon/react/*": ["./src/*/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

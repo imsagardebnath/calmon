@@ -1,0 +1,112 @@
+[
+ [
+  "alarm-fatigue",
+  "Fight alarm fatigue",
+  "bell-off",
+  "When every signal is loud, people learn to ignore all of them, and the one that matters gets missed. Fewer, better-grouped alerts get more attention, not less.",
+  "Group related signals into one alert with a count. Rate-limit repeats. Reserve red, sound and motion for things a person must act on now. Normal stays quiet.",
+  [
+   "Group alerts that share a cause; show the count, not 23 toasts.",
+   "Only critical can animate, and only gently.",
+   "Normal status gets no colour fill and no badge in lists.",
+   "Sort every overview worst first."
+  ],
+  [
+   "StationGrid",
+   "Toast",
+   "Banner"
+  ]
+ ],
+ [
+  "composite-score",
+  "One composite score",
+  "gauge",
+  "Five charts take minutes to read; one score with a clear band takes a second. Showing the factors beside it keeps the number trustworthy.",
+  "Combine weak signals into a health score with clear bands, and keep the breakdown one click away. A score without its factors is a black box people stop trusting.",
+  [
+   "Show the score, its band, and the biggest factor together.",
+   "Use the same bands everywhere for the same entity type.",
+   "Each metric shows the threshold it’s judged against."
+  ],
+  [
+   "HealthScore",
+   "VitalTile"
+  ]
+ ],
+ [
+  "limits",
+  "Soft and hard limits",
+  "limits",
+  "Most bad values are typos or misjudged defaults, not intent. A warning catches the first kind; a block stops the dangerous kind.",
+  "Inputs that matter get two limits. Past the soft limit, warn and ask for a reason that lands on the timeline. Past the hard limit, block and say the maximum.",
+  [
+   "Show the usual range before anyone types.",
+   "Never silently clamp a value.",
+   "The reason for a soft override is recorded."
+  ],
+  [
+   "LimitedNumberInput"
+  ]
+ ],
+ [
+  "pause-points",
+  "Pause points",
+  "pause",
+  "Risky actions fail on things everyone knew but nobody checked. A short, specific checklist at the moment of action catches them in seconds.",
+  "Before a risky action, show three to five checks that a person can verify in seconds. Pre-fill what the system already knows. The action button unlocks when every item is checked.",
+  [
+   "Three to five items, phrased as facts.",
+   "Show evidence: who approved and when.",
+   "The button names the action; the toast repeats it."
+  ],
+  [
+   "PausePoint"
+  ]
+ ],
+ [
+  "confirm-target",
+  "Confirm the target",
+  "target",
+  "Wrong-target mistakes happen when two things look alike: prod and staging, orders-eu and orders-us. Reading the exact name breaks autopilot.",
+  "Before deleting or overwriting, the person types the exact name and sees the environment badge beside it. Wrong-environment mistakes become hard to make.",
+  [
+   "Exact, case-sensitive match.",
+   "PROD badge sits next to the name, not in a corner.",
+   "Reversible actions get Undo instead."
+  ],
+  [
+   "ConfirmTarget"
+  ]
+ ],
+ [
+  "timeline",
+  "One timeline per entity",
+  "timeline",
+  "During an incident the first question is always “what changed?”. One ordered record answers it without hunting across tools.",
+  "Every entity has one ordered record of alerts, changes, deploys, notes and who did them. Nobody hunts across five tabs during an incident.",
+  [
+   "Group by day; show who and when.",
+   "Soft-limit justifications and pause-point completions are recorded here.",
+   "Link alerts to the change that preceded them."
+  ],
+  [
+   "Timeline"
+  ]
+ ],
+ [
+  "station-display",
+  "Readable across the room",
+  "room",
+  "Overview screens are glanced at, often from across a room. If the problem isn’t obvious in two seconds, the screen hasn’t done its job.",
+  "Overviews have a station density with large numerals for wall displays. Tiles sort worst first, so the top-left is always the one to look at.",
+  [
+   "Station density scales type, spacing and numerals together.",
+   "Worst first, always.",
+   "Severity is readable in greyscale, from a distance."
+  ],
+  [
+   "VitalTile",
+   "StationGrid"
+  ]
+ ]
+]

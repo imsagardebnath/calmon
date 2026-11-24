@@ -1,0 +1,390 @@
+/*
+ * Calmon styles. Import once, after Tailwind:
+ *
+ *   @import "tailwindcss";
+ *   @import "@calmon/react/styles.css";
+ *
+ * Contents: design tokens (light + dark), the tone system, density, the Tailwind v4
+ * theme mapping, and a small base layer. Tokens are plain CSS variables: override any of
+ * them on :root / .dark (see docs "Theming").
+ *
+ * Dark mode: add class "dark" (or data-theme="dark") to <html>; CalmonProvider does this.
+ * Density:   data-density="comfortable | compact | station" on <html> or any container.
+ */
+
+/* Scan the compiled components for Tailwind classes (relative to this file). */
+@source "./";
+
+@custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+/* ===================================================================
+   1. Design tokens (source of truth: design/calmon-design.html)
+   =================================================================== */
+:root {
+  /* Neutrals */
+  --surface: #FAFBFC;
+  --surface-raised: #FFFFFF;
+  --surface-sunken: #F2F5F7;
+  --border: #E4E9EE;
+  --border-strong: #CDD5DE;
+  --fg: #0B1726;
+  --fg-muted: #4F5D6E;
+  --fg-subtle: #5F6E81;
+  --ring: #0F766E;
+
+  /* Accent (brand teal) */
+  --accent: #0F766E;
+  --accent-on: #FFFFFF;
+  --accent-soft: #E7F4F2;
+  --accent-fg: #0D6961;
+  --accent-border: #B3DDD6;
+
+  /* Severity: normal → info → advisory → caution → critical */
+  --normal: #12805A;
+  --normal-on: #FFFFFF;
+  --normal-soft: #E8F6EF;
+  --normal-fg: #0E6B4B;
+  --normal-border: #BCE3CF;
+
+  --info: #2F5BEA;
+  --info-on: #FFFFFF;
+  --info-soft: #EDF1FE;
+  --info-fg: #2449C7;
+  --info-border: #C6D2F8;
+
+  --advisory: #D9A514;
+  --advisory-on: #241A00;
+  --advisory-soft: #FDF6DE;
+  --advisory-fg: #755800;
+  --advisory-border: #EED795;
+
+  --caution: #C2560F;
+  --caution-on: #FFFFFF;
+  --caution-soft: #FDF0E6;
+  --caution-fg: #9A430A;
+  --caution-border: #F2C9AA;
+
+  --critical: #CF283E;
+  --critical-on: #FFFFFF;
+  --critical-soft: #FDECEE;
+  --critical-fg: #AF1F34;
+  --critical-border: #F4BCC4;
+
+  /* Radius */
+  --radius-control: 8px;
+  --radius-card: 14px;
+  --radius-pill: 999px;
+
+  /* Shadows: soft, layered, low opacity */
+  --shadow-1: 0 1px 2px rgb(16 24 40 / .04), 0 1px 3px rgb(16 24 40 / .05);
+  --shadow-2: 0 2px 4px -2px rgb(16 24 40 / .05), 0 8px 20px -4px rgb(16 24 40 / .09);
+  --shadow-3: 0 4px 8px -4px rgb(16 24 40 / .06), 0 28px 56px -16px rgb(16 24 40 / .2);
+
+  /* Typography */
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-mono: "Azeret Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  /* Type scale. Named --fs-* on purpose: Tailwind keeps its own scale in --text-*, and a value set
+     on :root would silently change text-sm, text-xl, text-2xl and text-3xl in the whole app. */
+  --fs-xs: 0.75rem;    /* 12 */
+  --fs-sm: 0.8125rem;  /* 13 */
+  --fs-md: 0.9375rem;  /* 15  base UI */
+  --fs-lg: 1.125rem;   /* 18 */
+  --fs-xl: 1.5rem;     /* 24 */
+  --fs-2xl: 2.25rem;   /* 36 */
+  --fs-3xl: 3.75rem;   /* 60 */
+  --text-md: var(--fs-md);  /* same as --fs-md; kept because Tailwind has no --text-md */
+  --leading-ui: 1.4;
+  --leading-prose: 1.65;
+  --numeral-sm: 1rem;    /* 16 table cells, inline metrics */
+  --numeral-md: 1.875rem;/* 30 station tiles, compact */
+  --numeral-lg: 3rem;    /* 48 VitalTile comfortable */
+  --numeral-xl: 5.5rem;  /* 88 station / wall display */
+  --numeral-weight: 300;
+
+  /* Spacing (4px base) */
+  --space-0: 0; --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px; --space-16: 64px; --space-24: 96px;
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease-calmon-curve: cubic-bezier(.2, .7, .2, 1);  /* the one easing curve (Tailwind keeps --ease-out for its own) */
+
+  /* Focus ring */
+  --ring-width: 2px;
+  --ring-offset: 2px;
+}
+
+/* Intent aliases: familiar names mapped onto the severity scale.
+   Use either; components accept both (intent="danger" == severity="critical").
+   Declared on the dark scopes as well as :root: a var() reference is resolved where the property
+   is declared, so each scope (including a .dark container nested in a light page) re-resolves the
+   aliases against its own palette. */
+:root,
+.dark,
+[data-theme="dark"] {
+  --primary: var(--accent); --primary-on: var(--accent-on); --primary-soft: var(--accent-soft); --primary-fg: var(--accent-fg); --primary-border: var(--accent-border);
+  --secondary: var(--surface-raised); --secondary-on: var(--fg); --secondary-soft: var(--surface-sunken); --secondary-fg: var(--fg-muted); --secondary-border: var(--border-strong);
+  --success: var(--normal); --success-on: var(--normal-on); --success-soft: var(--normal-soft); --success-fg: var(--normal-fg); --success-border: var(--normal-border);
+  --warning: var(--caution); --warning-on: var(--caution-on); --warning-soft: var(--caution-soft); --warning-fg: var(--caution-fg); --warning-border: var(--caution-border);
+  --danger: var(--critical); --danger-on: var(--critical-on); --danger-soft: var(--critical-soft); --danger-fg: var(--critical-fg); --danger-border: var(--critical-border);
+}
+
+.dark,
+[data-theme="dark"] {
+  --surface: #0A0F16;
+  --surface-raised: #111821;
+  --surface-sunken: #070B11;
+  --border: #1C2530;
+  --border-strong: #2C3846;
+  --fg: #E8EDF3;
+  --fg-muted: #9AA7B6;
+  --fg-subtle: #7F8C9D;
+  --ring: #5FE0CE;
+
+  --accent: #2CC5B3;
+  --accent-on: #04201C;
+  --accent-soft: #0B2422;
+  --accent-fg: #5FE0CE;
+  --accent-border: #1A4D47;
+
+  --normal: #3ECF8E;
+  --normal-on: #03190F;
+  --normal-soft: #0D251D;
+  --normal-fg: #6EE0AA;
+  --normal-border: #1C5240;
+
+  --info: #6AA6FF;
+  --info-on: #061328;
+  --info-soft: #111E36;
+  --info-fg: #9AC1FF;
+  --info-border: #29467A;
+
+  --advisory: #E8C547;
+  --advisory-on: #1E1700;
+  --advisory-soft: #26210E;
+  --advisory-fg: #F0D46A;
+  --advisory-border: #625320;
+
+  --caution: #FF9A4A;
+  --caution-on: #231000;
+  --caution-soft: #2B1A0C;
+  --caution-fg: #FFB680;
+  --caution-border: #74441C;
+
+  --critical: #FF6273;
+  --critical-on: #2A0308;
+  --critical-soft: #311219;
+  --critical-fg: #FF919C;
+  --critical-border: #7E2734;
+
+  --shadow-1: 0 1px 2px rgb(0 0 0 / .3);
+  --shadow-2: 0 2px 4px -2px rgb(0 0 0 / .4), 0 10px 24px -6px rgb(0 0 0 / .5);
+  --shadow-3: 0 4px 8px -4px rgb(0 0 0 / .4), 0 32px 64px -16px rgb(0 0 0 / .7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0ms; --duration-base: 0ms; --duration-slow: 0ms; }
+}
+
+/* ===================================================================
+   2. Tone system
+   A component sets data-tone="accent|normal|info|advisory|caution|critical|neutral" on its
+   root, then styles itself with bg-tone, text-tone-on, bg-tone-soft, text-tone-fg,
+   border-tone-border. Intents map onto tones (see src/lib/tone.ts). Always set data-tone
+   explicitly: the custom properties inherit, so a nested component without its own tone
+   would pick up its parent's.
+   =================================================================== */
+[data-tone="neutral"] { --s: var(--fg-subtle); --s-on: var(--surface); --s-soft: var(--surface-sunken); --s-fg: var(--fg-muted); --s-border: var(--border); }
+[data-tone="accent"] { --s: var(--accent); --s-on: var(--accent-on); --s-soft: var(--accent-soft); --s-fg: var(--accent-fg); --s-border: var(--accent-border); }
+[data-tone="normal"] { --s: var(--normal); --s-on: var(--normal-on); --s-soft: var(--normal-soft); --s-fg: var(--normal-fg); --s-border: var(--normal-border); }
+[data-tone="info"] { --s: var(--info); --s-on: var(--info-on); --s-soft: var(--info-soft); --s-fg: var(--info-fg); --s-border: var(--info-border); }
+[data-tone="advisory"] { --s: var(--advisory); --s-on: var(--advisory-on); --s-soft: var(--advisory-soft); --s-fg: var(--advisory-fg); --s-border: var(--advisory-border); }
+[data-tone="caution"] { --s: var(--caution); --s-on: var(--caution-on); --s-soft: var(--caution-soft); --s-fg: var(--caution-fg); --s-border: var(--caution-border); }
+[data-tone="critical"] { --s: var(--critical); --s-on: var(--critical-on); --s-soft: var(--critical-soft); --s-fg: var(--critical-fg); --s-border: var(--critical-border); }
+
+/* ===================================================================
+   3. Density. Components read these variables, so they follow the nearest
+   data-density ancestor. An explicit size="sm|md|lg" prop overrides them.
+   =================================================================== */
+:root {
+  --btn-h: 36px;       /* Button, IconButton */
+  --btn-px: 14px;
+  --btn-fs: var(--fs-md);
+  --btn-radius: var(--radius-control);
+  --control-h: 38px;   /* Input, Select, NumberInput, Search */
+  --control-fs: var(--fs-md);
+  --control-px: 12px;
+}
+[data-density="compact"] {
+  --btn-h: 30px;
+  --btn-px: 11px;
+  --btn-fs: var(--fs-sm);
+  --btn-radius: 7px;
+  --control-h: 30px;
+  --control-fs: var(--fs-sm);
+  --control-px: 9px;
+}
+[data-density="station"] {
+  --btn-h: 56px;
+  --btn-px: 24px;
+  --btn-fs: 1.125rem;
+  --btn-radius: 12px;
+  --control-h: 56px;
+  --control-fs: 1.25rem;
+  --control-px: 16px;
+}
+
+/* ===================================================================
+   4. Tailwind v4 theme mapping
+   =================================================================== */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-ring: var(--ring);
+
+  --color-accent: var(--accent);
+  --color-accent-on: var(--accent-on);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-border: var(--accent-border);
+
+  --color-normal: var(--normal);
+  --color-normal-on: var(--normal-on);
+  --color-normal-soft: var(--normal-soft);
+  --color-normal-fg: var(--normal-fg);
+  --color-normal-border: var(--normal-border);
+
+  --color-info: var(--info);
+  --color-info-on: var(--info-on);
+  --color-info-soft: var(--info-soft);
+  --color-info-fg: var(--info-fg);
+  --color-info-border: var(--info-border);
+
+  --color-advisory: var(--advisory);
+  --color-advisory-on: var(--advisory-on);
+  --color-advisory-soft: var(--advisory-soft);
+  --color-advisory-fg: var(--advisory-fg);
+  --color-advisory-border: var(--advisory-border);
+
+  --color-caution: var(--caution);
+  --color-caution-on: var(--caution-on);
+  --color-caution-soft: var(--caution-soft);
+  --color-caution-fg: var(--caution-fg);
+  --color-caution-border: var(--caution-border);
+
+  --color-critical: var(--critical);
+  --color-critical-on: var(--critical-on);
+  --color-critical-soft: var(--critical-soft);
+  --color-critical-fg: var(--critical-fg);
+  --color-critical-border: var(--critical-border);
+
+  /* The component's current tone (set by data-tone) */
+  --color-tone: var(--s);
+  --color-tone-on: var(--s-on);
+  --color-tone-soft: var(--s-soft);
+  --color-tone-fg: var(--s-fg);
+  --color-tone-border: var(--s-border);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Sizes that differ from Tailwind's scale: sm = text-ui-sm, md = text-ui. The others already match
+     Tailwind's own sizes: xs = text-xs, lg = text-lg, xl = text-2xl, 2xl = text-4xl, 3xl = text-6xl. */
+  --text-ui-sm: var(--fs-sm);
+  --text-ui-sm--line-height: 1.4;
+  --text-ui: var(--fs-md);
+  --text-ui--line-height: 1.4;
+  --text-numeral-sm: 1rem;
+  --text-numeral-sm--line-height: 1.1;
+  --text-numeral-md: 1.875rem;
+  --text-numeral-md--line-height: 1.05;
+  --text-numeral-lg: 3rem;
+  --text-numeral-lg--line-height: 1;
+  --text-numeral-xl: 5.5rem;
+  --text-numeral-xl--line-height: 1;
+
+  --radius-control: var(--radius-control);
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
+
+  --shadow-low: var(--shadow-1);
+  --shadow-mid: var(--shadow-2);
+  --shadow-high: var(--shadow-3);
+
+  --ease-calmon: var(--ease-calmon-curve);
+
+  /* Animations. Durations come from the motion tokens, which are 0 under prefers-reduced-motion. */
+  --animate-calmon-spin: calmon-spin 0.75s linear infinite;
+  --animate-calmon-shim: calmon-shim 1.8s ease-in-out infinite;
+  --animate-calmon-indet: calmon-indet 1.4s var(--ease-calmon-curve) infinite;
+  --animate-calmon-crit: calmon-crit 2.6s ease-in-out infinite;
+  --animate-calmon-blink: calmon-blink 2.4s ease-in-out infinite;
+  --animate-calmon-pop: calmon-pop var(--duration-slow) var(--ease-calmon-curve);
+  --animate-calmon-dialog: calmon-dialog var(--duration-base) var(--ease-calmon-curve);
+  --animate-calmon-slide: calmon-slide var(--duration-slow) var(--ease-calmon-curve);
+  --animate-calmon-toast-out: calmon-toast-out var(--duration-base) ease-in forwards;
+}
+
+/* Reduced motion: stop the decorative loops (critical pulse, blink, shimmer). Loading indicators
+   (spin, indeterminate bar) keep running because they carry meaning. Unlayered, so it beats utilities. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-calmon-crit,
+  .animate-calmon-blink,
+  .animate-calmon-shim {
+    animation: none;
+  }
+}
+
+/* Keyframes (also usable directly: animate-[calmon-trace_3.4s_...]) */
+@keyframes calmon-spin { to { transform: rotate(360deg); } }
+@keyframes calmon-shim { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+@keyframes calmon-indet { from { transform: translateX(-100%); } to { transform: translateX(340%); } }
+@keyframes calmon-crit { 50% { opacity: 1; } }
+@keyframes calmon-blink { 50% { opacity: 0.35; } }
+@keyframes calmon-trace { to { stroke-dashoffset: 0; } }
+@keyframes calmon-pop { from { opacity: 0; transform: translateY(12px) scale(0.98); } }
+@keyframes calmon-toast-out { to { opacity: 0; transform: translateX(24px); } }
+@keyframes calmon-bar { from { width: 100%; } to { width: 0; } }
+@keyframes calmon-dialog { from { opacity: 0; transform: translateY(8px) scale(0.98); } }
+@keyframes calmon-slide { from { transform: translateX(30px); opacity: 0; } }
+
+/* ===================================================================
+   5. Base layer
+   =================================================================== */
+@layer base {
+  html { color-scheme: light; }
+  html.dark, html[data-theme="dark"] { color-scheme: dark; }
+
+  *, ::before, ::after { border-color: var(--border); }
+
+  body {
+    background: var(--surface);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: var(--fs-md);
+    line-height: var(--leading-ui);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus-visible {
+    outline: var(--ring-width) solid var(--ring);
+    outline-offset: var(--ring-offset);
+  }
+
+  /* Tabular numerals for anything marked as a figure */
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-weight: var(--numeral-weight);
+    letter-spacing: -0.04em;
+  }
+}

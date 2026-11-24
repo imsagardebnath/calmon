@@ -1,0 +1,28 @@
+{
+  "name": "calmon-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run agent-docs && npm run dev -w @calmon/docs",
+    "build": "npm run build -w @calmon/react && npm run agent-docs && npm run build -w @calmon/docs",
+    "agent-docs": "node scripts/sync-exports.mjs && node scripts/build-agent-docs.mjs",
+    "test": "npm run test -w @calmon/react",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "check:size": "node scripts/check-size.mjs",
+    "ci": "npm run typecheck && npm run test && npm run build && npm run check:size",
+    "preview": "npm run preview -w @calmon/docs"
+  },
+  "devDependencies": {
+    "react-docgen-typescript": "^2.4.0",
+    "typescript": "^5.8.3",
+    "esbuild": "^0.25.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

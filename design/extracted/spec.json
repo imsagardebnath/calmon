@@ -1,0 +1,1702 @@
+{
+ "Button": {
+  "cat": "Actions",
+  "d": "Starts an action. Use one primary button per view, and let severity say how serious the action is.",
+  "raw": "button"
+ },
+ "IconButton": {
+  "cat": "Actions",
+  "d": "A button that shows only an icon. It always has an accessible label, shown as a tooltip on hover.",
+  "states": "Button",
+  "ex": [
+   [
+    "Variants",
+    "<button class=\"btn btn-secondary icon-btn\" aria-label=\"Settings\"><svg class=\"i\"><use href=\"#i-settings\"/></svg></button><button class=\"btn btn-ghost icon-btn\" aria-label=\"More actions\"><svg class=\"i\"><use href=\"#i-more\"/></svg></button><button class=\"btn btn-primary icon-btn\" aria-label=\"Add service\"><svg class=\"i\"><use href=\"#i-plus\"/></svg></button><button class=\"btn btn-solid sev-critical icon-btn\" aria-label=\"Delete\"><svg class=\"i\"><use href=\"#i-trash\"/></svg></button>",
+    "<IconButton label=\"Settings\" icon={<SettingsIcon />} />\n<IconButton label=\"More actions\" variant=\"ghost\" icon={<MoreIcon />} />\n<IconButton label=\"Delete\" intent=\"danger\" icon={<TrashIcon />} />"
+   ]
+  ],
+  "props": [
+   [
+    "label",
+    "string",
+    "required",
+    "Accessible name and tooltip text."
+   ],
+   [
+    "icon",
+    "ReactNode",
+    "required",
+    "The icon to show."
+   ],
+   [
+    "variant",
+    "\"primary\" | \"secondary\" | \"ghost\"",
+    "\"secondary\"",
+    "Visual emphasis."
+   ],
+   [
+    "intent",
+    "Intent",
+    "none",
+    "Colour for risky actions."
+   ],
+   [
+    "size",
+    "\"sm\" | \"md\" | \"lg\"",
+    "\"md\"",
+    "30, 36 or 44px square."
+   ]
+  ],
+  "a11y": [
+   [
+    "Name",
+    "label becomes aria-label and the tooltip, so sighted and screen-reader users get the same name."
+   ]
+  ],
+  "do": "Use for repeated, well-known actions in toolbars and table rows.",
+  "dont": "Don’t use for the main action on a page. Give it words."
+ },
+ "Menu": {
+  "cat": "Actions",
+  "d": "A list of actions that opens from a button. Destructive items sit last, after a divider.",
+  "embedState": "Popover",
+  "ex": [
+   [
+    "Row actions",
+    "<div class=\"menu\" role=\"menu\"><div class=\"mi on\" role=\"menuitem\"><svg class=\"i\"><use href=\"#i-timeline\"/></svg>Open timeline<span class=\"k\">T</span></div><div class=\"mi\" role=\"menuitem\"><svg class=\"i\"><use href=\"#i-bell-off\"/></svg>Snooze alerts<span class=\"k\">S</span></div><div class=\"mi\" role=\"menuitem\"><svg class=\"i\"><use href=\"#i-copy\"/></svg>Copy ID</div><hr><div class=\"mi danger\" role=\"menuitem\"><svg class=\"i\"><use href=\"#i-trash\"/></svg>Delete service…</div></div>",
+    "<Menu trigger={<IconButton label=\"Actions\" icon={<MoreIcon />} />}>\n  <MenuItem icon={<TimelineIcon />} shortcut=\"T\">Open timeline</MenuItem>\n  <MenuItem icon={<SnoozeIcon />} shortcut=\"S\">Snooze alerts</MenuItem>\n  <MenuSeparator />\n  <MenuItem intent=\"danger\">Delete service…</MenuItem>\n</Menu>"
+   ]
+  ],
+  "props": [
+   [
+    "trigger",
+    "ReactElement",
+    "required",
+    "Element that opens the menu."
+   ],
+   [
+    "align",
+    "\"start\" | \"end\"",
+    "\"start\"",
+    "Horizontal alignment to the trigger."
+   ],
+   [
+    "MenuItem.intent",
+    "\"danger\"",
+    "none",
+    "Marks a destructive item."
+   ],
+   [
+    "MenuItem.shortcut",
+    "string",
+    "none",
+    "Keyboard hint shown on the right."
+   ]
+  ],
+  "a11y": [
+   [
+    "Keyboard",
+    "Arrow keys move, Enter selects, Esc closes and returns focus to the trigger."
+   ],
+   [
+    "Roles",
+    "menu and menuitem roles; disabled items stay focusable with aria-disabled."
+   ]
+  ],
+  "do": "End destructive items with an ellipsis when they open a confirmation.",
+  "dont": "Don’t hide the only way to do a common task inside a menu."
+ },
+ "Input": {
+  "cat": "Forms",
+  "d": "Single-line text entry. Wrap it in Field for a label, hint and error.",
+  "states": "Input",
+  "ex": [
+   [
+    "Basic",
+    "<div class=\"field\" style=\"width:280px\"><label>Service name</label><input class=\"input\" placeholder=\"payments-api\"></div>",
+    "<Field label=\"Service name\">\n  <Input placeholder=\"payments-api\" />\n</Field>"
+   ],
+   [
+    "With prefix icon",
+    "<div style=\"position:relative;width:280px\"><span style=\"position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--fg-subtle)\"><svg class=\"i\"><use href=\"#i-search\"/></svg></span><input class=\"input\" placeholder=\"Search services\" style=\"padding-left:34px\"></div>",
+    "<Input iconStart={<SearchIcon />} placeholder=\"Search services\" />"
+   ]
+  ],
+  "props": [
+   [
+    "value",
+    "string",
+    "none",
+    "Controlled value."
+   ],
+   [
+    "iconStart",
+    "ReactNode",
+    "none",
+    "Icon inside the start of the field."
+   ],
+   [
+    "invalid",
+    "boolean",
+    "false",
+    "Error styling. Field sets this for you."
+   ],
+   [
+    "disabled",
+    "boolean",
+    "false",
+    "Blocks input."
+   ],
+   [
+    "size",
+    "\"sm\" | \"md\" | \"lg\"",
+    "\"md\"",
+    "Follows density when unset."
+   ]
+  ],
+  "a11y": [
+   [
+    "Label",
+    "Always pair with a visible label. Placeholders disappear and are not labels."
+   ],
+   [
+    "Errors",
+    "Field links the error with aria-describedby and sets aria-invalid."
+   ]
+  ],
+  "do": "Show the expected format in the hint before someone gets it wrong.",
+  "dont": "Don’t validate on every keystroke. Validate on blur or submit."
+ },
+ "NumberInput": {
+  "cat": "Forms",
+  "d": "Numeric entry with steppers, units and tabular figures. For values with safe ranges, use LimitedNumberInput.",
+  "states": "NumberInput",
+  "ex": [
+   [
+    "With unit",
+    "<div class=\"field\" style=\"width:200px\"><label>Timeout</label><div class=\"numwrap\"><input class=\"input\" value=\"30\"><span class=\"unit\">sec</span></div></div>",
+    "<Field label=\"Timeout\">\n  <NumberInput defaultValue={30} unit=\"sec\" min={1} max={300} />\n</Field>"
+   ]
+  ],
+  "props": [
+   [
+    "min / max",
+    "number",
+    "none",
+    "Hard bounds. Values outside are rejected."
+   ],
+   [
+    "step",
+    "number",
+    "1",
+    "Arrow and stepper increment."
+   ],
+   [
+    "unit",
+    "string",
+    "none",
+    "Unit shown after the value."
+   ],
+   [
+    "steppers",
+    "boolean",
+    "true",
+    "Show increment buttons."
+   ]
+  ],
+  "a11y": [
+   [
+    "Keyboard",
+    "Up and Down step; Page Up and Page Down step by 10."
+   ],
+   [
+    "Role",
+    "spinbutton with aria-valuemin, aria-valuemax and aria-valuenow."
+   ]
+  ],
+  "do": "Always show the unit next to the number.",
+  "dont": "Don’t use for IDs, phone numbers or codes. Those are text."
+ },
+ "Textarea": {
+  "cat": "Forms",
+  "d": "Multi-line text, such as notes, reasons and descriptions. Grows with content up to a maximum height.",
+  "ex": [
+   [
+    "Justification",
+    "<div class=\"field\" style=\"width:340px\"><label>Reason for change<span class=\"req\">*</span></label><textarea class=\"textarea\" placeholder=\"What changed and why\"></textarea><span class=\"hint\">Shown on the service timeline.</span></div>",
+    "<Field label=\"Reason for change\" hint=\"Shown on the service timeline.\" required>\n  <Textarea autoGrow maxRows={8} />\n</Field>"
+   ]
+  ],
+  "props": [
+   [
+    "autoGrow",
+    "boolean",
+    "true",
+    "Grows with content."
+   ],
+   [
+    "maxRows",
+    "number",
+    "10",
+    "Height limit before scrolling."
+   ],
+   [
+    "maxLength",
+    "number",
+    "none",
+    "Shows a counter near the limit."
+   ]
+  ],
+  "a11y": [
+   [
+    "Counter",
+    "The character counter is announced politely when within 20 characters of the limit."
+   ]
+  ],
+  "do": "Ask for a reason when a change needs one later.",
+  "dont": "Don’t use for single values."
+ },
+ "Search": {
+  "cat": "Forms",
+  "d": "A search field with clear, loading and keyboard shortcut, plus live suggestions grouped by type. For site-wide commands, see CommandPalette.",
+  "ex": [
+   [
+    "Live suggestions",
+    "<div style=\"width:100%;display:flex;flex-direction:column;align-items:center\"><div data-search-live style=\"width:100%;max-width:460px\"></div></div>",
+    "<Search placeholder=\"Search services, people, incidents\"\n  shortcut=\"/\"\n  suggestions={(q) => searchIndex(q)}\n  groupBy=\"type\"\n  recent={recentSearches}\n  onSelect={(item) => navigate(item.href)} />"
+   ],
+   [
+    "Sizes and shapes",
+    "<div class=\"stack\" style=\"width:100%;max-width:420px;gap:12px\"><div class=\"searchfield sm\" role=\"search\"><span class=\"sf-ic\"><svg class=\"i\"><use href=\"#i-search\"/></svg></span><input class=\"input\" type=\"search\" placeholder=\"Search\" value=\"\" aria-label=\"Search\"><span class=\"sf-end\"><span class=\"spinner\"></span><button class=\"sf-clear\" type=\"button\" aria-label=\"Clear search\"><svg class=\"i\" style=\"width:14px;height:14px\"><use href=\"#i-x\"/></svg></button></span></div><div class=\"searchfield \" role=\"search\"><span class=\"sf-ic\"><svg class=\"i\"><use href=\"#i-search\"/></svg></span><input class=\"input\" type=\"search\" placeholder=\"Search services\" value=\"\" aria-label=\"Search services\"><span class=\"sf-end\"><span class=\"spinner\"></span><span class=\"sf-kbd\"><kbd>/</kbd></span><button class=\"sf-clear\" type=\"button\" aria-label=\"Clear search\"><svg class=\"i\" style=\"width:14px;height:14px\"><use href=\"#i-x\"/></svg></button></span></div><div class=\"searchfield lg pill\" role=\"search\"><span class=\"sf-ic\"><svg class=\"i\"><use href=\"#i-search\"/></svg></span><input class=\"input\" type=\"search\" placeholder=\"Search the docs\" value=\"\" aria-label=\"Search the docs\"><span class=\"sf-end\"><span class=\"spinner\"></span><span class=\"sf-kbd\"><kbd>/</kbd></span><button class=\"sf-clear\" type=\"button\" aria-label=\"Clear search\"><svg class=\"i\" style=\"width:14px;height:14px\"><use href=\"#i-x\"/></svg></button></span></div></div>",
+    "<Search size=\"sm\" />\n<Search shortcut=\"/\" />\n<Search size=\"lg\" shape=\"pill\" placeholder=\"Search the docs\" />"
+   ],
+   [
+    "States",
+    "<div class=\"stack\" style=\"width:100%;max-width:420px;gap:12px\"><div class=\"searchfield  has-value\" role=\"search\"><span class=\"sf-ic\"><svg class=\"i\"><use href=\"#i-search\"/></svg></span><input class=\"input\" type=\"search\" placeholder=\"Search services\" value=\"payments\" aria-label=\"Search services\"><span class=\"sf-end\"><span class=\"spinner\"></span><span class=\"sf-kbd\"><kbd>/</kbd></span><button class=\"sf-clear\" type=\"button\" aria-label=\"Clear search\"><svg class=\"i\" style=\"width:14px;height:14px\"><use href=\"#i-x\"/></svg></button></span></div><div class=\"searchfield loading has-value\" role=\"search\"><span class=\"sf-ic\"><svg class=\"i\"><use href=\"#i-search\"/></svg></span><input class=\"input\" type=\"search\" placeholder=\"Search services\" value=\"checkout\" aria-label=\"Search services\"><span class=\"sf-end\"><span class=\"spinner\"></span><button class=\"sf-clear\" type=\"button\" aria-label=\"Clear search\"><svg class=\"i\" style=\"width:14px;height:14px\"><use href=\"#i-x\"/></svg></button></span></div><div class=\"searchfield\"><span class=\"sf-ic\"><svg class=\"i\"><use href=\"#i-search\"/></svg></span><input class=\"input\" placeholder=\"Search is unavailable while offline\" disabled></div></div>",
+    "<Search defaultValue=\"payments\" />\n<Search loading defaultValue=\"checkout\" />\n<Search disabled placeholder=\"Search is unavailable while offline\" />"
+   ],
+   [
+    "Scoped, filtering a list",
+    "<div data-search-scoped style=\"width:100%;max-width:520px\"></div>",
+    "<Search scopes={['All','Critical','Caution','Normal']}\n  onChange={setQuery} onScopeChange={setScope} />\n<StationGrid items={filter(services, query, scope)} />"
+   ]
+  ],
+  "props": [
+   [
+    "value / defaultValue",
+    "string",
+    "\"\"",
+    "Query text."
+   ],
+   [
+    "placeholder",
+    "string",
+    "\"Search\"",
+    "Say what can be searched: “Search services”."
+   ],
+   [
+    "suggestions",
+    "(q) => Item[] | Promise",
+    "none",
+    "Turns on the suggestion list."
+   ],
+   [
+    "groupBy",
+    "string",
+    "none",
+    "Groups suggestions by a field."
+   ],
+   [
+    "recent",
+    "Item[]",
+    "none",
+    "Shown when the field is empty and focused."
+   ],
+   [
+    "shortcut",
+    "string",
+    "none",
+    "Focuses the field from anywhere, such as “/”."
+   ],
+   [
+    "loading",
+    "boolean",
+    "false",
+    "Spinner while results load."
+   ],
+   [
+    "debounce",
+    "number",
+    "150",
+    "ms before suggestions update."
+   ],
+   [
+    "scopes",
+    "string[]",
+    "none",
+    "Filter chips under the field."
+   ],
+   [
+    "size",
+    "\"sm\" | \"md\" | \"lg\"",
+    "\"md\"",
+    "30, 38 or 46px."
+   ],
+   [
+    "shape",
+    "\"default\" | \"pill\"",
+    "\"default\"",
+    "Corner style."
+   ],
+   [
+    "onSelect",
+    "(item) => void",
+    "none",
+    "Called on Enter or click."
+   ]
+  ],
+  "a11y": [
+   [
+    "Role",
+    "The wrapper is role=\"search\"; with suggestions the input is a combobox with aria-expanded and aria-activedescendant."
+   ],
+   [
+    "Keyboard",
+    "Up and Down move through suggestions, Enter selects, Esc clears then closes. The shortcut focuses the field."
+   ],
+   [
+    "Results",
+    "The number of results is announced politely as it changes."
+   ]
+  ],
+  "do": "Show recent searches on focus and highlight the matching text.",
+  "dont": "Don’t search on every keystroke without a debounce, and don’t hide the clear button."
+ },
+ "Select": {
+  "cat": "Forms",
+  "d": "Choose one option from a short list. For long lists, use a searchable combobox.",
+  "ex": [
+   [
+    "Basic",
+    "<div class=\"field\" style=\"width:240px\"><label>Region</label><select class=\"select\"><option>eu-west-1</option><option>us-east-1</option></select></div><div class=\"field\" style=\"width:240px\"><label>Region</label><select class=\"select\" disabled><option>eu-west-1</option></select><span class=\"hint\">Locked while a deploy runs.</span></div>",
+    "<Field label=\"Region\">\n  <Select options={regions} defaultValue=\"eu-west-1\" />\n</Field>"
+   ]
+  ],
+  "props": [
+   [
+    "options",
+    "{label, value}[]",
+    "required",
+    "Choices."
+   ],
+   [
+    "placeholder",
+    "string",
+    "none",
+    "Shown when empty."
+   ],
+   [
+    "disabled",
+    "boolean",
+    "false",
+    "Explain why in the hint."
+   ]
+  ],
+  "a11y": [
+   [
+    "Native",
+    "Renders a native select for reliable keyboard and screen-reader support."
+   ]
+  ],
+  "do": "Order options by frequency or alphabetically.",
+  "dont": "Don’t use for two options. Use Radio or Switch."
+ },
+ "Checkbox": {
+  "cat": "Forms",
+  "d": "Independent yes-or-no choices, and multi-select lists. Supports an indeterminate state for “some selected”.",
+  "states": "Checkbox",
+  "ex": [
+   [
+    "Group",
+    "<fieldset style=\"border:0;padding:0;margin:0\" class=\"stack\"><legend style=\"font-weight:550;font-size:var(--text-sm);margin-bottom:8px\">Notify me about</legend><label class=\"check\"><input type=\"checkbox\" checked>Critical alerts</label><label class=\"check\"><input type=\"checkbox\" checked>Caution alerts</label><label class=\"check\"><input type=\"checkbox\">Advisory alerts</label></fieldset>",
+    "<CheckboxGroup label=\"Notify me about\" defaultValue={['critical','caution']}>\n  <Checkbox value=\"critical\">Critical alerts</Checkbox>\n  <Checkbox value=\"caution\">Caution alerts</Checkbox>\n  <Checkbox value=\"advisory\">Advisory alerts</Checkbox>\n</CheckboxGroup>"
+   ]
+  ],
+  "props": [
+   [
+    "checked",
+    "boolean | \"indeterminate\"",
+    "false",
+    "Controlled state."
+   ],
+   [
+    "invalid",
+    "boolean",
+    "false",
+    "Error styling."
+   ],
+   [
+    "disabled",
+    "boolean",
+    "false",
+    "Blocks changes."
+   ]
+  ],
+  "a11y": [
+   [
+    "Groups",
+    "Wrap related checkboxes in a fieldset with a legend."
+   ]
+  ],
+  "do": "Phrase labels positively: “Send alerts”, not “Don’t send alerts”.",
+  "dont": "Don’t use a checkbox to trigger an immediate action. Use Switch."
+ },
+ "Radio": {
+  "cat": "Forms",
+  "d": "Pick exactly one from two to five visible options.",
+  "ex": [
+   [
+    "Deploy strategy",
+    "<div role=\"radiogroup\" class=\"stack\" style=\"gap:10px\"><label class=\"radio\"><input type=\"radio\" name=\"sx\" checked>Rolling</label><label class=\"radio\"><input type=\"radio\" name=\"sx\">Blue-green</label><label class=\"radio\"><input type=\"radio\" name=\"sx\" disabled>Canary (needs 3 pods)</label></div>",
+    "<RadioGroup label=\"Deploy strategy\" defaultValue=\"rolling\">\n  <Radio value=\"rolling\">Rolling</Radio>\n  <Radio value=\"blue-green\">Blue-green</Radio>\n  <Radio value=\"canary\" disabled>Canary (needs 3 pods)</Radio>\n</RadioGroup>"
+   ]
+  ],
+  "props": [
+   [
+    "value",
+    "string",
+    "none",
+    "Selected value."
+   ],
+   [
+    "orientation",
+    "\"vertical\" | \"horizontal\"",
+    "\"vertical\"",
+    "Layout."
+   ]
+  ],
+  "a11y": [
+   [
+    "Keyboard",
+    "Arrow keys move selection within the group; Tab leaves the group."
+   ]
+  ],
+  "do": "Preselect the safest option.",
+  "dont": "Don’t use for more than five options."
+ },
+ "Switch": {
+  "cat": "Forms",
+  "d": "Turns a setting on or off immediately, with no save step.",
+  "ex": [
+   [
+    "Settings",
+    "<div class=\"stack\" style=\"gap:12px\"><label class=\"switch\"><input type=\"checkbox\" role=\"switch\" checked>Group repeat alerts</label><label class=\"switch\"><input type=\"checkbox\" role=\"switch\">Page me on advisory</label><label class=\"switch\"><input type=\"checkbox\" role=\"switch\" disabled>Maintenance mode (admins only)</label></div>",
+    "<Switch defaultChecked>Group repeat alerts</Switch>\n<Switch>Page me on advisory</Switch>"
+   ]
+  ],
+  "props": [
+   [
+    "checked",
+    "boolean",
+    "false",
+    "Controlled state."
+   ],
+   [
+    "onCheckedChange",
+    "(v) => void",
+    "none",
+    "Fires immediately."
+   ]
+  ],
+  "a11y": [
+   [
+    "Role",
+    "role=\"switch\" with aria-checked; Space toggles."
+   ]
+  ],
+  "do": "Use for settings that take effect at once.",
+  "dont": "Don’t use inside a form that needs a Save button."
+ },
+ "Field": {
+  "cat": "Forms",
+  "d": "Wraps any input with a label, hint, warning or error, and wires up the accessibility attributes.",
+  "states": "Field",
+  "ex": [
+   [
+    "Error",
+    "<div class=\"field\" style=\"width:300px\"><label>Alert email<span class=\"req\">*</span></label><input class=\"input is-error\" value=\"oncall@\"><span class=\"err\"><svg class=\"i\"><use href=\"#i-critical\"/></svg>Enter a full email address, like oncall@company.com.</span></div>",
+    "<Field label=\"Alert email\" required error=\"Enter a full email address, like oncall@company.com.\">\n  <Input type=\"email\" />\n</Field>"
+   ]
+  ],
+  "props": [
+   [
+    "label",
+    "string",
+    "required",
+    "Visible label."
+   ],
+   [
+    "hint",
+    "ReactNode",
+    "none",
+    "Helper text below."
+   ],
+   [
+    "warning",
+    "ReactNode",
+    "none",
+    "Caution text. Doesn’t block submit."
+   ],
+   [
+    "error",
+    "ReactNode",
+    "none",
+    "Error text. Blocks submit."
+   ],
+   [
+    "required",
+    "boolean",
+    "false",
+    "Adds the marker and aria-required."
+   ]
+  ],
+  "a11y": [
+   [
+    "Wiring",
+    "Connects label, hint and error with htmlFor and aria-describedby automatically."
+   ]
+  ],
+  "do": "Write errors that say how to fix the problem.",
+  "dont": "Don’t write “Invalid input”."
+ },
+ "Badge": {
+  "cat": "Feedback",
+  "d": "A short status label. Every severity badge carries an icon or text, never colour alone.",
+  "states": "Badge",
+  "ex": [
+   [
+    "Severity",
+    "<span class=\"badge sev-normal\"><svg class=\"i\"><use href=\"#i-normal\"/></svg>Normal</span><span class=\"badge sev-info\"><svg class=\"i\"><use href=\"#i-info\"/></svg>Info</span><span class=\"badge sev-advisory\"><svg class=\"i\"><use href=\"#i-advisory\"/></svg>Advisory</span><span class=\"badge sev-caution\"><svg class=\"i\"><use href=\"#i-caution\"/></svg>Caution</span><span class=\"badge sev-critical\"><svg class=\"i\"><use href=\"#i-critical\"/></svg>Critical</span>",
+    "<Badge severity=\"normal\">Normal</Badge>\n<Badge severity=\"critical\">Critical</Badge>\n<Badge intent=\"success\" variant=\"solid\">Live</Badge>"
+   ]
+  ],
+  "props": [
+   [
+    "severity / intent",
+    "Severity | Intent",
+    "none",
+    "Colour and icon."
+   ],
+   [
+    "variant",
+    "\"soft\" | \"solid\" | \"outline\" | \"dot\"",
+    "\"soft\"",
+    "Emphasis."
+   ],
+   [
+    "icon",
+    "ReactNode | false",
+    "auto",
+    "Severity icon by default."
+   ]
+  ],
+  "a11y": [
+   [
+    "Not colour alone",
+    "The icon shape changes per level: circle, circle, diamond, triangle, octagon."
+   ]
+  ],
+  "do": "Keep labels to one or two words.",
+  "dont": "Don’t use solid badges for normal status. Save emphasis for problems."
+ },
+ "Banner": {
+  "cat": "Feedback",
+  "d": "A message across a page or section that stays until resolved or dismissed.",
+  "states": "Banner",
+  "ex": [
+   [
+    "With action",
+    "<div class=\"banner sev-caution\" style=\"width:100%\"><svg class=\"i\"><use href=\"#i-caution\"/></svg><div style=\"flex:1\"><b>Disk above 85% on 3 hosts</b><p>Free space before 90%, when writes slow down.</p><div class=\"acts\"><button class=\"btn btn-outline sev-caution btn-sm\">View hosts</button></div></div></div>",
+    "<Banner severity=\"caution\" title=\"Disk above 85% on 3 hosts\"\n  action={<Button size=\"sm\">View hosts</Button>}>\n  Free space before 90%, when writes slow down.\n</Banner>"
+   ]
+  ],
+  "props": [
+   [
+    "severity / intent",
+    "Severity | Intent",
+    "\"info\"",
+    "Colour and icon."
+   ],
+   [
+    "title",
+    "string",
+    "required",
+    "One line summary."
+   ],
+   [
+    "action",
+    "ReactNode",
+    "none",
+    "One action."
+   ],
+   [
+    "onDismiss",
+    "() => void",
+    "none",
+    "Shows a close button."
+   ]
+  ],
+  "a11y": [
+   [
+    "Live region",
+    "Critical banners use role=\"alert\"; others use role=\"status\"."
+   ]
+  ],
+  "do": "Group repeated causes into one banner with a count.",
+  "dont": "Don’t stack more than two banners. Summarise instead."
+ },
+ "Toast": {
+  "cat": "Feedback",
+  "d": "A brief confirmation in the corner that leaves on its own. Critical toasts stay until dismissed.",
+  "raw": "toast",
+  "props": [
+   [
+    "severity / intent",
+    "Severity | Intent",
+    "\"normal\"",
+    "Colour and icon."
+   ],
+   [
+    "title",
+    "string",
+    "required",
+    "Uses the action’s verb: Publish becomes Published."
+   ],
+   [
+    "duration",
+    "number",
+    "5000",
+    "0 keeps it open. Critical defaults to 0."
+   ],
+   [
+    "action",
+    "{label, onClick}",
+    "none",
+    "One action, such as Undo."
+   ],
+   [
+    "dedupeKey",
+    "string",
+    "none",
+    "Merges repeats into one toast with a count."
+   ]
+  ],
+  "a11y": [
+   [
+    "Announce",
+    "Polite live region; critical and caution use assertive."
+   ],
+   [
+    "Timing",
+    "Hover and focus pause the timer. Nothing important lives only in a toast."
+   ]
+  ],
+  "do": "Offer Undo instead of a confirmation for reversible actions.",
+  "dont": "Don’t use toasts for errors that need a decision. Use a Dialog."
+ },
+ "Spinner": {
+  "cat": "Feedback",
+  "d": "Shows a short wait of under a few seconds. For longer work, show progress.",
+  "states": "Spinner",
+  "ex": [
+   [
+    "Sizes",
+    "<div class=\"spinner\"></div><div class=\"spinner lg\"></div><button class=\"btn btn-secondary\"><span class=\"spinner spin\"></span>Loading</button>",
+    "<Spinner />\n<Spinner size=\"lg\" />\n<Button loading>Loading</Button>"
+   ]
+  ],
+  "props": [
+   [
+    "size",
+    "\"sm\" | \"md\" | \"lg\"",
+    "\"md\"",
+    "Diameter."
+   ],
+   [
+    "label",
+    "string",
+    "\"Loading\"",
+    "Screen-reader text."
+   ]
+  ],
+  "a11y": [
+   [
+    "Status",
+    "role=\"status\" with a visually hidden label."
+   ]
+  ],
+  "do": "Delay showing it by 300ms to avoid flicker.",
+  "dont": "Don’t block a whole page with a spinner. Use Skeleton."
+ },
+ "Skeleton": {
+  "cat": "Feedback",
+  "d": "A placeholder in the shape of content that is loading, so layout doesn’t jump.",
+  "ex": [
+   [
+    "Row",
+    "<div class=\"row\" style=\"width:320px;flex-wrap:nowrap\"><div class=\"skel\" style=\"width:36px;height:36px;border-radius:50%\"></div><div class=\"stack\" style=\"gap:6px;flex:1\"><div class=\"skel\" style=\"height:10px;width:70%\"></div><div class=\"skel\" style=\"height:10px;width:45%\"></div></div></div>",
+    "<Skeleton circle size={36} />\n<Skeleton lines={2} />"
+   ]
+  ],
+  "props": [
+   [
+    "lines",
+    "number",
+    "1",
+    "Number of text lines."
+   ],
+   [
+    "circle",
+    "boolean",
+    "false",
+    "Round shape."
+   ]
+  ],
+  "a11y": [
+   [
+    "Hidden",
+    "aria-hidden; the container sets aria-busy."
+   ]
+  ],
+  "do": "Match the real layout closely.",
+  "dont": "Don’t use for under 300ms loads."
+ },
+ "ProgressBar": {
+  "cat": "Feedback",
+  "d": "Shows known progress, or a level against capacity with severity.",
+  "states": "ProgressBar",
+  "ex": [
+   [
+    "Capacity",
+    "<div class=\"stack\" style=\"width:320px;gap:6px\"><div class=\"row\" style=\"justify-content:space-between;font-size:var(--text-sm)\"><span>Disk</span><span class=\"num\" style=\"font-size:12px\">87%</span></div><div class=\"progress sev-caution\"><span style=\"width:87%\"></span></div></div>",
+    "<ProgressBar value={87} label=\"Disk\" thresholds={{ caution: 85, critical: 95 }} />"
+   ]
+  ],
+  "props": [
+   [
+    "value",
+    "number",
+    "none",
+    "0–100. Omit for indeterminate."
+   ],
+   [
+    "thresholds",
+    "{caution, critical}",
+    "none",
+    "Applies severity automatically."
+   ]
+  ],
+  "a11y": [
+   [
+    "Role",
+    "progressbar with aria-valuenow; severity is also given in text."
+   ]
+  ],
+  "do": "Show the number next to the bar.",
+  "dont": "Don’t rely on bar colour to signal a problem."
+ },
+ "EmptyState": {
+  "cat": "Feedback",
+  "d": "Fills an empty area with what happened and what to do next.",
+  "states": "EmptyState",
+  "ex": [
+   [
+    "No data",
+    "<div class=\"empty\" style=\"width:360px\"><h4>No alerts in the last 24 hours</h4><p>Everything on this service is in range.</p></div>",
+    "<EmptyState title=\"No alerts in the last 24 hours\">\n  Everything on this service is in range.\n</EmptyState>"
+   ]
+  ],
+  "props": [
+   [
+    "title",
+    "string",
+    "required",
+    "What’s empty, plainly."
+   ],
+   [
+    "action",
+    "ReactNode",
+    "none",
+    "The next step."
+   ]
+  ],
+  "a11y": [
+   [
+    "Headings",
+    "Title is a heading at the right level for its container."
+   ]
+  ],
+  "do": "Offer the action that fills it.",
+  "dont": "Don’t apologise or joke. Direct."
+ },
+ "Dialog": {
+  "cat": "Overlays",
+  "d": "Blocks the page for a decision. Dialogs, sheets, popovers, menus and tooltips share this page.",
+  "raw": "dialog",
+  "props": [
+   [
+    "open",
+    "boolean",
+    "false",
+    "Controlled open state."
+   ],
+   [
+    "intent",
+    "Intent",
+    "none",
+    "Icon and confirm colour."
+   ],
+   [
+    "size",
+    "\"sm\" | \"md\" | \"lg\"",
+    "\"md\"",
+    "360, 480 or 720px."
+   ],
+   [
+    "dismissible",
+    "boolean",
+    "true",
+    "Esc and backdrop close. False for destructive flows mid-action."
+   ]
+  ],
+  "a11y": [
+   [
+    "Focus",
+    "Focus moves into the dialog, is trapped, and returns to the trigger on close."
+   ],
+   [
+    "Labels",
+    "aria-labelledby points at the title."
+   ]
+  ],
+  "do": "Name the confirm button with the action: “Delete service”.",
+  "dont": "Don’t use “OK” and “Cancel”."
+ },
+ "Drawer": {
+  "cat": "Overlays",
+  "d": "A side sheet for detail and editing without losing your place.",
+  "states": "Drawer",
+  "ex": [
+   [
+    "Open live",
+    "<button class=\"btn btn-secondary\" data-open-dlg=\"dlg-sheet\"><svg class=\"i\"><use href=\"#i-timeline\"/></svg>Open detail sheet</button>",
+    "<Drawer title=\"payments-api\" side=\"end\" size={420}>\n  …\n</Drawer>"
+   ]
+  ],
+  "props": [
+   [
+    "side",
+    "\"start\" | \"end\"",
+    "\"end\"",
+    "Edge it slides from."
+   ],
+   [
+    "size",
+    "number",
+    "420",
+    "Width in px."
+   ]
+  ],
+  "a11y": [
+   [
+    "Modal",
+    "Behaves like Dialog: focus trap and Esc to close."
+   ]
+  ],
+  "do": "Keep the primary action in the footer.",
+  "dont": "Don’t stack drawers."
+ },
+ "Popover": {
+  "cat": "Overlays",
+  "d": "Rich content anchored to a trigger, such as explanations and small forms.",
+  "states": "Popover",
+  "ex": [
+   [
+    "Explain a score",
+    "<div class=\"popover\"><b style=\"display:block;margin-bottom:4px\">Why 62?</b><span class=\"muted\">Latency is the largest factor (−21).</span></div>",
+    "<Popover trigger={<Button>Why 62?</Button>}>…</Popover>"
+   ]
+  ],
+  "props": [
+   [
+    "side",
+    "\"top\" | \"bottom\" | \"start\" | \"end\"",
+    "\"bottom\"",
+    "Preferred side."
+   ]
+  ],
+  "a11y": [
+   [
+    "Dialog",
+    "role=\"dialog\"; Esc closes."
+   ]
+  ],
+  "do": "Use to explain a number in place.",
+  "dont": "Don’t put required steps in a popover."
+ },
+ "Tooltip": {
+  "cat": "Overlays",
+  "d": "A short label on hover or focus. Never holds essential information.",
+  "ex": [
+   [
+    "Disabled reason",
+    "<span class=\"tip-host\" style=\"margin-top:36px\"><button class=\"btn btn-primary\" disabled>Publish</button><span class=\"tooltip\" style=\"opacity:1\">Locked until all checks pass</span></span>",
+    "<Tooltip content=\"Locked until all checks pass\">\n  <Button disabled>Publish</Button>\n</Tooltip>"
+   ]
+  ],
+  "props": [
+   [
+    "content",
+    "string",
+    "required",
+    "Under 80 characters."
+   ],
+   [
+    "delay",
+    "number",
+    "400",
+    "ms before showing."
+   ]
+  ],
+  "a11y": [
+   [
+    "Focus",
+    "Shows on keyboard focus; disabled triggers use aria-disabled so they stay focusable."
+   ]
+  ],
+  "do": "Explain why something is disabled.",
+  "dont": "Don’t put links or actions inside."
+ },
+ "Tabs": {
+  "cat": "Navigation",
+  "d": "Switch between views of the same thing. Segmented style for filters and time ranges.",
+  "states": "Tabs",
+  "ex": [
+   [
+    "Underline and segmented",
+    "<div class=\"stack\" style=\"gap:18px\"><div class=\"tabs\"><button aria-selected=\"true\">Overview</button><button aria-selected=\"false\">Timeline</button><button aria-selected=\"false\">Settings</button></div><div class=\"tabs seg\"><button aria-selected=\"true\">1h</button><button aria-selected=\"false\">24h</button><button aria-selected=\"false\">7d</button></div></div>",
+    "<Tabs defaultValue=\"overview\">\n  <Tab value=\"overview\">Overview</Tab>\n  <Tab value=\"timeline\">Timeline</Tab>\n</Tabs>\n<Tabs variant=\"segmented\" defaultValue=\"1h\">…</Tabs>"
+   ]
+  ],
+  "props": [
+   [
+    "variant",
+    "\"underline\" | \"segmented\"",
+    "\"underline\"",
+    "Style."
+   ],
+   [
+    "value",
+    "string",
+    "none",
+    "Selected tab."
+   ]
+  ],
+  "a11y": [
+   [
+    "Keyboard",
+    "Arrow keys move between tabs; Home and End jump."
+   ]
+  ],
+  "do": "Keep tab labels to one or two words.",
+  "dont": "Don’t use tabs for steps in a sequence."
+ },
+ "Breadcrumbs": {
+  "cat": "Navigation",
+  "d": "Shows where the current page sits in a hierarchy.",
+  "ex": [
+   [
+    "Path",
+    "<nav class=\"crumbs\"><a href=\"#\">Production</a><svg class=\"i\" style=\"width:14px;height:14px;color:var(--border-strong)\"><use href=\"#i-chev-r\"/></svg><a href=\"#\">eu-west</a><svg class=\"i\" style=\"width:14px;height:14px;color:var(--border-strong)\"><use href=\"#i-chev-r\"/></svg><span aria-current=\"page\">payments-api</span></nav>",
+    "<Breadcrumbs items={[{label:'Production',href:'/'},{label:'eu-west',href:'/eu-west'},{label:'payments-api'}]} />"
+   ]
+  ],
+  "props": [
+   [
+    "items",
+    "{label, href?}[]",
+    "required",
+    "Last item is the current page."
+   ],
+   [
+    "maxItems",
+    "number",
+    "4",
+    "Collapses the middle."
+   ]
+  ],
+  "a11y": [
+   [
+    "Current",
+    "aria-current=\"page\" on the last item."
+   ]
+  ],
+  "do": "Include the environment as the first crumb.",
+  "dont": "Don’t repeat the page title elsewhere in the crumb."
+ },
+ "Pagination": {
+  "cat": "Navigation",
+  "d": "Moves through pages of a table or list, with a range summary.",
+  "ex": [
+   [
+    "With range",
+    "<nav class=\"pager\"><button disabled><svg class=\"i\"><use href=\"#i-chev-l\"/></svg></button><button aria-current=\"page\">1</button><button>2</button><button>3</button><span class=\"subtle\">…</span><button>12</button><button><svg class=\"i\"><use href=\"#i-chev-r\"/></svg></button><span class=\"hint\" style=\"margin-left:8px\">1–25 of 289</span></nav>",
+    "<Pagination page={1} pageSize={25} total={289} onPageChange={setPage} />"
+   ]
+  ],
+  "props": [
+   [
+    "page",
+    "number",
+    "1",
+    "Current page."
+   ],
+   [
+    "pageSize",
+    "number",
+    "25",
+    "Rows per page."
+   ],
+   [
+    "total",
+    "number",
+    "required",
+    "Total rows."
+   ]
+  ],
+  "a11y": [
+   [
+    "Labels",
+    "Prev and next have aria-labels; the current page has aria-current."
+   ]
+  ],
+  "do": "Always show the total.",
+  "dont": "Don’t paginate under 50 rows."
+ },
+ "SideNav": {
+  "cat": "Navigation",
+  "d": "The main app navigation, with groups, icons and alert counts.",
+  "states": "SideNav",
+  "ex": [
+   [
+    "App navigation",
+    "<nav class=\"sidenav\" style=\"width:240px\"><div class=\"grp\">Monitor</div><a href=\"#\" aria-current=\"page\"><svg class=\"i\"><use href=\"#i-grid\"/></svg>Station<span class=\"badge sev-critical solid\">1</span></a><a href=\"#\"><svg class=\"i\"><use href=\"#i-pulse\"/></svg>Services</a><a href=\"#\"><svg class=\"i\"><use href=\"#i-timeline\"/></svg>Timeline</a></nav>",
+    "<SideNav>\n  <SideNavGroup label=\"Monitor\">\n    <SideNavItem icon={<GridIcon />} href=\"/station\" badge={{severity:'critical',count:1}} active>Station</SideNavItem>\n  </SideNavGroup>\n</SideNav>"
+   ]
+  ],
+  "props": [
+   [
+    "collapsed",
+    "boolean",
+    "false",
+    "Icon-only rail."
+   ],
+   [
+    "SideNavItem.badge",
+    "{severity, count}",
+    "none",
+    "Alert count."
+   ]
+  ],
+  "a11y": [
+   [
+    "Landmark",
+    "nav with aria-label; active item has aria-current."
+   ]
+  ],
+  "do": "Show only counts that need action.",
+  "dont": "Don’t show counts for normal items."
+ },
+ "CommandPalette": {
+  "cat": "Navigation",
+  "d": "Search and run commands from anywhere with Ctrl K. Try it on this site.",
+  "raw": "commandpalette",
+  "props": [
+   [
+    "groups",
+    "{label, items}[]",
+    "required",
+    "Grouped results."
+   ],
+   [
+    "shortcut",
+    "string",
+    "\"mod+k\"",
+    "Opens the palette."
+   ],
+   [
+    "onSelect",
+    "(item) => void",
+    "required",
+    "Runs the chosen item."
+   ]
+  ],
+  "a11y": [
+   [
+    "Combobox",
+    "Input is a combobox with aria-activedescendant; results are a listbox."
+   ]
+  ],
+  "do": "Show recent items when the query is empty.",
+  "dont": "Don’t hide destructive commands here without a confirm step."
+ },
+ "Card": {
+  "cat": "Data display",
+  "d": "Groups related content with an optional header and footer.",
+  "states": "Card",
+  "ex": [
+   [
+    "Panel",
+    "<div class=\"card\" style=\"width:340px\"><div class=\"card-h\"><h4>On call</h4><span class=\"badge sev-normal\" style=\"margin-left:auto\"><svg class=\"i\"><use href=\"#i-normal\"/></svg>Covered</span></div><div class=\"card-b\" style=\"font-size:var(--text-sm);color:var(--fg-muted)\">R. Iyer until 18:00, then A. Kaur.</div></div>",
+    "<Card title=\"On call\" action={<Badge severity=\"normal\">Covered</Badge>}>\n  R. Iyer until 18:00, then A. Kaur.\n</Card>"
+   ]
+  ],
+  "props": [
+   [
+    "title",
+    "ReactNode",
+    "none",
+    "Header text."
+   ],
+   [
+    "action",
+    "ReactNode",
+    "none",
+    "Header right side."
+   ],
+   [
+    "footer",
+    "ReactNode",
+    "none",
+    "Footer actions."
+   ]
+  ],
+  "a11y": [
+   [
+    "Headings",
+    "title renders a heading; set level with as."
+   ]
+  ],
+  "do": "One topic per card.",
+  "dont": "Don’t nest cards."
+ },
+ "Table": {
+  "cat": "Data display",
+  "d": "Rows of records with sorting, selection, bulk actions and row menus.",
+  "raw": "table",
+  "props": [
+   [
+    "columns",
+    "Column[]",
+    "required",
+    "Header, accessor, align, sortable."
+   ],
+   [
+    "data",
+    "T[]",
+    "required",
+    "Rows."
+   ],
+   [
+    "selectable",
+    "boolean",
+    "false",
+    "Checkbox column and bulk bar."
+   ],
+   [
+    "defaultSort",
+    "{key, dir}",
+    "severity desc",
+    "Worst first by default."
+   ],
+   [
+    "density",
+    "Density",
+    "inherit",
+    "Row height."
+   ],
+   [
+    "empty / error / loading",
+    "ReactNode | boolean",
+    "built-in",
+    "State slots."
+   ]
+  ],
+  "a11y": [
+   [
+    "Sorting",
+    "Sortable headers are buttons with aria-sort."
+   ],
+   [
+    "Numbers",
+    "Numeric columns align right in tabular figures."
+   ]
+  ],
+  "do": "Sort by severity, worst first, by default.",
+  "dont": "Don’t truncate the identifying column."
+ },
+ "Chart": {
+  "cat": "Data display",
+  "d": "Line, area and bar charts with threshold bands, hover readouts and legends. Used across the example dashboards.",
+  "ex": [
+   [
+    "Line with threshold",
+    "<div class=\"chart-wrap\" style=\"width:100%\"><svg class=\"chart\" data-chart=\"demo\" height=\"200\"></svg></div>",
+    "<Chart type=\"line\" data={latency} x=\"time\"\n  series={[{ key: 'p95', label: 'p95 latency' }]}\n  threshold={{ value: 400, label: 'limit 400 ms', severity: 'caution' }} />"
+   ]
+  ],
+  "props": [
+   [
+    "type",
+    "\"line\" | \"area\" | \"bar\"",
+    "\"line\"",
+    "Chart type."
+   ],
+   [
+    "series",
+    "{key, label, color?}[]",
+    "required",
+    "Up to 6 series."
+   ],
+   [
+    "threshold",
+    "{value, label, severity}",
+    "none",
+    "Dashed line and band."
+   ],
+   [
+    "unit",
+    "string",
+    "none",
+    "Shown in the readout."
+   ]
+  ],
+  "a11y": [
+   [
+    "Data table",
+    "Every chart has a hidden data table and an aria-label summary."
+   ]
+  ],
+  "do": "Show the threshold the line is judged against.",
+  "dont": "Don’t use more than 6 colours."
+ },
+ "Avatar": {
+  "cat": "Data display",
+  "d": "A person or team, with initials or an image and optional presence.",
+  "states": "Avatar",
+  "ex": [
+   [
+    "Group",
+    "<div class=\"avatars\"><span class=\"avatar\">PS</span><span class=\"avatar\">LT</span><span class=\"avatar\">+4</span></div>",
+    "<AvatarGroup max={2} people={team} />"
+   ]
+  ],
+  "props": [
+   [
+    "name",
+    "string",
+    "required",
+    "Used for initials and alt text."
+   ],
+   [
+    "status",
+    "\"online\" | \"away\"",
+    "none",
+    "Presence dot."
+   ]
+  ],
+  "a11y": [
+   [
+    "Name",
+    "Image alt or aria-label from name."
+   ]
+  ],
+  "do": "Show owners next to the entity they own.",
+  "dont": "Don’t rely on avatars alone; show the name nearby."
+ },
+ "Kbd": {
+  "cat": "Data display",
+  "d": "Keyboard keys and shortcuts.",
+  "states": "Kbd",
+  "ex": [
+   [
+    "Shortcut",
+    "<kbd>Ctrl</kbd><kbd>K</kbd>",
+    "<Kbd>Ctrl</Kbd><Kbd>K</Kbd>"
+   ]
+  ],
+  "props": [
+   [
+    "children",
+    "string",
+    "required",
+    "Key name."
+   ]
+  ],
+  "a11y": [
+   [
+    "Semantics",
+    "Renders kbd."
+   ]
+  ],
+  "do": "Show the platform key: Ctrl on Windows, ⌘ on Mac.",
+  "dont": "Don’t use for regular code."
+ },
+ "Code": {
+  "cat": "Data display",
+  "d": "Inline code and copyable code blocks.",
+  "ex": [
+   [
+    "Block",
+    "<div class=\"codeblock\" style=\"width:360px\"><div class=\"cb-h\">Terminal</div><pre>npm install @calmon/react</pre></div>",
+    "<CodeBlock language=\"bash\" copyable>npm install @calmon/react</CodeBlock>"
+   ]
+  ],
+  "props": [
+   [
+    "language",
+    "string",
+    "\"tsx\"",
+    "Highlighting."
+   ],
+   [
+    "copyable",
+    "boolean",
+    "true",
+    "Copy button."
+   ]
+  ],
+  "a11y": [
+   [
+    "Copy",
+    "Copy button announces “Copied”."
+   ]
+  ],
+  "do": "Keep lines short enough to read without scrolling.",
+  "dont": "Don’t use for prose emphasis."
+ },
+ "Sparkline": {
+  "cat": "Data display",
+  "d": "A word-sized trend line, with an optional threshold.",
+  "states": "Sparkline",
+  "ex": [
+   [
+    "With threshold",
+    "<svg class=\"spark sev-caution\" data-d=\"30,32,31,35,38,42,41,46,49,52,55,58\" data-th=\"45\" style=\"width:220px;height:36px\"></svg>",
+    "<Sparkline data={series} threshold={45} severity=\"caution\" />"
+   ]
+  ],
+  "props": [
+   [
+    "data",
+    "number[]",
+    "required",
+    "Values."
+   ],
+   [
+    "threshold",
+    "number",
+    "none",
+    "Dashed reference line."
+   ],
+   [
+    "area",
+    "boolean",
+    "false",
+    "Fills under the line."
+   ]
+  ],
+  "a11y": [
+   [
+    "Label",
+    "aria-label describes the trend: “rising, 30 to 58”."
+   ]
+  ],
+  "do": "Pair with the current value.",
+  "dont": "Don’t add axes. Use Chart."
+ },
+ "HealthScore": {
+  "cat": "Monitoring",
+  "d": "One number from many signals, with the factors that moved it.",
+  "pattern": "composite-score",
+  "ex": [
+   [
+    "Ring",
+    "<div data-hs=\"full\" style=\"width:100%\"></div>",
+    "<HealthScore value={62} factors={factors} bands={{ advisory: 85, caution: 70, critical: 50 }} />"
+   ]
+  ],
+  "props": [
+   [
+    "value",
+    "number",
+    "required",
+    "0–100."
+   ],
+   [
+    "factors",
+    "{label, weight, impact, severity}[]",
+    "required",
+    "Breakdown."
+   ],
+   [
+    "bands",
+    "object",
+    "default bands",
+    "Score to severity mapping."
+   ]
+  ],
+  "a11y": [
+   [
+    "Text",
+    "Score, band and top factor are given as text, not just the ring."
+   ]
+  ],
+  "do": "Show the biggest factor next to the score.",
+  "dont": "Don’t show a score without its factors."
+ },
+ "VitalTile": {
+  "cat": "Monitoring",
+  "d": "A metric with unit, trend and the threshold it’s judged against.",
+  "pattern": "composite-score",
+  "ex": [
+   [
+    "Tile",
+    "<div style=\"width:300px\" data-vt=\"0\"></div>",
+    "<VitalTile label=\"p95 latency\" value={412} unit=\"ms\" data={series} threshold={{ value: 400, severity: 'caution' }} />"
+   ]
+  ],
+  "props": [
+   [
+    "label",
+    "string",
+    "required",
+    "Metric name."
+   ],
+   [
+    "value",
+    "number",
+    "required",
+    "Current value."
+   ],
+   [
+    "unit",
+    "string",
+    "none",
+    "Unit."
+   ],
+   [
+    "threshold",
+    "{value, severity}",
+    "none",
+    "Limit."
+   ],
+   [
+    "density",
+    "Density",
+    "inherit",
+    "Size."
+   ]
+  ],
+  "a11y": [
+   [
+    "Status",
+    "Severity label is text inside the tile."
+   ]
+  ],
+  "do": "Show the limit, not just the value.",
+  "dont": "Don’t colour the tile without a label."
+ },
+ "StationGrid": {
+  "cat": "Monitoring",
+  "d": "A worst-first grid of entity tiles for overview screens.",
+  "pattern": "alarm-fatigue",
+  "ex": [
+   [
+    "Grid",
+    "<div class=\"station\" data-station=\"doc\" style=\"width:100%\"></div>",
+    "<StationGrid items={services} sort=\"worst-first\" columns={4} />"
+   ]
+  ],
+  "props": [
+   [
+    "items",
+    "StationItem[]",
+    "required",
+    "Entities with score and severity."
+   ],
+   [
+    "sort",
+    "\"worst-first\" | \"name\"",
+    "\"worst-first\"",
+    "Order."
+   ],
+   [
+    "columns",
+    "number",
+    "auto",
+    "Columns."
+   ]
+  ],
+  "a11y": [
+   [
+    "Order",
+    "DOM order matches visual order so screen readers hear the worst first."
+   ]
+  ],
+  "do": "Keep normal tiles quiet.",
+  "dont": "Don’t animate anything but critical."
+ },
+ "Timeline": {
+  "cat": "Monitoring",
+  "d": "One ordered record per entity: alerts, deploys, notes and people.",
+  "pattern": "timeline",
+  "ex": [
+   [
+    "Entity timeline",
+    "<ul class=\"tl\" data-tl=\"short\" style=\"width:420px\"></ul>",
+    "<Timeline events={events} groupBy=\"day\" />"
+   ]
+  ],
+  "props": [
+   [
+    "events",
+    "TimelineEvent[]",
+    "required",
+    "Ordered events."
+   ],
+   [
+    "groupBy",
+    "\"day\" | \"none\"",
+    "\"day\"",
+    "Day headers."
+   ]
+  ],
+  "a11y": [
+   [
+    "List",
+    "Ordered list with time elements."
+   ]
+  ],
+  "do": "Include who did it.",
+  "dont": "Don’t split one entity’s history across tabs."
+ },
+ "LimitedNumberInput": {
+  "cat": "Safety",
+  "d": "Number entry with a soft limit that asks for a reason and a hard limit that blocks.",
+  "pattern": "limits",
+  "ex": [
+   [
+    "Static states",
+    "<div class=\"field\" style=\"width:220px\"><label>Soft limit</label><div class=\"numwrap\"><input class=\"input is-warn\" value=\"40\"><span class=\"unit\">%</span></div><span class=\"warn\"><svg class=\"i\"><use href=\"#i-caution\"/></svg>Higher than usual, add justification.</span></div><div class=\"field\" style=\"width:220px\"><label>Hard limit</label><div class=\"numwrap\"><input class=\"input is-error\" value=\"75\"><span class=\"unit\">%</span></div><span class=\"err\"><svg class=\"i\"><use href=\"#i-critical\"/></svg>Maximum allowed is 60%.</span></div>",
+    "<LimitedNumberInput label=\"Shift traffic to canary\" unit=\"%\"\n  softMax={25} hardMax={60} requireJustification />"
+   ]
+  ],
+  "props": [
+   [
+    "softMin / softMax",
+    "number",
+    "none",
+    "Warn and ask for a reason."
+   ],
+   [
+    "hardMin / hardMax",
+    "number",
+    "none",
+    "Block."
+   ],
+   [
+    "requireJustification",
+    "boolean",
+    "true",
+    "Shows a reason field past soft limits."
+   ]
+  ],
+  "a11y": [
+   [
+    "Messages",
+    "Warnings and errors are announced via aria-live."
+   ]
+  ],
+  "do": "Show the usual range in the hint.",
+  "dont": "Don’t silently clamp values."
+ },
+ "PausePoint": {
+  "cat": "Safety",
+  "d": "A short checklist before a risky action. The action unlocks when every item is checked.",
+  "pattern": "pause-points",
+  "ex": [
+   [
+    "Compact",
+    "<div class=\"stack\" style=\"gap:8px\"><label class=\"check\"><input type=\"checkbox\" checked>Diff reviewed</label><label class=\"check\"><input type=\"checkbox\">Rollback linked</label><button class=\"btn btn-primary btn-sm\" disabled style=\"align-self:flex-start\">Publish</button></div>",
+    "<PausePoint title=\"Before you publish\" action=\"Publish\" onConfirm={publish}\n  items={['Diff reviewed by a second person','Rollback plan is linked']} />"
+   ]
+  ],
+  "props": [
+   [
+    "items",
+    "(string | {label, evidence})[]",
+    "required",
+    "3–5 items."
+   ],
+   [
+    "action",
+    "string",
+    "required",
+    "Button label."
+   ]
+  ],
+  "a11y": [
+   [
+    "Progress",
+    "“2 of 4 checked” is live text."
+   ]
+  ],
+  "do": "Pre-fill items the system can verify.",
+  "dont": "Don’t exceed five items."
+ },
+ "ConfirmTarget": {
+  "cat": "Safety",
+  "d": "Type the exact name to delete, with the environment shown beside it.",
+  "pattern": "confirm-target",
+  "ex": [
+   [
+    "Compact",
+    "<div class=\"stack\" style=\"gap:8px;width:280px\"><div class=\"row\" style=\"gap:8px\"><span class=\"mono\" style=\"font-size:12px\">orders-eu</span><span class=\"badge env solid sev-critical\">PROD</span></div><input class=\"input mono\" value=\"orders-e\" style=\"font-size:13px\"><button class=\"btn btn-critical btn-sm\" disabled style=\"align-self:flex-start\">Delete database</button></div>",
+    "<ConfirmTarget name=\"orders-prod-eu\" env=\"prod\" onConfirm={remove}>\n  <Button intent=\"danger\">Delete database</Button>\n</ConfirmTarget>"
+   ]
+  ],
+  "props": [
+   [
+    "name",
+    "string",
+    "required",
+    "Exact text to type."
+   ],
+   [
+    "env",
+    "\"prod\" | \"staging\" | \"dev\"",
+    "required",
+    "Environment badge."
+   ]
+  ],
+  "a11y": [
+   [
+    "Paste",
+    "Paste is allowed; the match is exact and case-sensitive."
+   ]
+  ],
+  "do": "Use on anything that can’t be undone.",
+  "dont": "Don’t use for reversible actions. Offer Undo."
+ }
+}
