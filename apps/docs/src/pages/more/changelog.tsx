@@ -8,7 +8,27 @@ export default function Changelog() {
   return (
     <>
       <h2 className="flex items-center gap-3">
-        {VERSION}
+        0.1.1
+        {VERSION === '0.1.1' && <Badge intent="primary">Latest</Badge>}
+      </h2>
+      <Bullets>
+        <li>
+          <b>Small screens.</b> Components that overflowed at 320 px now fit: the NumberInput stepper, the Table bulk bar and its
+          hidden text, the HealthScore factors, the PausePoint footer, Pagination, the Chart data table, and the action rows of
+          Dialog, Drawer, Card, Banner and Toast.
+        </li>
+        <li>
+          <b>StationGrid columns</b> is now a ceiling: tiles never get narrower than 130 px, so a phone gets fewer columns
+          instead of squeezed tiles.
+        </li>
+        <li>
+          <b>Docs.</b> The home page no longer clips inside the phone previews, and the README on npm links to the real
+          <code> llms.txt</code>.
+        </li>
+      </Bullets>
+
+      <h2 className="flex items-center gap-3">
+        0.1.0
         <Badge intent="primary">First release</Badge>
       </h2>
       <Bullets>

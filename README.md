@@ -41,7 +41,7 @@ export default function App() {
 }
 ```
 
-Tell your agent: "Use Pikore UI. Before writing code, read `https://<user>.github.io/<repo>/llms.txt`."
+Tell your agent: "Use Pikore UI. Before writing code, read `https://imsagardebnath.github.io/pikore-ui/llms.txt`."
 
 ## Deploy the docs to GitHub Pages
 

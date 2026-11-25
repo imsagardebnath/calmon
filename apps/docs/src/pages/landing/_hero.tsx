@@ -20,7 +20,7 @@ function Announce() {
         New
       </Badge>
       <span className="truncate">
-        v{VERSION}, the first release: {COMPONENT_COUNT} components
+        v{VERSION}: {COMPONENT_COUNT} components, now tuned for phones
       </span>
       <ChevronRightIcon className="size-3.5 shrink-0" aria-hidden="true" />
     </a>
