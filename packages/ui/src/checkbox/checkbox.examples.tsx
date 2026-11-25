@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Field } from '@openvanta/calmon-react/field'
-import { Checkbox, CheckboxGroup } from '@openvanta/calmon-react/checkbox'
+import { Field } from '@openvanta/pikore-react/field'
+import { Checkbox, CheckboxGroup } from '@openvanta/pikore-react/checkbox'
 
 /** Related checkboxes go in a CheckboxGroup, which renders a fieldset with a legend. */
 export function Group() {

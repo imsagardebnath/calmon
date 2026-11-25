@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Kbd } from '@openvanta/calmon-react/kbd'
-import { InfoIcon, PauseIcon } from '@openvanta/calmon-react/icons'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Kbd } from '@openvanta/pikore-react/kbd'
+import { InfoIcon, PauseIcon } from '@openvanta/pikore-react/icons'
 import { A, B, Bullets, C, Callout, ComponentLinks, H2, Lead, Page, PassBadge, TableWrap, Td, Th } from './_kit.tsx'
 import {
   CONTRAST_PAIRS,

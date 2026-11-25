@@ -11,7 +11,7 @@ import {
   RoomIcon,
   TargetIcon,
   TimelineIcon,
-} from '@openvanta/calmon-react/icons'
+} from '@openvanta/pikore-react/icons'
 import type { NavIcon } from '../nav.ts'
 
 const SECTION_ICONS = {

@@ -63,7 +63,7 @@ export function Dialog({
       {...rest}
       {...modal.props}
       className={cn(
-        'm-auto max-h-[calc(100dvh-32px)] max-w-[calc(100vw-32px)] open:animate-calmon-dialog',
+        'm-auto max-h-[calc(100dvh-32px)] max-w-[calc(100vw-32px)] open:animate-pikore-dialog',
         MODAL,
         WIDTH[size],
         className,

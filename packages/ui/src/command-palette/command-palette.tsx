@@ -140,7 +140,7 @@ const KBD =
 
 const DIALOG =
   'm-0 mx-auto mt-[12vh] w-[640px] max-w-[calc(100vw-32px)] overflow-visible border-0 bg-transparent p-0 text-fg ' +
-  'open:animate-calmon-dialog backdrop:bg-[color-mix(in_oklab,var(--fg),transparent_82%)] backdrop:backdrop-blur-[2px] ' +
+  'open:animate-pikore-dialog backdrop:bg-[color-mix(in_oklab,var(--fg),transparent_82%)] backdrop:backdrop-blur-[2px] ' +
   'dark:backdrop:bg-[rgb(0_0_0/.55)]'
 
 type BodyProps = {

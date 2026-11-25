@@ -31,7 +31,7 @@ export const STATIC_SECTIONS: NavSection[] = [
         description:
           'A React and Tailwind design system for software people rely on, built on safety principles for high-stakes work.',
       },
-      { id: 'installation', title: 'Installation', description: 'Add Calmon to a React project with Tailwind CSS v4.' },
+      { id: 'installation', title: 'Installation', description: 'Add Pikore UI to a React project with Tailwind CSS v4.' },
       {
         id: 'theming',
         title: 'Theming',
@@ -40,7 +40,7 @@ export const STATIC_SECTIONS: NavSection[] = [
       {
         id: 'agents',
         title: 'For AI agents',
-        description: 'Plain-text docs, rules and a prompt so coding agents build correctly with Calmon.',
+        description: 'Plain-text docs, rules and a prompt so coding agents build correctly with Pikore UI.',
       },
     ],
   },
@@ -108,13 +108,13 @@ export const DASHBOARDS_SECTION: NavSection = {
   name: 'Dashboards',
   icon: 'room',
   pages: [
-    { id: 'dashboards', title: 'Example dashboards', description: 'Four complete screens built only from Calmon components.' },
+    { id: 'dashboards', title: 'Example dashboards', description: 'Four complete screens built only from Pikore UI components.' },
     { id: 'responsive', title: 'Responsive previews', description: 'Home and docs at phone width.' },
     { id: 'changelog', title: 'Changelog', description: 'What changed in each release.' },
     {
       id: 'license',
       title: 'License',
-      description: 'Calmon is open source under the MIT license.',
+      description: 'Pikore UI is open source under the MIT license.',
     },
   ],
 }

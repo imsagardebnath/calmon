@@ -17,7 +17,7 @@ const STATS = [
 
 export function Stats() {
   return (
-    <Section label="Calmon in numbers" flush>
+    <Section label="Pikore UI in numbers" flush>
       <dl className="m-0 grid grid-cols-2 gap-x-6 gap-y-8 py-10 min-[56.25rem]:grid-cols-5 min-[56.25rem]:gap-x-0 min-[56.25rem]:divide-x min-[56.25rem]:divide-border min-[56.25rem]:py-12">
         {STATS.map((s, i) => (
           <div

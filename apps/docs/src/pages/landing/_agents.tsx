@@ -1,9 +1,9 @@
 // "Agent-ready from the first commit": the design's `.agent` section. The llms.txt excerpt is the first lines of the
 // real file served next to the site (fetched, with a fallback while it loads), shown in the library's Code component.
 import type { ReactNode } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Code } from '@openvanta/calmon-react/code'
-import { ArrowRIcon, BotIcon, FileIcon, LayersIcon, ListCheckIcon } from '@openvanta/calmon-react/icons'
+import { Button } from '@openvanta/pikore-react/button'
+import { Code } from '@openvanta/pikore-react/code'
+import { ArrowRIcon, BotIcon, FileIcon, LayersIcon, ListCheckIcon } from '@openvanta/pikore-react/icons'
 import { PACKAGE, siteUrl } from '../../site/config.ts'
 import { useTextFile } from '../../site/hooks.ts'
 import { docsHref } from '../../site/router.ts'
@@ -12,7 +12,7 @@ import { Section, SectionHead } from './_ui.tsx'
 const BASE = import.meta.env.BASE_URL
 
 /** Shown until llms.txt has loaded, and if it cannot be fetched. Mirrors the start of the real file. */
-const FALLBACK = `# Calmon
+const FALLBACK = `# Pikore UI
 
 > React + Tailwind CSS v4 components for operational software: monitoring, incident response, admin consoles.
 
@@ -59,7 +59,7 @@ function Point({ icon, children }: { icon: ReactNode; children: ReactNode }) {
 
 export function Agents() {
   const llms = useTextFile('llms.txt')
-  const prompt = `Build this UI with Calmon (${PACKAGE}). Read ${siteUrl('llms.txt')} first, follow its rules, and read the doc for each component you use before writing code. Use severity (normal, info, advisory, caution, critical) or intent (primary, secondary, success, warning, danger) props instead of colours. Wrap every destructive action in ConfirmTarget and every risky change in PausePoint. Do not guess props.`
+  const prompt = `Build this UI with Pikore UI (${PACKAGE}). Read ${siteUrl('llms.txt')} first, follow its rules, and read the doc for each component you use before writing code. Use severity (normal, info, advisory, caution, critical) or intent (primary, secondary, success, warning, danger) props instead of colours. Wrap every destructive action in ConfirmTarget and every risky change in PausePoint. Do not guess props.`
 
   return (
     <Section id="agents">
@@ -83,7 +83,7 @@ export function Agents() {
               <b className="font-semibold text-fg">Stable token names</b> so generated code survives a theme change.
             </Point>
             <Point icon={<BotIcon className="size-4" />}>
-              <b className="font-semibold text-fg">A copyable prompt</b> that tells your agent how to build with Calmon.
+              <b className="font-semibold text-fg">A copyable prompt</b> that tells your agent how to build with Pikore UI.
             </Point>
           </ul>
           <div className="mt-6 flex flex-wrap gap-2">

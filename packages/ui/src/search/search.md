@@ -2,7 +2,7 @@
 name: Search
 category: Forms
 principle: none
-import: "@openvanta/calmon-react/search"
+import: "@openvanta/pikore-react/search"
 status: stable
 related: [Input, CommandPalette]
 description: A search field with clear, loading and keyboard shortcut, plus live suggestions grouped by type. For site-wide commands, see CommandPalette.

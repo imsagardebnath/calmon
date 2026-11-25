@@ -2,7 +2,7 @@
 name: Menu
 category: Actions
 principle: none
-import: "@openvanta/calmon-react/menu"
+import: "@openvanta/pikore-react/menu"
 status: stable
 related: [IconButton, Button, Popover, Dialog]
 description: A list of actions that opens from a button. Destructive items sit last, after a divider.

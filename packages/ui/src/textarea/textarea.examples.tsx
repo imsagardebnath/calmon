@@ -1,5 +1,5 @@
-import { Field } from '@openvanta/calmon-react/field'
-import { Textarea } from '@openvanta/calmon-react/textarea'
+import { Field } from '@openvanta/pikore-react/field'
+import { Textarea } from '@openvanta/pikore-react/textarea'
 
 /** Ask for a reason when a change needs one later. It grows with the text, up to maxRows. */
 export function Justification() {

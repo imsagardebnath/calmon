@@ -2,7 +2,7 @@
 name: Switch
 category: Forms
 principle: none
-import: "@openvanta/calmon-react/switch"
+import: "@openvanta/pikore-react/switch"
 status: stable
 related: [Checkbox, Radio, Field]
 description: Turns a setting on or off immediately, with no save step.

@@ -1,10 +1,10 @@
 // "Install in under a minute" (three steps with code) and the closing call to action.
 import { useState, type ReactNode } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Code } from '@openvanta/calmon-react/code'
-import { ArrowRIcon, GithubIcon } from '@openvanta/calmon-react/icons'
-import { Kbd } from '@openvanta/calmon-react/kbd'
-import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/calmon-react/tabs'
+import { Button } from '@openvanta/pikore-react/button'
+import { Code } from '@openvanta/pikore-react/code'
+import { ArrowRIcon, GithubIcon } from '@openvanta/pikore-react/icons'
+import { Kbd } from '@openvanta/pikore-react/kbd'
+import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/pikore-react/tabs'
 import { PACKAGE, REPO_URL } from '../../site/config.ts'
 import { docsHref } from '../../site/router.ts'
 import { Section, SectionHead } from './_ui.tsx'
@@ -19,13 +19,13 @@ const MANAGERS = [
 const STYLES = `@import "tailwindcss";
 @import "${PACKAGE}/styles.css";`
 
-const APP = `import { CalmonProvider, Button } from '${PACKAGE}'
+const APP = `import { PikoreProvider, Button } from '${PACKAGE}'
 
 export default function App() {
   return (
-    <CalmonProvider theme="system">
+    <PikoreProvider theme="system">
       <Button variant="primary">Save changes</Button>
-    </CalmonProvider>
+    </PikoreProvider>
   )
 }`
 
@@ -92,7 +92,7 @@ export function Install() {
             n={3}
             title={
               <>
-                Wrap your app in <code className="rounded-[5px] bg-surface-sunken px-1.5 py-px font-mono text-[.84em] shadow-[inset_0_0_0_1px_var(--border)]">CalmonProvider</code> and start with a Button.
+                Wrap your app in <code className="rounded-[5px] bg-surface-sunken px-1.5 py-px font-mono text-[.84em] shadow-[inset_0_0_0_1px_var(--border)]">PikoreProvider</code> and start with a Button.
               </>
             }
           >

@@ -35,7 +35,7 @@ const RULE = "before:absolute before:inset-y-0 before:left-0 before:w-[3px] befo
 
 /** Critical tiles get a tinted face and a ring that pulses once in a while. Reduced motion turns the pulse off. */
 const CRITICAL =
-  "border-tone-border bg-tone-soft after:pointer-events-none after:absolute after:inset-0 after:rounded-[12px] after:opacity-0 after:animate-calmon-crit after:shadow-[inset_0_0_0_1px_var(--critical)] after:content-[''] motion-reduce:after:animate-none"
+  "border-tone-border bg-tone-soft after:pointer-events-none after:absolute after:inset-0 after:rounded-[12px] after:opacity-0 after:animate-pikore-crit after:shadow-[inset_0_0_0_1px_var(--critical)] after:content-[''] motion-reduce:after:animate-none"
 
 const CLICKABLE = 'cursor-pointer hover:shadow-mid'
 

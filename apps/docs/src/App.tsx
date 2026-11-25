@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { Drawer } from '@openvanta/calmon-react/drawer'
+import { Drawer } from '@openvanta/pikore-react/drawer'
 import { ComponentPage } from './site/ComponentPage.tsx'
 import { DocsLayout } from './site/DocsLayout.tsx'
 import { Footer } from './site/Footer.tsx'
@@ -14,7 +14,7 @@ import { docsHref, scrollToAnchor, useRoute, type Route } from './site/router.ts
 
 const Landing = lazy(() => import('./pages/landing/index.tsx'))
 
-const HOME_TITLE = 'Calmon · Calm interfaces for systems that can’t fail'
+const HOME_TITLE = 'Pikore UI · Calm interfaces for systems that can’t fail'
 
 /**
  * The body of a docs page: generated for components, a lazy file for static pages. While a file is missing, a
@@ -42,7 +42,7 @@ export function App() {
 
   // Title, scroll position, recent pages and the mobile menu follow the route.
   useEffect(() => {
-    document.title = route.kind === 'home' ? HOME_TITLE : page ? `${page.title} · Calmon` : 'Page not found · Calmon'
+    document.title = route.kind === 'home' ? HOME_TITLE : page ? `${page.title} · Pikore UI` : 'Page not found · Pikore UI'
     setAnnouncement(document.title)
     if (route.kind === 'docs' && route.anchor) scrollToAnchor(route.anchor)
     else window.scrollTo(0, 0)
@@ -97,7 +97,7 @@ export function App() {
       />
       {pending ? (
         <div aria-hidden="true" className="pointer-events-none fixed inset-x-0 top-[60px] z-[59] h-0.5 overflow-hidden">
-          <div className="h-full w-1/4 animate-calmon-indet bg-accent" />
+          <div className="h-full w-1/4 animate-pikore-indet bg-accent" />
         </div>
       ) : null}
       {content}

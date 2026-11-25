@@ -25,7 +25,7 @@ describe('ProgressBar', () => {
     render(<ProgressBar aria-label="Loading" />)
     const bar = screen.getByRole('progressbar')
     expect(bar.hasAttribute('aria-valuenow')).toBe(false)
-    expect((bar.firstElementChild as HTMLElement).className).toContain('animate-calmon-indet')
+    expect((bar.firstElementChild as HTMLElement).className).toContain('animate-pikore-indet')
   })
 
   it('shows the label and the number, and uses the label as the name', () => {

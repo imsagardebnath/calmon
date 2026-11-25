@@ -38,10 +38,10 @@ describe('cn', () => {
   it('lets a radius, shadow, animation or easing override replace the default', () => {
     expect(cn('rounded-control', 'rounded-card')).toBe('rounded-card')
     expect(cn('shadow-low', 'shadow-high')).toBe('shadow-high')
-    expect(cn('animate-calmon-spin', 'animate-calmon-pop')).toBe('animate-calmon-pop')
-    expect(cn('animate-calmon-toast-out', 'animate-none')).toBe('animate-none')
-    expect(cn('ease-calmon', 'ease-in')).toBe('ease-in')
-    expect(cn('ease-in', 'ease-calmon')).toBe('ease-calmon')
+    expect(cn('animate-pikore-spin', 'animate-pikore-pop')).toBe('animate-pikore-pop')
+    expect(cn('animate-pikore-toast-out', 'animate-none')).toBe('animate-none')
+    expect(cn('ease-pikore', 'ease-in')).toBe('ease-in')
+    expect(cn('ease-in', 'ease-pikore')).toBe('ease-pikore')
   })
 })
 

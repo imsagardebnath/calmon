@@ -1,8 +1,8 @@
 export {
-  CalmonProvider,
-  useCalmon,
-  type CalmonProviderProps,
-  type CalmonContextValue,
+  PikoreProvider,
+  usePikore,
+  type PikoreProviderProps,
+  type PikoreContextValue,
   type Theme,
   type Density,
-} from './calmon-provider.tsx'
+} from './pikore-provider.tsx'

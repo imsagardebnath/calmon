@@ -1,4 +1,4 @@
-import { Badge } from '@openvanta/calmon-react/badge'
+import { Badge } from '@openvanta/pikore-react/badge'
 
 /** Each severity has its own icon shape (check, i, diamond, triangle, octagon), so colour is never the only signal. */
 export function Severity() {

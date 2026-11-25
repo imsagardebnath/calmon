@@ -1358,8 +1358,8 @@
   "ex": [
    [
     "Block",
-    "<div class=\"codeblock\" style=\"width:360px\"><div class=\"cb-h\">Terminal</div><pre>npm install @openvanta/calmon-react</pre></div>",
-    "<CodeBlock language=\"bash\" copyable>npm install @openvanta/calmon-react</CodeBlock>"
+    "<div class=\"codeblock\" style=\"width:360px\"><div class=\"cb-h\">Terminal</div><pre>npm install @openvanta/pikore-react</pre></div>",
+    "<CodeBlock language=\"bash\" copyable>npm install @openvanta/pikore-react</CodeBlock>"
    ]
   ],
   "props": [

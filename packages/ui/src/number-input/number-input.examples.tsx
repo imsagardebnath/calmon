@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Field } from '@openvanta/calmon-react/field'
-import { NumberInput } from '@openvanta/calmon-react/number-input'
+import { Field } from '@openvanta/pikore-react/field'
+import { NumberInput } from '@openvanta/pikore-react/number-input'
 
 /** A unit sits after the value. min and max are hard bounds: typing outside them clamps on blur. */
 export function WithUnit() {

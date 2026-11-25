@@ -13,7 +13,7 @@ const SIZE = {
  * The spinning ring: a faint track with an accent arc. The loading Toast draws the same ring, so the two
  * look alike. Internal: it is not exported from the package.
  */
-export const SPIN_RING = 'animate-calmon-spin rounded-full border-accent/20 border-t-accent'
+export const SPIN_RING = 'animate-pikore-spin rounded-full border-accent/20 border-t-accent'
 
 export type SpinnerProps = Omit<ComponentPropsWithRef<'span'>, 'children'> & {
   /** Diameter: 16, 20 or 32px. Default `md`. */

@@ -317,7 +317,7 @@ export function Search<T extends SearchItem = SearchItem>({
           {busy ? (
             <span
               aria-hidden="true"
-              className="size-3.5 animate-calmon-spin rounded-full border-2 border-accent/20 border-t-accent"
+              className="size-3.5 animate-pikore-spin rounded-full border-2 border-accent/20 border-t-accent"
             />
           ) : null}
           {shortcut && !value && !disabled ? <kbd className={KBD}>{shortcut}</kbd> : null}
@@ -340,7 +340,7 @@ export function Search<T extends SearchItem = SearchItem>({
           hidden={!shown}
           onMouseDown={(e) => e.preventDefault()}
           onBlur={closeUnlessWithin}
-          className="absolute inset-x-0 top-[calc(100%+6px)] z-30 max-h-[340px] animate-calmon-dialog overflow-auto rounded-xl bg-surface-raised p-1.5 shadow-[0_0_0_1px_var(--border),var(--shadow-3)]"
+          className="absolute inset-x-0 top-[calc(100%+6px)] z-30 max-h-[340px] animate-pikore-dialog overflow-auto rounded-xl bg-surface-raised p-1.5 shadow-[0_0_0_1px_var(--border),var(--shadow-3)]"
         >
           {showRecent ? (
             <div className={cn('flex justify-between', HEAD)}>

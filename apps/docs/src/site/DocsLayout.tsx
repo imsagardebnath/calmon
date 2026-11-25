@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useRef, useState, type ReactNode } from 'react'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Breadcrumbs, type BreadcrumbItem } from '@openvanta/calmon-react/breadcrumbs'
-import { ArrowRIcon, ChevronLeftIcon } from '@openvanta/calmon-react/icons'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Breadcrumbs, type BreadcrumbItem } from '@openvanta/pikore-react/breadcrumbs'
+import { ArrowRIcon, ChevronLeftIcon } from '@openvanta/pikore-react/icons'
 import { ComponentMeta } from './ComponentPage.tsx'
 import { REPO_URL, VERSION } from './config.ts'
 import { SidebarNav } from './Sidebar.tsx'
@@ -210,7 +210,7 @@ export function DocsLayout({ page, children }: { page: DocPage; children: ReactN
             ) : null}
           </nav>
           <div className="doc-foot">
-            <span>Calmon v{VERSION}</span>
+            <span>Pikore UI v{VERSION}</span>
             {editHref ? (
               <a href={editHref} target="_blank" rel="noreferrer">
                 Edit this page

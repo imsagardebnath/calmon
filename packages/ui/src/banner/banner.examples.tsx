@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Banner } from '@openvanta/calmon-react/banner'
-import { Button } from '@openvanta/calmon-react/button'
+import { Banner } from '@openvanta/pikore-react/banner'
+import { Button } from '@openvanta/pikore-react/button'
 
 /** A message across a section, with one action. The title says what happened, the body says why it matters. */
 export function WithAction() {

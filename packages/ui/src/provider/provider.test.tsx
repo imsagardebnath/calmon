@@ -1,6 +1,6 @@
 import { act, render, screen } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { CalmonProvider, useCalmon, type CalmonContextValue, type CalmonProviderProps } from './index.ts'
+import { PikoreProvider, usePikore, type PikoreContextValue, type PikoreProviderProps } from './index.ts'
 
 const html = document.documentElement
 
@@ -25,32 +25,32 @@ function stubMatchMedia(dark: boolean) {
 }
 
 /** Renders the context into the page and keeps the latest value for the tests to call. */
-function setup(props: CalmonProviderProps = {}) {
-  const renders: CalmonContextValue[] = []
+function setup(props: PikoreProviderProps = {}) {
+  const renders: PikoreContextValue[] = []
   function Probe() {
-    const calmon = useCalmon()
-    renders.push(calmon)
+    const pikore = usePikore()
+    renders.push(pikore)
     return (
       <p data-testid="probe">
-        {calmon.theme}|{calmon.resolvedTheme}|{calmon.density}
+        {pikore.theme}|{pikore.resolvedTheme}|{pikore.density}
       </p>
     )
   }
   const view = render(
-    <CalmonProvider {...props}>
+    <PikoreProvider {...props}>
       <Probe />
-    </CalmonProvider>,
+    </PikoreProvider>,
   )
   return {
     ...view,
     renders,
     api: () => renders[renders.length - 1]!,
     text: () => screen.getByTestId('probe').textContent,
-    rerenderWith: (next: CalmonProviderProps) =>
+    rerenderWith: (next: PikoreProviderProps) =>
       view.rerender(
-        <CalmonProvider {...next}>
+        <PikoreProvider {...next}>
           <Probe />
-        </CalmonProvider>,
+        </PikoreProvider>,
       ),
   }
 }
@@ -73,14 +73,14 @@ afterEach(() => {
   Reflect.deleteProperty(window, 'matchMedia')
 })
 
-describe('useCalmon', () => {
+describe('usePikore', () => {
   it('throws outside the provider', () => {
     vi.spyOn(console, 'error').mockImplementation(() => {})
     function Outside() {
-      useCalmon()
+      usePikore()
       return null
     }
-    expect(() => render(<Outside />)).toThrow(/CalmonProvider/)
+    expect(() => render(<Outside />)).toThrow(/PikoreProvider/)
   })
 })
 
@@ -128,7 +128,7 @@ describe('theme', () => {
 
   it('does not strip a dark class that was set before hydration while it works out the system theme', () => {
     stubMatchMedia(true)
-    localStorage.setItem('calmon-theme', 'system')
+    localStorage.setItem('pikore-theme', 'system')
     html.classList.add('dark')
     const watch = watchHtmlClass()
     setup()
@@ -139,7 +139,7 @@ describe('theme', () => {
 
   it('does not apply the theme prop first when a different choice was remembered', () => {
     stubMatchMedia(false)
-    localStorage.setItem('calmon-theme', 'light')
+    localStorage.setItem('pikore-theme', 'light')
     const watch = watchHtmlClass()
     const view = setup({ theme: 'dark' })
     expect(watch.take()).toEqual([])
@@ -152,7 +152,7 @@ describe('theme', () => {
 describe('persistence', () => {
   it('renders the theme prop first, then switches to the remembered choice after mount', () => {
     stubMatchMedia(false)
-    localStorage.setItem('calmon-theme', 'dark')
+    localStorage.setItem('pikore-theme', 'dark')
     const view = setup({ theme: 'light' })
     // The first render must match what a server (which has no localStorage) renders.
     expect(view.renders[0]!.theme).toBe('light')
@@ -165,14 +165,14 @@ describe('persistence', () => {
     const view = setup({ theme: 'light', storageKey: 'my-theme' })
     act(() => view.api().setTheme('dark'))
     expect(localStorage.getItem('my-theme')).toBe('dark')
-    expect(localStorage.getItem('calmon-theme')).toBeNull()
+    expect(localStorage.getItem('pikore-theme')).toBeNull()
     expect(view.text()).toBe('dark|dark|comfortable')
     expect(html.classList.contains('dark')).toBe(true)
   })
 
   it('does not read or write storage when storageKey is false', () => {
     stubMatchMedia(false)
-    localStorage.setItem('calmon-theme', 'dark')
+    localStorage.setItem('pikore-theme', 'dark')
     const setItem = vi.spyOn(Storage.prototype, 'setItem')
     const view = setup({ theme: 'light', storageKey: false })
     expect(view.text()).toBe('light|light|comfortable')
@@ -183,7 +183,7 @@ describe('persistence', () => {
 
   it('ignores a remembered value that is not a theme', () => {
     stubMatchMedia(false)
-    localStorage.setItem('calmon-theme', 'purple')
+    localStorage.setItem('pikore-theme', 'purple')
     const view = setup({ theme: 'light' })
     expect(view.text()).toBe('light|light|comfortable')
   })

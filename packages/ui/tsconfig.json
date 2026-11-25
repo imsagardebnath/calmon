@@ -4,8 +4,8 @@
     "rewriteRelativeImportExtensions": true,
     "types": ["vitest/globals"],
     "paths": {
-      "@openvanta/calmon-react": ["./src/index.ts"],
-      "@openvanta/calmon-react/*": ["./src/*/index.ts"]
+      "@openvanta/pikore-react": ["./src/index.ts"],
+      "@openvanta/pikore-react/*": ["./src/*/index.ts"]
     }
   },
   "include": ["src"]

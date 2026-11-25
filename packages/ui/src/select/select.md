@@ -2,7 +2,7 @@
 name: Select
 category: Forms
 principle: none
-import: "@openvanta/calmon-react/select"
+import: "@openvanta/pikore-react/select"
 status: stable
 related: [Field, Radio, Switch]
 description: Choose one option from a short list. For long lists, use a searchable combobox.

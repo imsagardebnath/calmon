@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Checkbox } from '@openvanta/calmon-react/checkbox'
-import { Input } from '@openvanta/calmon-react/input'
-import { Switch } from '@openvanta/calmon-react/switch'
-import { InfoIcon, PauseIcon } from '@openvanta/calmon-react/icons'
+import { Button } from '@openvanta/pikore-react/button'
+import { Checkbox } from '@openvanta/pikore-react/checkbox'
+import { Input } from '@openvanta/pikore-react/input'
+import { Switch } from '@openvanta/pikore-react/switch'
+import { InfoIcon, PauseIcon } from '@openvanta/pikore-react/icons'
 import { B, Bullets, C, Callout, H2, H3, Lead, Page, Specimen, TableWrap, Td, Th } from './_kit.tsx'
 import { showValue, useLive, useReducedMotion } from './_tokens.ts'
 
@@ -80,7 +80,7 @@ function MotionDemo() {
           {on ? 'Send them back' : 'Play'}
         </Button>
         <span className="text-ui-sm text-fg-muted">
-          Each dot moves with its own duration and the same <C>--ease-calmon-curve</C> curve.
+          Each dot moves with its own duration and the same <C>--ease-pikore-curve</C> curve.
         </span>
       </div>
       <div className="flex flex-col gap-3.5">
@@ -90,7 +90,7 @@ function MotionDemo() {
             <span className="relative h-4 min-w-0 flex-1 rounded-pill bg-surface-sunken shadow-[inset_0_0_0_1px_var(--border)]">
               <span
                 aria-hidden="true"
-                className={`absolute top-0 size-4 rounded-full bg-accent transition-[left] ease-calmon ${t.cls}`}
+                className={`absolute top-0 size-4 rounded-full bg-accent transition-[left] ease-pikore ${t.cls}`}
                 style={{ left: on ? 'calc(100% - 16px)' : '0px' }}
               />
             </span>
@@ -123,7 +123,7 @@ function AmbientDemo() {
     <Specimen title="Ambient motion">
       <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
         <span className="inline-flex items-center gap-2 text-ui-sm font-[550]" data-tone="normal">
-          <span aria-hidden="true" className="size-2 rounded-full bg-tone motion-safe:animate-calmon-blink" />
+          <span aria-hidden="true" className="size-2 rounded-full bg-tone motion-safe:animate-pikore-blink" />
           Live
         </span>
         <span className="text-ui-sm text-fg-muted">
@@ -238,7 +238,7 @@ export default function Elevation() {
       <Bullets>
         <li>
           Use <C>duration-(--duration-fast)</C>, <C>duration-(--duration-base)</C> or <C>duration-(--duration-slow)</C> with{' '}
-          <C>ease-calmon</C>. Never a raw millisecond value.
+          <C>ease-pikore</C>. Never a raw millisecond value.
         </li>
         <li>The only ambient motion is a slow pulse on critical tiles and the live dot.</li>
         <li>

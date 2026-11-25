@@ -45,11 +45,11 @@ describe('Code block', () => {
   it('copies the code, announces "Copied", and resets after a moment', async () => {
     vi.useFakeTimers()
     const writeText = mockClipboard()
-    render(<Code language="bash">{'npm install @openvanta/calmon-react\n'}</Code>)
+    render(<Code language="bash">{'npm install @openvanta/pikore-react\n'}</Code>)
     await act(async () => {
       fireEvent.click(screen.getByRole('button', { name: 'Copy' }))
     })
-    expect(writeText).toHaveBeenCalledWith('npm install @openvanta/calmon-react')
+    expect(writeText).toHaveBeenCalledWith('npm install @openvanta/pikore-react')
     expect(screen.getByRole('button', { name: 'Copied' })).toBeTruthy()
     const status = screen.getByRole('status')
     expect(status.textContent).toBe('Copied')
@@ -63,12 +63,12 @@ describe('Code block', () => {
 
   it('leaves a leading shell prompt out of the copied text, but keeps it on screen', async () => {
     const writeText = mockClipboard()
-    const { container, unmount } = render(<Code language="bash">{'$ npm install @openvanta/calmon-react\n$ npm run dev\nready on :5173'}</Code>)
-    expect(container.querySelector('pre')?.textContent).toBe('$ npm install @openvanta/calmon-react\n$ npm run dev\nready on :5173')
+    const { container, unmount } = render(<Code language="bash">{'$ npm install @openvanta/pikore-react\n$ npm run dev\nready on :5173'}</Code>)
+    expect(container.querySelector('pre')?.textContent).toBe('$ npm install @openvanta/pikore-react\n$ npm run dev\nready on :5173')
     await act(async () => {
       fireEvent.click(screen.getByRole('button', { name: 'Copy' }))
     })
-    expect(writeText).toHaveBeenLastCalledWith('npm install @openvanta/calmon-react\nnpm run dev\nready on :5173')
+    expect(writeText).toHaveBeenLastCalledWith('npm install @openvanta/pikore-react\nnpm run dev\nready on :5173')
     unmount()
     // Other languages are copied as written, and a "$" that is not a prompt stays.
     render(<Code language="tsx">{'$ x = 1'}</Code>)
@@ -155,13 +155,13 @@ describe('Code inline', () => {
 
 describe('syntax highlighting', () => {
   it('colours keywords, strings and comments in tsx, and keeps the text intact', () => {
-    const src = "import { Button } from '@openvanta/calmon-react' // ui\nconst n = 1"
+    const src = "import { Button } from '@openvanta/pikore-react' // ui\nconst n = 1"
     const { container } = render(<Code>{src}</Code>)
     expect(container.querySelector('pre')?.textContent).toBe(src)
     expect(tokens(container)).toEqual([
       ['k', 'import'],
       ['k', 'from'],
-      ['s', "'@openvanta/calmon-react'"],
+      ['s', "'@openvanta/pikore-react'"],
       ['c', '// ui'],
       ['k', 'const'],
     ])

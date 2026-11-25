@@ -1,28 +1,28 @@
-// Example dashboard: an ICU central station, built only from Calmon components.
+// Example dashboard: an ICU central station, built only from Pikore UI components.
 // Every name, number and time is fictional. Underscore files are not routes.
 import { useEffect, useRef, useState, type FormEvent } from 'react'
-import type { Severity } from '@openvanta/calmon-react'
-import { Avatar } from '@openvanta/calmon-react/avatar'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Banner } from '@openvanta/calmon-react/banner'
-import { Button } from '@openvanta/calmon-react/button'
-import { Card } from '@openvanta/calmon-react/card'
-import { Chart } from '@openvanta/calmon-react/chart'
-import { Dialog } from '@openvanta/calmon-react/dialog'
-import { Field } from '@openvanta/calmon-react/field'
-import { HealthScore, type HealthFactor } from '@openvanta/calmon-react/health-score'
-import { BellOffIcon, FileIcon, GridIcon, PulseIcon, SettingsIcon, TimelineIcon, UserIcon } from '@openvanta/calmon-react/icons'
-import { IconButton } from '@openvanta/calmon-react/icon-button'
-import { Input } from '@openvanta/calmon-react/input'
-import { LimitedNumberInput, type LimitState } from '@openvanta/calmon-react/limited-number-input'
-import { Menu, MenuItem } from '@openvanta/calmon-react/menu'
-import { PausePoint } from '@openvanta/calmon-react/pause-point'
-import { SideNav, SideNavItem } from '@openvanta/calmon-react/side-nav'
-import { StationGrid, type StationItem } from '@openvanta/calmon-react/station-grid'
-import { Tab, Tabs } from '@openvanta/calmon-react/tabs'
-import { Timeline, type TimelineEvent } from '@openvanta/calmon-react/timeline'
-import { ToastProvider, useToast } from '@openvanta/calmon-react/toast'
-import { VitalTile } from '@openvanta/calmon-react/vital-tile'
+import type { Severity } from '@openvanta/pikore-react'
+import { Avatar } from '@openvanta/pikore-react/avatar'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Banner } from '@openvanta/pikore-react/banner'
+import { Button } from '@openvanta/pikore-react/button'
+import { Card } from '@openvanta/pikore-react/card'
+import { Chart } from '@openvanta/pikore-react/chart'
+import { Dialog } from '@openvanta/pikore-react/dialog'
+import { Field } from '@openvanta/pikore-react/field'
+import { HealthScore, type HealthFactor } from '@openvanta/pikore-react/health-score'
+import { BellOffIcon, FileIcon, GridIcon, PulseIcon, SettingsIcon, TimelineIcon, UserIcon } from '@openvanta/pikore-react/icons'
+import { IconButton } from '@openvanta/pikore-react/icon-button'
+import { Input } from '@openvanta/pikore-react/input'
+import { LimitedNumberInput, type LimitState } from '@openvanta/pikore-react/limited-number-input'
+import { Menu, MenuItem } from '@openvanta/pikore-react/menu'
+import { PausePoint } from '@openvanta/pikore-react/pause-point'
+import { SideNav, SideNavItem } from '@openvanta/pikore-react/side-nav'
+import { StationGrid, type StationItem } from '@openvanta/pikore-react/station-grid'
+import { Tab, Tabs } from '@openvanta/pikore-react/tabs'
+import { Timeline, type TimelineEvent } from '@openvanta/pikore-react/timeline'
+import { ToastProvider, useToast } from '@openvanta/pikore-react/toast'
+import { VitalTile } from '@openvanta/pikore-react/vital-tile'
 
 /* ------------------------------------------------------------------ Scenario data (fictional) */
 
@@ -173,7 +173,7 @@ function Clock() {
 function Live() {
   return (
     <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-normal-fg">
-      <i aria-hidden="true" className="size-[7px] animate-calmon-blink rounded-full bg-normal shadow-[0_0_0_3px_color-mix(in_oklab,var(--normal),transparent_80%)]" />
+      <i aria-hidden="true" className="size-[7px] animate-pikore-blink rounded-full bg-normal shadow-[0_0_0_3px_color-mix(in_oklab,var(--normal),transparent_80%)]" />
       Live
     </span>
   )

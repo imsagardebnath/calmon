@@ -1,10 +1,10 @@
 import { Component, useState, type ErrorInfo, type ReactNode } from 'react'
 import type { Token, Tokens } from 'marked'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Button } from '@openvanta/calmon-react/button'
-import { Code } from '@openvanta/calmon-react/code'
-import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/calmon-react/tabs'
-import { CheckIcon, CopyIcon, FileIcon, GithubIcon, GridIcon, InfoIcon, XIcon } from '@openvanta/calmon-react/icons'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Button } from '@openvanta/pikore-react/button'
+import { Code } from '@openvanta/pikore-react/code'
+import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/pikore-react/tabs'
+import { CheckIcon, CopyIcon, FileIcon, GithubIcon, GridIcon, InfoIcon, XIcon } from '@openvanta/pikore-react/icons'
 import type { DocEntry, DocExample } from '../registry.ts'
 import { BASE, REPO_URL, VERSION } from './config.ts'
 import { useCopy, useProps, type PropDoc } from './hooks.ts'
@@ -390,7 +390,7 @@ export function ComponentPage({ entry }: { entry: DocEntry }) {
       </Code>
       <p className="lead mt-3 text-ui-sm">
         Each component has its own entry point, so you only ship what you use. Everything is also exported from{' '}
-        <code>@openvanta/calmon-react</code>.
+        <code>@openvanta/pikore-react</code>.
       </p>
 
       {setup ? (

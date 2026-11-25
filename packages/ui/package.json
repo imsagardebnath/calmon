@@ -1,5 +1,5 @@
 {
-  "name": "@openvanta/calmon-react",
+  "name": "@openvanta/pikore-react",
   "version": "0.1.0",
   "description": "React + Tailwind CSS v4 components for operational software, built on safety principles.",
   "license": "MIT",
@@ -243,11 +243,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imsagardebnath/calmon.git",
+    "url": "git+https://github.com/imsagardebnath/pikore-ui.git",
     "directory": "packages/ui"
   },
-  "homepage": "https://imsagardebnath.github.io/calmon/",
+  "homepage": "https://imsagardebnath.github.io/pikore-ui/",
   "bugs": {
-    "url": "https://github.com/imsagardebnath/calmon/issues"
+    "url": "https://github.com/imsagardebnath/pikore-ui/issues"
   }
 }

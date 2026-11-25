@@ -2,7 +2,7 @@
 name: Radio
 category: Forms
 principle: none
-import: "@openvanta/calmon-react/radio"
+import: "@openvanta/pikore-react/radio"
 status: stable
 related: [Checkbox, Select, Switch]
 description: Pick exactly one from two to five visible options. Use RadioGroup with Radio.

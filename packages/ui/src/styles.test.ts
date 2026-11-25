@@ -68,7 +68,7 @@ describe('token names', () => {
   })
 
   it('keeps the design type scale and easing under their own names', () => {
-    for (const name of ['--fs-xs', '--fs-sm', '--fs-md', '--fs-lg', '--fs-xl', '--fs-2xl', '--fs-3xl', '--ease-calmon-curve']) {
+    for (const name of ['--fs-xs', '--fs-sm', '--fs-md', '--fs-lg', '--fs-xl', '--fs-2xl', '--fs-3xl', '--ease-pikore-curve']) {
       expect(plainNames, name).toContain(name)
     }
     for (const name of ['--text-sm', '--text-xl', '--text-2xl', '--text-3xl', '--ease-out']) {
@@ -81,6 +81,6 @@ describe('token names', () => {
     expect(css).toContain('--control-fs: var(--fs-sm)')
     expect(css).toContain('--text-ui: var(--fs-md)')
     expect(css).toContain('--text-ui-sm: var(--fs-sm)')
-    expect(css).toContain('--ease-calmon: var(--ease-calmon-curve)')
+    expect(css).toContain('--ease-pikore: var(--ease-pikore-curve)')
   })
 })

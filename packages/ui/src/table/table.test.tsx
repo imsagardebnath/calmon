@@ -307,7 +307,7 @@ describe('Table', () => {
       render(<Table aria-label="T" columns={columns} data={[]} loading />)
       expect(screen.getByRole('table').getAttribute('aria-busy')).toBe('true')
       expect(screen.getAllByRole('row').length).toBeGreaterThan(2)
-      expect(document.querySelector('.animate-calmon-shim')).toBeTruthy()
+      expect(document.querySelector('.animate-pikore-shim')).toBeTruthy()
       expect(screen.getByText('Loading')).toBeTruthy()
     })
 

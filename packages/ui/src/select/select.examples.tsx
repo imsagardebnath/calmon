@@ -1,5 +1,5 @@
-import { Field } from '@openvanta/calmon-react/field'
-import { Select } from '@openvanta/calmon-react/select'
+import { Field } from '@openvanta/pikore-react/field'
+import { Select } from '@openvanta/pikore-react/select'
 
 /** A native select built from options. Order options by frequency or alphabetically. */
 export function Basic() {

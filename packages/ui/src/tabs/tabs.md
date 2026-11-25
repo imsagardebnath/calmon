@@ -2,7 +2,7 @@
 name: Tabs
 category: Navigation
 principle: none
-import: "@openvanta/calmon-react/tabs"
+import: "@openvanta/pikore-react/tabs"
 status: stable
 related: [Breadcrumbs, SideNav, Pagination]
 description: Switch between views of the same thing. Underline style for page sections, segmented style for filters and time ranges.

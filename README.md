@@ -1,4 +1,4 @@
-# Calmon
+# Pikore UI
 
 React 19 + Tailwind CSS v4 components for operational software: monitoring, incident response, admin consoles, and any screen where a missed signal costs something. Built on safety principles from ICUs and operating theatres: fewer alarms, clear limits, and a short pause before anything risky.
 
@@ -20,28 +20,28 @@ npm run ci       # typecheck, tests, build, size budgets
 ## Use it in an app
 
 ```bash
-npm install @openvanta/calmon-react
+npm install @openvanta/pikore-react
 ```
 
 ```css
 /* app.css */
 @import "tailwindcss";
-@import "@openvanta/calmon-react/styles.css";
+@import "@openvanta/pikore-react/styles.css";
 ```
 
 ```tsx
-import { CalmonProvider, Button } from '@openvanta/calmon-react'
+import { PikoreProvider, Button } from '@openvanta/pikore-react'
 
 export default function App() {
   return (
-    <CalmonProvider theme="system" density="comfortable">
+    <PikoreProvider theme="system" density="comfortable">
       <Button variant="primary" severity="critical">Delete service "api-gateway"</Button>
-    </CalmonProvider>
+    </PikoreProvider>
   )
 }
 ```
 
-Tell your agent: "Use Calmon. Before writing code, read `https://<user>.github.io/<repo>/llms.txt`."
+Tell your agent: "Use Pikore UI. Before writing code, read `https://<user>.github.io/<repo>/llms.txt`."
 
 ## Deploy the docs to GitHub Pages
 
@@ -52,8 +52,8 @@ Tell your agent: "Use Calmon. Before writing code, read `https://<user>.github.i
 
 ## Repository layout
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the layout and the rules for changing the library.
+See [CONTRIBUTING.md](https://github.com/imsagardebnath/pikore-ui/blob/main/CONTRIBUTING.md) for the layout and the rules for changing the library.
 
 ## License
 
-MIT, see [LICENSE](LICENSE). Copyright (c) 2026 Sagar Debnath.
+MIT, see [LICENSE](https://github.com/imsagardebnath/pikore-ui/blob/main/LICENSE). Copyright (c) 2026 Sagar Debnath.

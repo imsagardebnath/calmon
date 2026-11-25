@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { IconButton } from '@openvanta/calmon-react/icon-button'
-import { MoreIcon, TrashIcon } from '@openvanta/calmon-react/icons'
-import { Table, type TableSort } from '@openvanta/calmon-react/table'
+import { Button } from '@openvanta/pikore-react/button'
+import { IconButton } from '@openvanta/pikore-react/icon-button'
+import { MoreIcon, TrashIcon } from '@openvanta/pikore-react/icons'
+import { Table, type TableSort } from '@openvanta/pikore-react/table'
 
 /** Rows with a severity are sorted worst first by default, marked with a left bar, and labelled with an icon and a word. */
 export function WorstFirst() {

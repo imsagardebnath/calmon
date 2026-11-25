@@ -95,7 +95,7 @@ const BAR = 'shadow-[inset_3px_0_0_var(--s)]'
 const NUM = 'font-mono text-[length:.92em] tabular-nums'
 const ALIGN = { left: 'text-left', center: 'text-center', right: 'text-right' }
 const SKEL =
-  'block h-[.9em] animate-calmon-shim rounded-md bg-[linear-gradient(90deg,var(--surface-sunken)_0%,color-mix(in_oklab,var(--border),var(--surface-sunken))_50%,var(--surface-sunken)_100%)] bg-[length:200%_100%]'
+  'block h-[.9em] animate-pikore-shim rounded-md bg-[linear-gradient(90deg,var(--surface-sunken)_0%,color-mix(in_oklab,var(--border),var(--surface-sunken))_50%,var(--surface-sunken)_100%)] bg-[length:200%_100%]'
 const SKEL_WIDTHS = ['62%', '40%', '74%', '52%']
 
 /* A native checkbox, styled like the Checkbox component. */

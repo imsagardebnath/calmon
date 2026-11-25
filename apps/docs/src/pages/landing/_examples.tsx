@@ -1,14 +1,14 @@
 // "Build any dashboard": four small, inert compositions of real library components. Each card links to the example
 // dashboards page. The previews are laid out at 167% width and scaled to 60%, so they fit any card width.
 import type { ReactNode } from 'react'
-import { Avatar } from '@openvanta/calmon-react/avatar'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Banner } from '@openvanta/calmon-react/banner'
-import { Button } from '@openvanta/calmon-react/button'
-import { Chart } from '@openvanta/calmon-react/chart'
-import { ArrowRIcon, GaugeIcon, PulseIcon, RoomIcon, SettingsIcon } from '@openvanta/calmon-react/icons'
-import { StationGrid, type StationItem } from '@openvanta/calmon-react/station-grid'
-import { VitalTile } from '@openvanta/calmon-react/vital-tile'
+import { Avatar } from '@openvanta/pikore-react/avatar'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Banner } from '@openvanta/pikore-react/banner'
+import { Button } from '@openvanta/pikore-react/button'
+import { Chart } from '@openvanta/pikore-react/chart'
+import { ArrowRIcon, GaugeIcon, PulseIcon, RoomIcon, SettingsIcon } from '@openvanta/pikore-react/icons'
+import { StationGrid, type StationItem } from '@openvanta/pikore-react/station-grid'
+import { VitalTile } from '@openvanta/pikore-react/vital-tile'
 import { docsHref } from '../../site/router.ts'
 import { Section, SectionHead } from './_ui.tsx'
 
@@ -152,7 +152,7 @@ export function Examples() {
               Build any dashboard. <span className="block">Start from one of these.</span>
             </>
           }
-          lede="Complete screens made only from Calmon components, in both themes. Open one, then copy what you need."
+          lede="Complete screens made only from Pikore UI components, in both themes. Open one, then copy what you need."
         />
         <Button asChild variant="secondary">
           <a href={docsHref('dashboards')}>

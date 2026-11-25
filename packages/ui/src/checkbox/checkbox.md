@@ -2,7 +2,7 @@
 name: Checkbox
 category: Forms
 principle: none
-import: "@openvanta/calmon-react/checkbox"
+import: "@openvanta/pikore-react/checkbox"
 status: stable
 related: [Switch, Radio, Field]
 description: Independent yes-or-no choices, and multi-select lists. Supports an indeterminate state for "some selected".

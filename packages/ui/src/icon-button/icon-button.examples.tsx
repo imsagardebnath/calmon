@@ -1,5 +1,5 @@
-import { IconButton } from '@openvanta/calmon-react/icon-button'
-import { MoreIcon, PlusIcon, SettingsIcon, TrashIcon } from '@openvanta/calmon-react/icons'
+import { IconButton } from '@openvanta/pikore-react/icon-button'
+import { MoreIcon, PlusIcon, SettingsIcon, TrashIcon } from '@openvanta/pikore-react/icons'
 
 /** Variants. Every icon button has a label, which is also its hover tooltip. */
 export function Variants() {

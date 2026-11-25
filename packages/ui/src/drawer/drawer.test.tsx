@@ -40,7 +40,7 @@ describe('Drawer', () => {
     const dialog = () => screen.getByRole('dialog') as HTMLDialogElement
     expect(dialog().style.width).toBe('420px')
     expect(dialog().className).toContain('ml-auto')
-    expect(dialog().className).toContain('open:animate-calmon-slide')
+    expect(dialog().className).toContain('open:animate-pikore-slide')
     rerender(<Drawer open side="start" size={300} title="A" />)
     expect(dialog().style.width).toBe('300px')
     expect(dialog().className).toContain('mr-auto')

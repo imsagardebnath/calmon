@@ -12,7 +12,7 @@ describe('Skeleton', () => {
 
   it('shimmers', () => {
     const { container } = render(<Skeleton />)
-    expect((container.firstElementChild as HTMLElement).className).toContain('animate-calmon-shim')
+    expect((container.firstElementChild as HTMLElement).className).toContain('animate-pikore-shim')
   })
 
   it('renders one bar by default and the given number of lines', () => {

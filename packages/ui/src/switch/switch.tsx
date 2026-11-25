@@ -4,13 +4,13 @@ import type { ChangeEvent, ComponentPropsWithRef, ReactNode } from 'react'
 import { cn } from '../lib/cn.ts'
 import { useFieldControl } from '../field/control.ts'
 
-/* `.switch input` in design/calmon-design.html: a pill track on the native input, with the thumb as its ::after. */
+/* `.switch input` in design/pikore-design.html: a pill track on the native input, with the thumb as its ::after. */
 const TRACK =
   'relative m-0 h-5 w-[34px] flex-none cursor-pointer appearance-none rounded-pill bg-border-strong ' +
-  'transition-colors duration-(--duration-base) ease-calmon checked:bg-accent ' +
+  'transition-colors duration-(--duration-base) ease-pikore checked:bg-accent ' +
   "after:absolute after:top-0.5 after:left-0.5 after:size-4 after:rounded-full after:bg-white after:content-[''] " +
   'after:shadow-[0_1px_2px_rgb(0_0_0/.2),0_0_0_.5px_rgb(0_0_0/.06)] ' +
-  'after:transition-transform after:duration-(--duration-base) after:ease-calmon checked:after:translate-x-3.5 ' +
+  'after:transition-transform after:duration-(--duration-base) after:ease-pikore checked:after:translate-x-3.5 ' +
   'disabled:cursor-not-allowed disabled:opacity-45'
 
 export type SwitchProps = Omit<ComponentPropsWithRef<'input'>, 'type' | 'size' | 'role'> & {

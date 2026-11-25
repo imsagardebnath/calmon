@@ -4,8 +4,8 @@
 // in, a live demo on a framed stage, Do and Don't pairs, a checklist, and links to neighbouring principles. The page
 // files (alarm-fatigue.tsx and the rest) hold only what is specific to them: the demo, the previews and the component list.
 import { useState, type ComponentType, type ReactNode } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Checkbox } from '@openvanta/calmon-react/checkbox'
+import { Button } from '@openvanta/pikore-react/button'
+import { Checkbox } from '@openvanta/pikore-react/checkbox'
 import {
   BellOffIcon,
   CheckIcon,
@@ -19,7 +19,7 @@ import {
   TimelineIcon,
   XIcon,
   type IconProps,
-} from '@openvanta/calmon-react/icons'
+} from '@openvanta/pikore-react/icons'
 import { DASHBOARDS_SECTION, STATIC_SECTIONS } from '../../nav.ts'
 import { entries } from '../../registry.ts'
 
@@ -319,7 +319,7 @@ export function Stage({ title, children, className = '' }: { title: string; chil
         <span className="inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold text-normal-fg">
           <i
             aria-hidden="true"
-            className="size-[7px] animate-calmon-blink rounded-full bg-normal shadow-[0_0_0_3px_color-mix(in_oklab,var(--normal),transparent_80%)]"
+            className="size-[7px] animate-pikore-blink rounded-full bg-normal shadow-[0_0_0_3px_color-mix(in_oklab,var(--normal),transparent_80%)]"
           />
           Live demo
         </span>
@@ -433,7 +433,7 @@ export const componentHref = (name: string) => {
 
 const CARD =
   'flex min-w-0 flex-col gap-1.5 rounded-card bg-surface-raised p-[18px] text-fg no-underline shadow-[0_0_0_1px_var(--border),var(--shadow-1)] ' +
-  'transition-[box-shadow,transform] duration-(--duration-base) ease-calmon hover:-translate-y-px hover:shadow-[0_0_0_1px_var(--border-strong),var(--shadow-2)]'
+  'transition-[box-shadow,transform] duration-(--duration-base) ease-pikore hover:-translate-y-px hover:shadow-[0_0_0_1px_var(--border-strong),var(--shadow-2)]'
 
 function CardIcon({ children }: { children: ReactNode }) {
   return (
@@ -515,8 +515,8 @@ export function PatternPage({ principle: p, demo, demoTitle, demoIntro, componen
         ))}
       </ul>
 
-      <h2 id="how-calmon-builds-it-in" className={H2}>
-        How Calmon builds it in
+      <h2 id="how-pikore-builds-it-in" className={H2}>
+        How Pikore UI builds it in
       </h2>
       <Lead>
         {components.length === 1 ? 'This component carries' : 'These components carry'} the pattern, so the habit is the

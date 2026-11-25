@@ -1,4 +1,4 @@
-import { ProgressBar } from '@openvanta/calmon-react/progress-bar'
+import { ProgressBar } from '@openvanta/pikore-react/progress-bar'
 
 /** A level against capacity. Past a threshold the bar turns caution or critical, and screen readers hear the severity. */
 export function Capacity() {

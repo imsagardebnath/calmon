@@ -8,7 +8,7 @@ import {
   TargetIcon,
   TimelineIcon,
   type IconProps,
-} from '@openvanta/calmon-react/icons'
+} from '@openvanta/pikore-react/icons'
 import { entries } from '../../registry.ts'
 import { A, B, Bullets, C, Callout, H2, Lead, Page, componentSlug } from './_kit.tsx'
 

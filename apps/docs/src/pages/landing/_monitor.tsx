@@ -2,11 +2,11 @@
 // StationGrid (worst first, with Sparkline tiles), Badge, Tabs and the severity icons. The clock ticks every second,
 // and the sparklines take a new point every five seconds unless the visitor asked for reduced motion.
 import { useState } from 'react'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { scoreSeverity } from '@openvanta/calmon-react/health-score'
-import { RoomIcon, SeverityIcon } from '@openvanta/calmon-react/icons'
-import { StationGrid, type StationItem } from '@openvanta/calmon-react/station-grid'
-import { Tab, Tabs } from '@openvanta/calmon-react/tabs'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { scoreSeverity } from '@openvanta/pikore-react/health-score'
+import { RoomIcon, SeverityIcon } from '@openvanta/pikore-react/icons'
+import { StationGrid, type StationItem } from '@openvanta/pikore-react/station-grid'
+import { Tab, Tabs } from '@openvanta/pikore-react/tabs'
 import { ENVIRONMENT_SCORE, SERVICES } from './_data.ts'
 import { seeded, useInterval, useReducedMotion, useUtcClock } from './_hooks.ts'
 import { cx } from './_util.ts'
@@ -66,7 +66,7 @@ const ECG =
   'M0 32 H150 l8 -4 8 4 H230 l6 10 10 -36 10 44 8 -18 H390 l8 -4 8 4 H560 l6 10 10 -36 10 44 8 -18 H720 l8 -4 8 4 H880 l6 10 10 -36 10 44 8 -18 H1040 l8 -4 8 4 H1200'
 
 /**
- * The trace is drawn once on load. `stroke-dashoffset` runs from 3000 to 0 (`calmon-trace` in the library styles), and
+ * The trace is drawn once on load. `stroke-dashoffset` runs from 3000 to 0 (`pikore-trace` in the library styles), and
  * reduced motion shows the finished line at once.
  */
 function Trace() {
@@ -83,7 +83,7 @@ function Trace() {
         d={ECG}
         className={cx(
           'fill-none stroke-accent [stroke-linecap:round] [stroke-linejoin:round] [stroke-width:1.6] [vector-effect:non-scaling-stroke]',
-          '[stroke-dasharray:3000] [stroke-dashoffset:3000] animate-[calmon-trace_3.4s_var(--ease-calmon-curve)_.3s_forwards]',
+          '[stroke-dasharray:3000] [stroke-dashoffset:3000] animate-[pikore-trace_3.4s_var(--ease-pikore-curve)_.3s_forwards]',
           'motion-reduce:animate-none motion-reduce:[stroke-dashoffset:0]',
         )}
       />
@@ -120,7 +120,7 @@ export function Monitor() {
         <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-normal-fg">
           <span
             aria-hidden="true"
-            className="size-[7px] animate-calmon-blink rounded-full bg-normal shadow-[0_0_0_3px_color-mix(in_oklab,var(--normal),transparent_80%)]"
+            className="size-[7px] animate-pikore-blink rounded-full bg-normal shadow-[0_0_0_3px_color-mix(in_oklab,var(--normal),transparent_80%)]"
           />
           Live
         </span>

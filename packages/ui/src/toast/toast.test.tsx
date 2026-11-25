@@ -71,7 +71,7 @@ describe('Toast', () => {
     expect(screen.getByRole('progressbar', { name: 'Deploying' }).getAttribute('aria-valuenow')).toBe('40')
     const toast = screen.getByRole('status')
     expect(toast.querySelector('svg')).toBeNull()
-    const ring = toast.querySelector('[aria-hidden="true"].animate-calmon-spin') as HTMLElement
+    const ring = toast.querySelector('[aria-hidden="true"].animate-pikore-spin') as HTMLElement
     expect(ring.className).toContain('border-t-accent')
   })
 
@@ -149,7 +149,7 @@ describe('ToastProvider', () => {
     advance(4900)
     expect(screen.queryByText('Saved')).not.toBeNull()
     advance(200)
-    expect(screen.getByRole('status').className).toContain('animate-calmon-toast-out')
+    expect(screen.getByRole('status').className).toContain('animate-pikore-toast-out')
     advance(250)
     expect(screen.queryByText('Saved')).toBeNull()
   })
@@ -353,7 +353,7 @@ describe('ToastProvider', () => {
     advance(100)
     act(() => void api().toast({ id: 'deploy', title: 'Deploying again', duration: 0 }))
     expect(screen.getAllByRole('status')).toHaveLength(1)
-    expect(screen.getByRole('status').className).not.toContain('animate-calmon-toast-out')
+    expect(screen.getByRole('status').className).not.toContain('animate-pikore-toast-out')
     // The first dismissal's removal timer fires later and must not take the new toast with it.
     advance(500)
     expect(screen.getAllByRole('status')).toHaveLength(1)

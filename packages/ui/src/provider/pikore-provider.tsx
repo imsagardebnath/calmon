@@ -5,7 +5,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 export type Theme = 'light' | 'dark' | 'system'
 export type Density = 'comfortable' | 'compact' | 'station'
 
-export interface CalmonContextValue {
+export interface PikoreContextValue {
   /** The chosen theme. `system` follows the OS setting. */
   theme: Theme
   /** What is actually shown: `light` or `dark`. */
@@ -18,14 +18,14 @@ export interface CalmonContextValue {
   setDensity: (density: Density) => void
 }
 
-const CalmonContext = createContext<CalmonContextValue | null>(null)
+const PikoreContext = createContext<PikoreContextValue | null>(null)
 
-export interface CalmonProviderProps {
+export interface PikoreProviderProps {
   /** Initial theme. Default `system`. */
   theme?: Theme
   /** Initial density. Default `comfortable`. `station` is for wall displays. */
   density?: Density
-  /** localStorage key to remember the chosen theme. Set to `false` to not persist. Default `"calmon-theme"`. */
+  /** localStorage key to remember the chosen theme. Set to `false` to not persist. Default `"pikore-theme"`. */
   storageKey?: string | false
   /** Your app. The provider renders no element of its own. */
   children?: ReactNode
@@ -49,12 +49,12 @@ const read = (key: string | false): Theme | null => {
  * The first render uses the `theme` prop on the server and in the browser alike, so server-rendered
  * markup hydrates cleanly. The remembered choice is read after mount.
  */
-export function CalmonProvider({
+export function PikoreProvider({
   theme: themeProp = 'system',
   density: densityProp = 'comfortable',
-  storageKey = 'calmon-theme',
+  storageKey = 'pikore-theme',
   children,
-}: CalmonProviderProps) {
+}: PikoreProviderProps) {
   // The remembered choice, `null` until it has been read after mount.
   const [chosen, setChosen] = useState<Theme | null>(null)
   const [density, setDensity] = useState<Density>(densityProp)
@@ -111,12 +111,12 @@ export function CalmonProvider({
     [theme, resolvedTheme, setTheme, density],
   )
 
-  return <CalmonContext.Provider value={value}>{children}</CalmonContext.Provider>
+  return <PikoreContext.Provider value={value}>{children}</PikoreContext.Provider>
 }
 
-/** Read and change the theme and density. Must be used inside `CalmonProvider`. */
-export function useCalmon(): CalmonContextValue {
-  const ctx = useContext(CalmonContext)
-  if (!ctx) throw new Error('useCalmon must be used inside <CalmonProvider>.')
+/** Read and change the theme and density. Must be used inside `PikoreProvider`. */
+export function usePikore(): PikoreContextValue {
+  const ctx = useContext(PikoreContext)
+  if (!ctx) throw new Error('usePikore must be used inside <PikoreProvider>.')
   return ctx
 }

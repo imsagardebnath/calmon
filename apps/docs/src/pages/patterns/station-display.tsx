@@ -1,10 +1,10 @@
 // Readable across the room: the same tiles at comfortable, compact and station density, worst first, with a greyscale check.
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { StationGrid, StationTile, type StationItem } from '@openvanta/calmon-react/station-grid'
-import { Switch } from '@openvanta/calmon-react/switch'
-import { Tab, Tabs } from '@openvanta/calmon-react/tabs'
-import { VitalTile, type VitalThreshold } from '@openvanta/calmon-react/vital-tile'
+import { Button } from '@openvanta/pikore-react/button'
+import { StationGrid, StationTile, type StationItem } from '@openvanta/pikore-react/station-grid'
+import { Switch } from '@openvanta/pikore-react/switch'
+import { Tab, Tabs } from '@openvanta/pikore-react/tabs'
+import { VitalTile, type VitalThreshold } from '@openvanta/pikore-react/vital-tile'
 import { PatternPage, PRINCIPLES, type DoDontPair, type PatternComponent } from './_pattern.tsx'
 
 type Density = 'comfortable' | 'compact' | 'station'

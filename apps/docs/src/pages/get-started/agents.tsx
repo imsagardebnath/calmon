@@ -1,10 +1,10 @@
-import { Code } from '@openvanta/calmon-react/code'
-import { BotIcon, FileIcon } from '@openvanta/calmon-react/icons'
+import { Code } from '@openvanta/pikore-react/code'
+import { BotIcon, FileIcon } from '@openvanta/pikore-react/icons'
 import { Bullets, Callout, Lead } from '../../site/doc.tsx'
 import { BASE, PACKAGE, siteUrl } from '../../site/config.ts'
 import { useTextFile } from '../../site/hooks.ts'
 
-const FALLBACK = `# Calmon
+const FALLBACK = `# Pikore UI
 
 > React + Tailwind v4 components for operational software.
 
@@ -18,7 +18,7 @@ const FALLBACK = `# Calmon
 - Inputs with safe ranges use LimitedNumberInput.`
 
 const FILES = [
-  ['llms.txt', 'Index: what Calmon is, plus a link to every component doc.'],
+  ['llms.txt', 'Index: what Pikore UI is, plus a link to every component doc.'],
   ['llms-full.txt', 'Setup, rules, tokens and every component doc in one file. Best for a single fetch.'],
   ['components.json', 'Machine-readable catalogue: props with types and defaults, examples, import paths, source URLs.'],
   ['AGENTS.snippet.md', 'Short rules to paste into your project’s AGENTS.md or other agent instructions file.'],
@@ -34,7 +34,7 @@ const preview = (text: string, lines = 28) => {
 
 export default function Agents() {
   const llms = useTextFile('llms.txt')
-  const prompt = `Build this UI with Calmon (${PACKAGE}). Read ${siteUrl('llms.txt')} first, follow its rules, and read the doc for each component you use before writing code. Use severity (normal, info, advisory, caution, critical) or intent (primary, secondary, success, warning, danger) props instead of colours. Sort overviews worst first. Wrap destructive actions in ConfirmTarget, risky changes in PausePoint, and inputs with safe ranges in LimitedNumberInput. Do not guess props.`
+  const prompt = `Build this UI with Pikore UI (${PACKAGE}). Read ${siteUrl('llms.txt')} first, follow its rules, and read the doc for each component you use before writing code. Use severity (normal, info, advisory, caution, critical) or intent (primary, secondary, success, warning, danger) props instead of colours. Sort overviews worst first. Wrap destructive actions in ConfirmTarget, risky changes in PausePoint, and inputs with safe ranges in LimitedNumberInput. Do not guess props.`
 
   return (
     <>

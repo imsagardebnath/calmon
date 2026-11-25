@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calmon</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230F766E'/%3E%3Cpath d='M14.6 6.6A6.8 6.8 0 1 0 14.6 17.4' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M12.6 12h2.4l1.5-4.2 1.9 8.4 1.5-4.2h1.1' fill='none' stroke='%23FFFFFF' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>Pikore UI</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230F766E'/%3E%3Cpath d='M7.6 19V5' fill='none' stroke='%23FFFFFF' stroke-width='2.8' stroke-linecap='round'/%3E%3Ccircle cx='13' cy='9.6' r='5' fill='%23FFFFFF'/%3E%3Cpath d='M9.9 9.6h1.5l1-2.4 1.5 4.8 1-2.4h.7' fill='none' stroke='%230F766E' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <script>try{if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.classList.add("dark")}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Azeret+Mono:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
 <!-- ============================================================
-     CALMON DESIGN TOKENS  (source of truth — copy this block)
+     PIKORE UI DESIGN TOKENS  (source of truth — copy this block)
      Light values live on :root, dark values on .dark
      ============================================================ -->
-<style id="calmon-tokens">
+<style id="pikore-tokens">
 :root {
   /* Neutrals */
   --surface: #FAFBFC;
@@ -1054,13 +1054,13 @@ html{scroll-padding-top:80px}
   <symbol id="i-room" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20h8M12 16v4M5.5 11h3l1.5-3 2 5 1.5-2h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3.5l9 5-9 5-9-5zM3 13l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m-4.5-4.5L12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="var(--accent)"/><path d="M14.6 6.6A6.8 6.8 0 1 0 14.6 17.4" fill="none" stroke="var(--accent-on)" stroke-width="2.5" stroke-linecap="round"/><path d="M12.6 12h2.4l1.5-4.2 1.9 8.4 1.5-4.2h1.1" fill="none" stroke="var(--accent-on)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="var(--accent)"/><path d="M7.6 19V5" fill="none" stroke="var(--accent-on)" stroke-width="2.8" stroke-linecap="round"/><circle cx="13" cy="9.6" r="5" fill="var(--accent-on)"/><path d="M9.9 9.6h1.5l1-2.4 1.5 4.8 1-2.4h.7" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
  </defs>
 </svg>
 
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-nav">
-  <a class="logo" href="#/"><svg aria-hidden="true"><use href="#i-logo"/></svg>Calmon</a><span class="ver">v1.4</span>
+  <a class="logo" href="#/"><svg aria-hidden="true"><use href="#i-logo"/></svg>Pikore UI</a><span class="ver">v1.4</span>
   <nav class="links" aria-label="Primary"><a href="#/docs/introduction" data-nav="docs">Docs</a><a href="#/docs/alarm-fatigue" data-nav="patterns">Safety patterns</a><a href="#/docs/components" data-nav="components">Components</a><a href="#/docs/dashboards" data-nav="examples">Dashboards</a></nav>
   <div class="right"><button class="searchbtn" data-open-palette><svg class="i"><use href="#i-search"/></svg><span class="lbl">Search docs</span><span class="kk"><kbd>Ctrl</kbd><kbd>K</kbd></span></button><a class="btn btn-ghost icon-btn" href="#" aria-label="GitHub repository"><svg class="i"><use href="#i-github"/></svg></a><button class="btn btn-ghost icon-btn" data-theme-toggle aria-label="Toggle theme"><svg class="i"><use href="#i-moon"/></svg></button></div>
 </header>
@@ -1128,7 +1128,7 @@ html{scroll-padding-top:80px}
      </div>
    </section>
 
-   <section class="lsec"><div class="lsec-in"><h2>Build any dashboard. Start from one of these.</h2><p class="lede">Complete screens made only from Calmon components, in both themes. Open one, then copy what you need.</p><div class="ex-strip" id="home-ex"></div></div></section><section class="lsec" style="background:var(--surface-sunken)">
+   <section class="lsec"><div class="lsec-in"><h2>Build any dashboard. Start from one of these.</h2><p class="lede">Complete screens made only from Pikore UI components, in both themes. Open one, then copy what you need.</p><div class="ex-strip" id="home-ex"></div></div></section><section class="lsec" style="background:var(--surface-sunken)">
      <div class="lsec-in">
        <h2>Forty components. Seven you won’t find elsewhere.</h2>
        <p class="lede">The basics are quiet and dense. The signature components carry the safety patterns.</p>
@@ -1158,12 +1158,12 @@ html{scroll-padding-top:80px}
            <li><svg class="i"><use href="#i-file"/></svg><span><b>llms.txt and llms-full.txt</b> at the site root, listing every component with props and rules.</span></li>
            <li><svg class="i"><use href="#i-list-check"/></svg><span><b>Rules, not just props.</b> Each page says when to use the component and which mistakes to avoid.</span></li>
            <li><svg class="i"><use href="#i-layers"/></svg><span><b>Stable token names</b> so generated code survives a theme change.</span></li>
-           <li><svg class="i"><use href="#i-bot"/></svg><span><b>A copyable prompt</b> that tells your agent how to build with Calmon.</span></li>
+           <li><svg class="i"><use href="#i-bot"/></svg><span><b>A copyable prompt</b> that tells your agent how to build with Pikore UI.</span></li>
          </ul>
        </div>
        <div class="stack" style="gap:var(--space-4)">
-         <div class="codeblock"><div class="cb-h"><svg class="i"><use href="#i-file"/></svg>calmon.dev/llms.txt<button class="btn btn-ghost btn-sm" data-copy="llms"><svg class="i"><use href="#i-copy"/></svg>Copy</button></div>
-<pre id="cp-llms"><span class="tk-c"># Calmon</span>
+         <div class="codeblock"><div class="cb-h"><svg class="i"><use href="#i-file"/></svg>pikore.dev/llms.txt<button class="btn btn-ghost btn-sm" data-copy="llms"><svg class="i"><use href="#i-copy"/></svg>Copy</button></div>
+<pre id="cp-llms"><span class="tk-c"># Pikore UI</span>
 <span class="tk-c">&gt; React + Tailwind v4 components for operational software.</span>
 
 <span class="tk-k">## Rules</span>
@@ -1175,7 +1175,7 @@ html{scroll-padding-top:80px}
 - [Button](<span class="tk-s">/docs/button.md</span>): actions; one primary per view
 - [HealthScore](<span class="tk-s">/docs/health-score.md</span>): composite 0–100</pre></div>
          <div class="codeblock"><div class="cb-h"><svg class="i"><use href="#i-bot"/></svg>Prompt for your coding agent<button class="btn btn-secondary btn-sm" data-copy="prompt"><svg class="i"><use href="#i-copy"/></svg>Copy prompt</button></div>
-<pre id="cp-prompt" style="white-space:pre-wrap">Build this UI with Calmon (@openvanta/calmon-react). Read https://calmon.dev/llms.txt first. Use severity props (normal, info, advisory, caution, critical) or intents (success, warning, danger) instead of colours. Wrap every destructive action in ConfirmTarget and every risky change in PausePoint.</pre></div>
+<pre id="cp-prompt" style="white-space:pre-wrap">Build this UI with Pikore UI (@openvanta/pikore-react). Read https://pikore.dev/llms.txt first. Use severity props (normal, info, advisory, caution, critical) or intents (success, warning, danger) instead of colours. Wrap every destructive action in ConfirmTarget and every risky change in PausePoint.</pre></div>
        </div>
      </div>
    </section>
@@ -1188,19 +1188,19 @@ html{scroll-padding-top:80px}
          <div class="steps">
            <div class="stp"><span>Add the package to your React project.</span></div>
            <div class="stp"><span>Import the stylesheet once, after Tailwind.</span></div>
-           <div class="stp"><span>Wrap your app in <code class="inline">&lt;CalmonProvider&gt;</code> and start with a Button.</span></div>
+           <div class="stp"><span>Wrap your app in <code class="inline">&lt;PikoreProvider&gt;</code> and start with a Button.</span></div>
          </div>
        </div>
        <div class="stack" style="gap:var(--space-4)">
-         <div class="codeblock"><div class="cb-h">Terminal<button class="btn btn-ghost btn-sm" data-copy="install"><svg class="i"><use href="#i-copy"/></svg>Copy</button></div><pre id="cp-install"><span class="tk-c">$</span> npm install @openvanta/calmon-react</pre></div>
+         <div class="codeblock"><div class="cb-h">Terminal<button class="btn btn-ghost btn-sm" data-copy="install"><svg class="i"><use href="#i-copy"/></svg>Copy</button></div><pre id="cp-install"><span class="tk-c">$</span> npm install @openvanta/pikore-react</pre></div>
          <div class="codeblock"><div class="cb-h">app.css</div><pre><span class="tk-k">@import</span> <span class="tk-s">"tailwindcss"</span>;
-<span class="tk-k">@import</span> <span class="tk-s">"@openvanta/calmon-react/styles.css"</span>;</pre></div>
+<span class="tk-k">@import</span> <span class="tk-s">"@openvanta/pikore-react/styles.css"</span>;</pre></div>
        </div>
      </div>
    </section>
 
    <footer class="footer"><div class="footer-in">
-     <div><a class="logo" href="#"><svg aria-hidden="true"><use href="#i-logo"/></svg>Calmon</a><p>Open-source components for software people rely on. </p></div>
+     <div><a class="logo" href="#"><svg aria-hidden="true"><use href="#i-logo"/></svg>Pikore UI</a><p>Open-source components for software people rely on. </p></div>
      <div><h4>Docs</h4><a href="#/docs/installation">Getting started</a><a href="#/docs/theming">Theming</a><a href="#/docs/principles">Principles</a><a href="#/docs/agents">For AI agents</a></div>
      <div><h4>Components</h4><a href="#/docs/health-score">Monitoring</a><a href="#/docs/pause-points">Safety</a><a href="#/docs/input">Forms</a><a href="#/docs/components">All components</a></div>
      <div><h4>Project</h4><a href="#">GitHub</a><a href="#/docs/changelog">Changelog</a><a href="#">Contributing</a><a href="#">MIT License</a></div>
@@ -1209,7 +1209,7 @@ html{scroll-padding-top:80px}
 <div class="route" id="r-examples"><div id="ex-host"></div></div>
 </div>
 <div id="store" aria-hidden="true"><div class="rawc" id="raw-button"><h2 id="d-import">Import</h2>
-       <div class="codeblock"><div class="cb-h">tsx<button class="btn btn-ghost btn-sm" data-copy="import"><svg class="i"><use href="#i-copy"/></svg>Copy</button></div><pre id="cp-import"><span class="tk-k">import</span> { Button } <span class="tk-k">from</span> <span class="tk-s">"@openvanta/calmon-react"</span>;</pre></div>
+       <div class="codeblock"><div class="cb-h">tsx<button class="btn btn-ghost btn-sm" data-copy="import"><svg class="i"><use href="#i-copy"/></svg>Copy</button></div><pre id="cp-import"><span class="tk-k">import</span> { Button } <span class="tk-k">from</span> <span class="tk-s">"@openvanta/pikore-react"</span>;</pre></div>
 
        <h2 id="d-examples">Examples</h2>
        <h3 id="d-variants">Variants</h3>
@@ -1292,7 +1292,7 @@ html{scroll-padding-top:80px}
 
   <h2>CSS variables</h2>
   <p class="sec-lede">The complete block. Light values on <code class="inline">:root</code>, dark on <code class="inline">.dark</code>.</p>
-  <div class="codeblock"><div class="cb-h">calmon-tokens.css<button class="btn btn-secondary btn-sm" data-copy="tokens"><svg class="i"><use href="#i-copy"/></svg>Copy CSS</button></div><pre id="cp-tokens" style="max-height:520px"></pre></div>
+  <div class="codeblock"><div class="cb-h">pikore-tokens.css<button class="btn btn-secondary btn-sm" data-copy="tokens"><svg class="i"><use href="#i-copy"/></svg>Copy CSS</button></div><pre id="cp-tokens" style="max-height:520px"></pre></div>
 
   </div><div class="rawc" id="raw-notes"><h2>Notes for the developer</h2>
   <div class="notes">
@@ -1350,17 +1350,17 @@ html{scroll-padding-top:80px}
   <div class="phones">
    <div><p class="frame-label" style="text-align:center">Landing hero</p><div class="phone"><div class="scr">
      <div class="notch"><span>9:41</span><span>●●● 5G</span></div>
-     <div class="m-nav"><a class="logo" href="#"><svg aria-hidden="true"><use href="#i-logo"/></svg>Calmon</a><div class="row" style="gap:2px"><button class="btn btn-ghost icon-btn" aria-label="Search" data-open-palette><svg class="i"><use href="#i-search"/></svg></button><button class="btn btn-ghost icon-btn" data-theme-toggle aria-label="Toggle theme"><svg class="i"><use href="#i-sun"/></svg></button><button class="btn btn-ghost icon-btn" aria-label="Menu"><svg class="i"><use href="#i-more"/></svg></button></div></div>
+     <div class="m-nav"><a class="logo" href="#"><svg aria-hidden="true"><use href="#i-logo"/></svg>Pikore UI</a><div class="row" style="gap:2px"><button class="btn btn-ghost icon-btn" aria-label="Search" data-open-palette><svg class="i"><use href="#i-search"/></svg></button><button class="btn btn-ghost icon-btn" data-theme-toggle aria-label="Toggle theme"><svg class="i"><use href="#i-sun"/></svg></button><button class="btn btn-ghost icon-btn" aria-label="Menu"><svg class="i"><use href="#i-more"/></svg></button></div></div>
      <div class="m-hero"><h1>Interfaces that stay calm when the system isn’t.</h1><p>React and Tailwind components built on proven safety principles: fewer alarms, clear limits, and a short pause before anything risky.</p><div class="ctas"><a class="btn btn-primary btn-lg" href="#">Get started</a><a class="btn btn-secondary btn-lg" href="#">Browse components</a></div></div>
      <div class="m-station"><div class="mon-h"><b style="font-size:13px">Production, eu-west</b><span class="live"><i></i>Live</span></div><div class="station" data-station="mobile"></div></div>
    </div></div></div>
    <div><p class="frame-label" style="text-align:center">Docs: Button</p><div class="phone"><div class="scr">
      <div class="notch"><span>9:41</span><span>●●● 5G</span></div>
-     <div class="m-nav"><a class="logo" href="#"><svg aria-hidden="true"><use href="#i-logo"/></svg>Calmon</a><div class="row" style="gap:2px"><button class="btn btn-ghost icon-btn" aria-label="Search" data-open-palette><svg class="i"><use href="#i-search"/></svg></button><button class="btn btn-ghost icon-btn" aria-label="Menu"><svg class="i"><use href="#i-more"/></svg></button></div></div>
+     <div class="m-nav"><a class="logo" href="#"><svg aria-hidden="true"><use href="#i-logo"/></svg>Pikore UI</a><div class="row" style="gap:2px"><button class="btn btn-ghost icon-btn" aria-label="Search" data-open-palette><svg class="i"><use href="#i-search"/></svg></button><button class="btn btn-ghost icon-btn" aria-label="Menu"><svg class="i"><use href="#i-more"/></svg></button></div></div>
      <div class="m-sel"><span class="muted">Actions /</span><b style="margin-right:auto;margin-left:6px">Button</b><svg class="i"><use href="#i-chev-d"/></svg></div>
      <div class="m-docs">
        <h1>Button</h1><p class="desc">Starts an action. Use one primary button per view, and let severity say how serious the action is.</p>
-       <h2>Import</h2><div class="codeblock"><div class="cb-h">tsx<button class="btn btn-ghost btn-sm icon-btn" aria-label="Copy"><svg class="i"><use href="#i-copy"/></svg></button></div><pre style="font-size:11px"><span class="tk-k">import</span> { Button } <span class="tk-k">from</span> <span class="tk-s">"@openvanta/calmon-react"</span>;</pre></div>
+       <h2>Import</h2><div class="codeblock"><div class="cb-h">tsx<button class="btn btn-ghost btn-sm icon-btn" aria-label="Copy"><svg class="i"><use href="#i-copy"/></svg></button></div><pre style="font-size:11px"><span class="tk-k">import</span> { Button } <span class="tk-k">from</span> <span class="tk-s">"@openvanta/pikore-react"</span>;</pre></div>
        <h2>Variants</h2>
        <div class="example" data-tab="preview"><div class="ex-h"><div class="tabs"><button aria-selected="true" data-ex="preview">Preview</button><button aria-selected="false" data-ex="code">Code</button></div></div><div class="ex-p" style="padding:20px 12px"><button class="btn btn-primary">Save changes</button><button class="btn btn-secondary">Cancel</button></div><div class="ex-c"><pre style="font-size:11px"><span class="tk-t">&lt;Button</span> <span class="tk-a">variant</span>=<span class="tk-s">"primary"</span><span class="tk-t">&gt;</span>Save changes<span class="tk-t">&lt;/Button&gt;</span></pre></div></div>
        <h2>Props</h2>
@@ -1622,7 +1622,7 @@ html{scroll-padding-top:80px}
      <h3 style="margin-top:24px">Pagination</h3><nav class="pager" aria-label="Pagination"><button disabled aria-label="Previous page"><svg class="i"><use href="#i-chev-l"/></svg></button><button aria-current="page">1</button><button>2</button><button>3</button><span class="subtle">…</span><button>12</button><button aria-label="Next page"><svg class="i"><use href="#i-chev-r"/></svg></button><span class="hint" style="margin-left:8px">1–25 of 289</span></nav>
    </div></div><div class="rawc" id="raw-spec_SideNav"><div class="specimen"><h3>SideNav</h3><nav class="sidenav" style="max-width:240px">
      <div class="grp">Monitor</div><a href="#" aria-current="page"><svg class="i"><use href="#i-grid"/></svg>Station<span class="badge sev-critical solid"><svg class="i" style="--critical-on:var(--critical)"><use href="#i-critical"/></svg>1</span></a><a href="#"><svg class="i"><use href="#i-pulse"/></svg>Services</a><a href="#"><svg class="i"><use href="#i-timeline"/></svg>Timeline</a>
-     <div class="grp">Change</div><a href="#"><svg class="i"><use href="#i-list-check"/></svg>Deploys<span class="badge">3</span></a><a href="#"><svg class="i"><use href="#i-settings"/></svg>Settings</a></nav></div></div><div class="rawc" id="raw-spec_Avatar"><div class="specimen"><h3>Avatar</h3><div class="row" style="gap:16px"><span class="avatar sm">MR</span><span class="avatar">AK<i class="dot"></i></span><span class="avatar lg">JO</span><span class="avatar"><svg class="i"><use href="#i-user"/></svg></span><div class="avatars"><span class="avatar">PS</span><span class="avatar">LT</span><span class="avatar">+4</span></div></div></div></div><div class="rawc" id="raw-spec_Kbd"><div class="specimen"><h3>Kbd and Code</h3><div class="stack"><div class="row" style="gap:6px;font-size:var(--text-sm)"><kbd>Ctrl</kbd><kbd>K</kbd><span class="muted">to search,</span><kbd>Esc</kbd><span class="muted">to close</span></div><p style="font-size:var(--text-sm)">Set <code class="inline">severity="critical"</code> on the tile.</p><div class="codeblock"><pre>pnpm add @openvanta/calmon-react</pre></div></div></div></div><div class="rawc" id="raw-spec_Sparkline"><div class="specimen"><h3>Sparkline</h3><div class="stack" style="gap:14px">
+     <div class="grp">Change</div><a href="#"><svg class="i"><use href="#i-list-check"/></svg>Deploys<span class="badge">3</span></a><a href="#"><svg class="i"><use href="#i-settings"/></svg>Settings</a></nav></div></div><div class="rawc" id="raw-spec_Avatar"><div class="specimen"><h3>Avatar</h3><div class="row" style="gap:16px"><span class="avatar sm">MR</span><span class="avatar">AK<i class="dot"></i></span><span class="avatar lg">JO</span><span class="avatar"><svg class="i"><use href="#i-user"/></svg></span><div class="avatars"><span class="avatar">PS</span><span class="avatar">LT</span><span class="avatar">+4</span></div></div></div></div><div class="rawc" id="raw-spec_Kbd"><div class="specimen"><h3>Kbd and Code</h3><div class="stack"><div class="row" style="gap:6px;font-size:var(--text-sm)"><kbd>Ctrl</kbd><kbd>K</kbd><span class="muted">to search,</span><kbd>Esc</kbd><span class="muted">to close</span></div><p style="font-size:var(--text-sm)">Set <code class="inline">severity="critical"</code> on the tile.</p><div class="codeblock"><pre>pnpm add @openvanta/pikore-react</pre></div></div></div></div><div class="rawc" id="raw-spec_Sparkline"><div class="specimen"><h3>Sparkline</h3><div class="stack" style="gap:14px">
      <div class="row" style="flex-wrap:nowrap"><span class="muted" style="width:70px;font-size:12px">Normal</span><svg class="spark sev-normal" data-d="20,22,21,24,22,23,25,22,21,23,24,22" style="width:100%;height:28px"></svg></div>
      <div class="row" style="flex-wrap:nowrap"><span class="muted" style="width:70px;font-size:12px">Threshold</span><svg class="spark sev-caution" data-d="30,32,31,35,38,42,41,46,49,52,55,58" data-th="45" style="width:100%;height:28px"></svg></div>
      <div class="row" style="flex-wrap:nowrap"><span class="muted" style="width:70px;font-size:12px">Area</span><svg class="spark" data-d="10,14,12,18,22,19,26,24,28,25,30,33" data-area="1" style="width:100%;height:28px"></svg></div>
@@ -1775,7 +1775,7 @@ const P={
  Table:['Rows of records','<div class="table-wrap" style="width:190px"><table class="t" style="font-size:11px"><tr><th>Service</th><th class="n">Score</th></tr><tr><td>orders</td><td class="n">88</td></tr><tr><td>search</td><td class="n">64</td></tr></table></div>'],
  Avatar:['People and owners','<div class="avatars"><span class="avatar">PS</span><span class="avatar">LT</span><span class="avatar">+4</span></div>'],
  Kbd:['Keyboard keys','<div class="row" style="gap:4px"><kbd>Ctrl</kbd><kbd>K</kbd></div>'],
- Code:['Inline and block code','<div class="codeblock" style="width:180px"><pre style="padding:8px 10px;font-size:11px">npm i @openvanta/calmon-react</pre></div>'],
+ Code:['Inline and block code','<div class="codeblock" style="width:180px"><pre style="padding:8px 10px;font-size:11px">npm i @openvanta/pikore-react</pre></div>'],
  Sparkline:['Trend in a line','<svg class="spark" data-d="10,14,12,18,22,19,26,24,28" data-area="1" style="width:170px;height:40px"></svg>'],
  Timeline:['One record per entity','<ul class="tl" style="width:180px;font-size:12px"><li class="sev-critical" style="padding:4px 0"><span class="dot">'+ic('critical')+'</span><div class="what"><b>Errors above 4%</b></div><time></time></li><li class="sev-normal" style="padding:4px 0"><span class="dot">'+ic('normal')+'</span><div class="what"><b>v42 published</b></div><time></time></li></ul>',1],
  HealthScore:['Composite 0–100 score','<div class="hs-ring sev-caution" style="width:96px;height:96px"><svg viewBox="0 0 132 132"><circle class="trk" cx="66" cy="66" r="56"/><circle class="val" cx="66" cy="66" r="56" stroke-dasharray="218 352"/></svg><div class="ctr"><span class="num" style="font-size:var(--numeral-md)">62</span></div></div>',1],
@@ -1812,7 +1812,7 @@ const SRCH=[];
 CATS.forEach(([c,l])=>l.forEach(n=>SRCH.push({g:'Components',t:n,sub:`${c} · ${P[n][0]}`,i:'grid'})));
 [['Getting started','Install, import styles, first component'],['Theming','Tokens, dark mode, custom accent'],['Principles','Seven safety habits behind every component'],['Density','Comfortable, compact and station'],['For AI agents','llms.txt, rules and a copyable prompt'],['Severity','normal, info, advisory, caution, critical']].forEach(([t,s])=>SRCH.push({g:'Guides',t,sub:s,i:'book'}));
 [['Button › Common mistakes','Deleting without confirming the target'],['ConfirmTarget › Environments','Show PROD next to the record name'],['Principles › Confirm the target','Type the exact name before deleting'],['PausePoint › Writing good items','Facts, not questions; three to five items'],['LimitedNumberInput › Soft vs hard limits','Warn and justify, or block']].forEach(([t,s])=>SRCH.push({g:'Sections',t,sub:s,i:'hash'}));
-[['Toggle theme','Switch between light and dark'],['Copy install command','npm install @openvanta/calmon-react'],['Open llms.txt','Plain-text docs for coding agents']].forEach(([t,s])=>SRCH.push({g:'Actions',t,sub:s,i:'cmd'}));
+[['Toggle theme','Switch between light and dark'],['Copy install command','npm install @openvanta/pikore-react'],['Open llms.txt','Plain-text docs for coding agents']].forEach(([t,s])=>SRCH.push({g:'Actions',t,sub:s,i:'cmd'}));
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const hl=(s,q)=>{if(!q)return esc(s);const i=s.toLowerCase().indexOf(q);return i<0?esc(s):esc(s.slice(0,i))+'<mark>'+esc(s.slice(i,i+q.length))+'</mark>'+esc(s.slice(i+q.length));};
 function buildPalette(root,initial,live){
@@ -1834,7 +1834,7 @@ function buildPalette(root,initial,live){
       h+=`<div class="pr" role="option" id="${root.id}-o${i}" aria-selected="${i===sel}" data-i="${i}"><span class="pic">${ic(x.i)}</span><span class="t"><b>${hl(x.t,q)}</b><span>${hl(x.sub,q)}</span></span><span class="go">${ic('enter')}</span></div>`;});
     res.innerHTML=h; inp.setAttribute('aria-activedescendant',`${root.id}-o${sel}`);
   }
-  function activate(x){ if(!live) return; closePalette(); if(x.href) go(x.href); else if(x.t==='Toggle theme') toggleTheme(); else if(x.t==='Copy install command') copyText('npm install @openvanta/calmon-react'); }
+  function activate(x){ if(!live) return; closePalette(); if(x.href) go(x.href); else if(x.t==='Toggle theme') toggleTheme(); else if(x.t==='Copy install command') copyText('npm install @openvanta/pikore-react'); }
   inp.addEventListener('input',()=>{sel=0;render();});
   inp.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){sel=(sel+1)%list.length;render();e.preventDefault();$(`[data-i="${sel}"]`,res)?.scrollIntoView({block:'nearest'});}else if(e.key==='ArrowUp'){sel=(sel-1+list.length)%list.length;render();e.preventDefault();$(`[data-i="${sel}"]`,res)?.scrollIntoView({block:'nearest'});}else if(e.key==='Enter'&&list[sel]){activate(list[sel]);}});
   res.addEventListener('mousemove',e=>{const r=e.target.closest('.pr');if(r&&+r.dataset.i!==sel){sel=+r.dataset.i;render();}});
@@ -1900,7 +1900,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-copy],[dat
  <div style="max-width:${w}px;margin-top:20px">${vtHTML(VT[0])}</div></div>`).join('');})();
 
 /* ---------- Tokens ---------- */
-const TOKCSS=$('#calmon-tokens').textContent.trim();
+const TOKCSS=$('#pikore-tokens').textContent.trim();
 $('#cp-tokens').textContent=TOKCSS;
 function parseBlock(sel){const m=TOKCSS.match(new RegExp(sel.replace('.','\\.').replace(':','\\:')+'\\s*\\{([\\s\\S]*?)\\n\\}'));const o={};if(!m)return o;m[1].replace(/\/\*[\s\S]*?\*\//g,'').replace(/(--[\w-]+)\s*:\s*([^;]+);/g,(_,k,v)=>{o[k]=v.trim();});return o;}
 const LT=parseBlock(':root'),DK=parseBlock('.dark');
@@ -1955,7 +1955,7 @@ function toast(o){
   el.update=p=>{Object.assign(o,p);const b=el.querySelector('b');b.textContent=o.title;const pr=el.querySelector('.progress span');if(pr&&p.progress!==undefined)pr.style.width=p.progress+'%';if(p.body!==undefined){let q=el.querySelector('p');if(q)q.textContent=p.body;}};
   el.close=close;return el;
 }
-window.calmonToast=toast;
+window.pikoreToast=toast;
 const TT=[['normal','Published','Config v43 is live in production.'],['info','Deploy queued','Starts after the current rollout finishes.'],['advisory','Certificate expires soon','orders.example.com renews in 21 days.'],['caution','Disk above 85%','db-03 will slow down writes at 90%.'],['critical','Couldn’t publish','The change window closed at 18:00. Request an extension or schedule for tomorrow.'],['accent','Invite sent','priya@company.com can join the workspace.']];
 const TN={normal:'Success',info:'Info',advisory:'Advisory',caution:'Warning',critical:'Danger',accent:'Primary'};
 $('#toast-triggers').innerHTML=TT.map(([k])=>`<button class="btn btn-soft sev-${k}" data-toast="${k}">${ic(TICON[k])}${TN[k]}</button>`).join('');
@@ -2132,7 +2132,7 @@ const SPEC={
   ex:[['Group',`<div class="avatars"><span class="avatar">PS</span><span class="avatar">LT</span><span class="avatar">+4</span></div>`,`<AvatarGroup max={2} people={team} />`]],
   props:[['name','string','required','Used for initials and alt text.'],['status','"online" | "away"','none','Presence dot.']],a11y:[['Name','Image alt or aria-label from name.']],do:'Show owners next to the entity they own.',dont:'Don’t rely on avatars alone; show the name nearby.'},
  Kbd:{cat:'Data display',d:'Keyboard keys and shortcuts.',states:'Kbd',ex:[['Shortcut',`<kbd>Ctrl</kbd><kbd>K</kbd>`,`<Kbd>Ctrl</Kbd><Kbd>K</Kbd>`]],props:[['children','string','required','Key name.']],a11y:[['Semantics','Renders kbd.']],do:'Show the platform key: Ctrl on Windows, ⌘ on Mac.',dont:'Don’t use for regular code.'},
- Code:{cat:'Data display',d:'Inline code and copyable code blocks.',ex:[['Block',`<div class="codeblock" style="width:360px"><div class="cb-h">Terminal</div><pre>npm install @openvanta/calmon-react</pre></div>`,`<CodeBlock language="bash" copyable>npm install @openvanta/calmon-react</CodeBlock>`]],props:[['language','string','"tsx"','Highlighting.'],['copyable','boolean','true','Copy button.']],a11y:[['Copy','Copy button announces “Copied”.']],do:'Keep lines short enough to read without scrolling.',dont:'Don’t use for prose emphasis.'},
+ Code:{cat:'Data display',d:'Inline code and copyable code blocks.',ex:[['Block',`<div class="codeblock" style="width:360px"><div class="cb-h">Terminal</div><pre>npm install @openvanta/pikore-react</pre></div>`,`<CodeBlock language="bash" copyable>npm install @openvanta/pikore-react</CodeBlock>`]],props:[['language','string','"tsx"','Highlighting.'],['copyable','boolean','true','Copy button.']],a11y:[['Copy','Copy button announces “Copied”.']],do:'Keep lines short enough to read without scrolling.',dont:'Don’t use for prose emphasis.'},
  Sparkline:{cat:'Data display',d:'A word-sized trend line, with an optional threshold.',states:'Sparkline',ex:[['With threshold',`<svg class="spark sev-caution" data-d="30,32,31,35,38,42,41,46,49,52,55,58" data-th="45" style="width:220px;height:36px"></svg>`,`<Sparkline data={series} threshold={45} severity="caution" />`]],props:[['data','number[]','required','Values.'],['threshold','number','none','Dashed reference line.'],['area','boolean','false','Fills under the line.']],a11y:[['Label','aria-label describes the trend: “rising, 30 to 58”.']],do:'Pair with the current value.',dont:'Don’t add axes. Use Chart.'},
  HealthScore:{cat:'Monitoring',d:'One number from many signals, with the factors that moved it.',pattern:'composite-score',ex:[['Ring',`<div data-hs="full" style="width:100%"></div>`,`<HealthScore value={62} factors={factors} bands={{ advisory: 85, caution: 70, critical: 50 }} />`]],props:[['value','number','required','0–100.'],['factors','{label, weight, impact, severity}[]','required','Breakdown.'],['bands','object','default bands','Score to severity mapping.']],a11y:[['Text','Score, band and top factor are given as text, not just the ring.']],do:'Show the biggest factor next to the score.',dont:'Don’t show a score without its factors.'},
  VitalTile:{cat:'Monitoring',d:'A metric with unit, trend and the threshold it’s judged against.',pattern:'composite-score',ex:[['Tile',`<div style="width:300px" data-vt="0"></div>`,`<VitalTile label="p95 latency" value={412} unit="ms" data={series} threshold={{ value: 400, severity: 'caution' }} />`]],props:[['label','string','required','Metric name.'],['value','number','required','Current value.'],['unit','string','none','Unit.'],['threshold','{value, severity}','none','Limit.'],['density','Density','inherit','Size.']],a11y:[['Status','Severity label is text inside the tile.']],do:'Show the limit, not just the value.',dont:'Don’t colour the tile without a label.'},
@@ -2156,9 +2156,9 @@ const PAGES=[]; const NAV=[];
 function sec(name,icon,items){NAV.push({name,icon,items});items.forEach(it=>{if(it.sub)return;PAGES.push(Object.assign({section:name},it));});}
 sec('Get started','book',[
  {id:'introduction',t:'Introduction',d:'A React and Tailwind design system for software people rely on, built on safety principles for high-stakes work.'},
- {id:'installation',t:'Installation',d:'Add Calmon to a React project with Tailwind CSS v4.'},
+ {id:'installation',t:'Installation',d:'Add Pikore UI to a React project with Tailwind CSS v4.'},
  {id:'theming',t:'Theming',d:'Light and dark are equal. Change the accent, density and radius with tokens.'},
- {id:'agents',t:'For AI agents',d:'Plain-text docs, rules and a prompt so coding agents build correctly with Calmon.'}]);
+ {id:'agents',t:'For AI agents',d:'Plain-text docs, rules and a prompt so coding agents build correctly with Pikore UI.'}]);
 sec('Foundations','layers',[
  {id:'principles',t:'Design principles',d:'Seven safety habits that shape every component and pattern.'},
  {id:'colour',t:'Colour',d:'Intents, the severity scale and every colour code for light and dark.'},
@@ -2175,7 +2175,7 @@ const compItems=[{id:'components',t:'Overview',d:'Every component, grouped by wh
 CGROUPS.forEach(([g,l])=>{compItems.push({sub:g});l.forEach(n=>compItems.push({id:slug(n),t:n,comp:n,d:SPEC[n].d,group:g}));});
 sec('Components','grid',compItems);
 sec('Dashboards','room',[
- {id:'dashboards',t:'Example dashboards',d:'Four complete screens built only from Calmon components.'},
+ {id:'dashboards',t:'Example dashboards',d:'Four complete screens built only from Pikore UI components.'},
  {id:'responsive',t:'Responsive previews',d:'Home and docs at phone width.'},
  {id:'changelog',t:'Changelog',d:'What changed in each release.'}]);
 const PIDX={};PAGES.forEach((p,i)=>PIDX[p.id]=i);
@@ -2184,15 +2184,15 @@ const PIDX={};PAGES.forEach((p,i)=>PIDX[p.id]=i);
 const cb=(lang,code,key)=>`<div class="codeblock"><div class="cb-h">${lang}${key?`<button class="btn btn-ghost btn-sm" data-copy-text>${I('copy')}Copy</button>`:''}</div><pre>${code}</pre></div>`;
 const lc=(href,icon,t,s)=>`<a class="linkcard" href="${href}"><span class="lc-ic">${I(icon)}</span><b>${t}</b><span>${s}</span></a>`;
 const BODY={
- introduction:()=>`<p class="lead">Calmon is an open-source component library for operational and enterprise software: monitoring, incident response, admin consoles, and any dashboard where a missed signal costs something. Use it to build screens people can trust under pressure.</p>
- <div class="callout">${I('info')}<span><b>Why safety principles?</b> Screens fail people under pressure in predictable ways: too many alarms, unclear limits, acting on the wrong target. Calmon builds the fixes into components, so every team gets them by default.</span></div>
+ introduction:()=>`<p class="lead">Pikore UI is an open-source component library for operational and enterprise software: monitoring, incident response, admin consoles, and any dashboard where a missed signal costs something. Use it to build screens people can trust under pressure.</p>
+ <div class="callout">${I('info')}<span><b>Why safety principles?</b> Screens fail people under pressure in predictable ways: too many alarms, unclear limits, acting on the wrong target. Pikore UI builds the fixes into components, so every team gets them by default.</span></div>
  <h2>Seven principles</h2><p class="lead">Each principle is a Safety pattern page with the component that implements it.</p>
  <div class="linkcards">${PRINC.map(p=>lc('#/docs/'+p[0],p[2],p[1],p[4].split('. ')[0]+'.')).join('')}</div>
  <h2>Find your way</h2><div class="linkcards">${lc('#/docs/colour','layers','Foundations','Colour codes, type, spacing, icons and tokens.')}${lc('#/docs/components','grid','Components','Forty components with examples, props and guidelines.')}${lc('#/docs/dashboards','room','Example dashboards','Patient monitoring, IT ops, business ops and admin screens.')}${lc('#/docs/agents','bot','For AI agents','llms.txt and a ready prompt for coding agents.')}</div>`,
  installation:()=>`<h2>Requirements</h2><ul class="bul"><li>React 18 or 19</li><li>Tailwind CSS v4</li><li>Any bundler: Vite, Next.js, Remix</li></ul>
- <h2>1. Install the package</h2>${cb('Terminal','<span class="tk-c">$</span> npm install @openvanta/calmon-react',1)}
- <h2>2. Import the styles</h2><p class="lead">Import once, after Tailwind. Tokens arrive as CSS variables.</p>${cb('app.css','<span class="tk-k">@import</span> <span class="tk-s">"tailwindcss"</span>;\n<span class="tk-k">@import</span> <span class="tk-s">"@openvanta/calmon-react/styles.css"</span>;',1)}
- <h2>3. Add the provider</h2>${cb('App.tsx',`<span class="tk-k">import</span> { CalmonProvider, Button } <span class="tk-k">from</span> <span class="tk-s">"@openvanta/calmon-react"</span>;\n\n<span class="tk-k">export default function</span> App() {\n  <span class="tk-k">return</span> (\n    <span class="tk-t">&lt;CalmonProvider</span> <span class="tk-a">theme</span>=<span class="tk-s">"system"</span> <span class="tk-a">density</span>=<span class="tk-s">"comfortable"</span><span class="tk-t">&gt;</span>\n      <span class="tk-t">&lt;Button</span> <span class="tk-a">variant</span>=<span class="tk-s">"primary"</span><span class="tk-t">&gt;</span>Save changes<span class="tk-t">&lt;/Button&gt;</span>\n    <span class="tk-t">&lt;/CalmonProvider&gt;</span>\n  );\n}`,1)}
+ <h2>1. Install the package</h2>${cb('Terminal','<span class="tk-c">$</span> npm install @openvanta/pikore-react',1)}
+ <h2>2. Import the styles</h2><p class="lead">Import once, after Tailwind. Tokens arrive as CSS variables.</p>${cb('app.css','<span class="tk-k">@import</span> <span class="tk-s">"tailwindcss"</span>;\n<span class="tk-k">@import</span> <span class="tk-s">"@openvanta/pikore-react/styles.css"</span>;',1)}
+ <h2>3. Add the provider</h2>${cb('App.tsx',`<span class="tk-k">import</span> { PikoreProvider, Button } <span class="tk-k">from</span> <span class="tk-s">"@openvanta/pikore-react"</span>;\n\n<span class="tk-k">export default function</span> App() {\n  <span class="tk-k">return</span> (\n    <span class="tk-t">&lt;PikoreProvider</span> <span class="tk-a">theme</span>=<span class="tk-s">"system"</span> <span class="tk-a">density</span>=<span class="tk-s">"comfortable"</span><span class="tk-t">&gt;</span>\n      <span class="tk-t">&lt;Button</span> <span class="tk-a">variant</span>=<span class="tk-s">"primary"</span><span class="tk-t">&gt;</span>Save changes<span class="tk-t">&lt;/Button&gt;</span>\n    <span class="tk-t">&lt;/PikoreProvider&gt;</span>\n  );\n}`,1)}
  <h2>Next steps</h2><div class="linkcards">${lc('#/docs/principles','layers','Read the principles','How the seven habits shape your screens.')}${lc('#/docs/dashboards','room','Start from a dashboard','Copy a complete example screen.')}</div>`,
  theming:()=>`<h2>Light and dark</h2><p class="lead">Both themes are designed together and pass the same contrast checks. <code class="inline">theme="system"</code> follows the device; people can switch with the toggle in the header. Severity colours shift lightness between themes so they stay distinguishable on both.</p>
  <div class="row"><button class="btn btn-secondary" data-theme-set="light">${I('sun')}Light</button><button class="btn btn-secondary" data-theme-set="dark">${I('moon')}Dark</button></div>
@@ -2200,8 +2200,8 @@ const BODY={
  <h2>Tailwind v4 mapping</h2>${cb('app.css',`<span class="tk-k">@custom-variant</span> dark (&amp;:where(.dark, .dark *));\n<span class="tk-k">@theme</span> inline {\n  --color-surface: var(--surface);\n  --color-critical: var(--critical);\n  --color-critical-soft: var(--critical-soft);\n  --radius-card: var(--radius-card);\n}`,1)}
  <h2>Density</h2><p class="lead">Set density on the provider or any subtree: <code class="inline">comfortable</code>, <code class="inline">compact</code> or <code class="inline">station</code>. See <a href="#/docs/station-display">Readable across the room</a>.</p>`,
  agents:()=>`<p class="lead">Coding agents read the same rules people do. Every page on this site has a plain-text twin, and the root has an index.</p>
- <h2>llms.txt</h2>${cb('calmon.dev/llms.txt',`<span class="tk-c"># Calmon</span>\n<span class="tk-c">&gt; React + Tailwind v4 components for operational software.</span>\n\n<span class="tk-k">## Rules</span>\n- Use severity or intent props, never raw colours.\n- Every severity indicator shows an icon or label.\n- Sort overviews worst first.\n- Destructive actions use &lt;ConfirmTarget&gt;.\n- Risky actions use &lt;PausePoint&gt; (3–5 items).\n- Inputs with safe ranges use &lt;LimitedNumberInput&gt;.\n\n<span class="tk-k">## Components</span>\n- [Button](/docs/button.md): actions; one primary per view\n- [HealthScore](/docs/health-score.md): composite 0–100 with factors`,1)}
- <h2>Prompt for your agent</h2>${cb('Prompt','Build this UI with Calmon (@openvanta/calmon-react). Read https://calmon.dev/llms.txt first. Use severity (normal, info, advisory, caution, critical) or intent (primary, secondary, success, warning, danger) props instead of colours. Sort overviews worst first. Wrap destructive actions in ConfirmTarget, risky changes in PausePoint, and inputs with safe ranges in LimitedNumberInput. Start from the closest example dashboard.',1)}
+ <h2>llms.txt</h2>${cb('pikore.dev/llms.txt',`<span class="tk-c"># Pikore UI</span>\n<span class="tk-c">&gt; React + Tailwind v4 components for operational software.</span>\n\n<span class="tk-k">## Rules</span>\n- Use severity or intent props, never raw colours.\n- Every severity indicator shows an icon or label.\n- Sort overviews worst first.\n- Destructive actions use &lt;ConfirmTarget&gt;.\n- Risky actions use &lt;PausePoint&gt; (3–5 items).\n- Inputs with safe ranges use &lt;LimitedNumberInput&gt;.\n\n<span class="tk-k">## Components</span>\n- [Button](/docs/button.md): actions; one primary per view\n- [HealthScore](/docs/health-score.md): composite 0–100 with factors`,1)}
+ <h2>Prompt for your agent</h2>${cb('Prompt','Build this UI with Pikore UI (@openvanta/pikore-react). Read https://pikore.dev/llms.txt first. Use severity (normal, info, advisory, caution, critical) or intent (primary, secondary, success, warning, danger) props instead of colours. Sort overviews worst first. Wrap destructive actions in ConfirmTarget, risky changes in PausePoint, and inputs with safe ranges in LimitedNumberInput. Start from the closest example dashboard.',1)}
  <h2>What agents get right with it</h2><ul class="bul"><li><b>Stable token names</b> survive theme changes.</li><li><b>Rules on every page</b> under Guidelines, written as do and don’t.</li><li><b>Example dashboards</b> as complete starting points.</li></ul>`,
  principles:()=>`<p class="lead">Every component and pattern traces back to one of these. When two good options conflict, the principle decides.</p>`+PRINC.map(p=>`<h2>${p[1]}</h2><div class="callout">${I(p[2])}<span><b>Why it matters.</b> ${p[3]}</span></div><p class="lead"><b style="color:var(--fg)">In your software.</b> ${p[4]}</p><ul class="bul">${p[5].map(x=>`<li>${x}</li>`).join('')}</ul><p style="font-size:var(--text-sm)"><a href="#/docs/${p[0]}">Open the ${p[1].toLowerCase()} pattern</a></p>`).join(''),
  colour:()=>`<p class="lead">Colour carries meaning, so it’s rationed. Teal is the brand accent for actions and selection. The five severity levels are for status only. Neutrals do everything else. Click any code to copy it.</p><h2>Colour codes</h2><p class="lead">Every family has five roles: solid fill, text on the fill, soft background, text on surfaces, and border. Intent names are aliases. Contrast is checked live for both themes.</p><div id="colour-codes" class="stack" style="gap:16px"></div><h2>Neutrals</h2><div id="neutral-codes"></div><div data-raw="colours"></div><h2>Severity scale</h2><p class="lead">Least to most urgent. Hue, lightness and icon shape all change between levels, so the scale holds up for colour-blind people and in greyscale.</p><div data-raw="severity_scale"></div>
@@ -2213,7 +2213,7 @@ const BODY={
  accessibility:()=>`<p class="lead">Accessibility is a safety property: a person who can’t perceive an alarm can’t act on it.</p><h2>Contrast</h2><p class="lead">All text tokens meet 4.5:1 in both themes; the focus ring meets 3:1. The <a href="#/docs/tokens">token table</a> computes every ratio live.</p><h2>Not colour alone</h2><p class="lead">Each severity has a shape (circle-check, circle-i, diamond, triangle, octagon) and a word. Charts use dashed thresholds and labels, not colour bands alone.</p><h2>Keyboard</h2><ul class="bul"><li>Everything is reachable with Tab; focus is always visible.</li><li>Dialogs trap focus and return it on close. Esc closes overlays.</li><li>Ctrl K opens search from anywhere.</li></ul><h2>Screen readers</h2><ul class="bul"><li>Critical toasts and banners are assertive; everything else is polite.</li><li>Station grids keep DOM order equal to visual order, worst first.</li><li>Charts include a hidden data table.</li></ul>`,
  tokens:()=>`<div data-raw="tokens"></div><div data-raw="notes"></div>`,
  components:()=>`<div class="gal-head" style="margin-top:8px"><div style="width:260px"><input class="input" id="gal-filter" placeholder="Filter components" aria-label="Filter components"></div><div class="tabs seg" role="tablist"><button aria-selected="true" data-galf="all">All</button><button aria-selected="false" data-galf="sig">Signature</button></div></div><div id="gallery"></div>`,
- dashboards:()=>`<p class="lead">Each screen is built only from Calmon components and follows the seven principles. Open one to see it full width, in either theme.</p><div class="ex-strip" style="grid-template-columns:repeat(2,minmax(0,1fr))">${EXAMPLES.map(exCard).join('')}</div>`,
+ dashboards:()=>`<p class="lead">Each screen is built only from Pikore UI components and follows the seven principles. Open one to see it full width, in either theme.</p><div class="ex-strip" style="grid-template-columns:repeat(2,minmax(0,1fr))">${EXAMPLES.map(exCard).join('')}</div>`,
  responsive:()=>`<div data-raw="responsive"></div>`,
  changelog:()=>`<h2>1.4.0</h2><ul class="bul"><li>LimitedNumberInput: units and step sizes.</li><li>Chart: threshold bands and hover readouts.</li><li>Intent aliases: primary, secondary, success, warning, danger.</li></ul><h2>1.3.0</h2><ul class="bul"><li>Station density for wall displays.</li><li>Toast deduplication with counts.</li></ul><h2>1.2.0</h2><ul class="bul"><li>CommandPalette.</li><li>Table bulk actions and row menus.</li></ul>`
 };
@@ -2221,7 +2221,7 @@ const PATTERN_RAW={'alarm-fatigue':['sig_StationTile'],'composite-score':['sig_H
 function patternBody(p){return `<div class="callout">${I(p[2])}<span><b>Why it matters.</b> ${p[3]}</span></div><p class="lead"><b style="color:var(--fg)">In your software.</b> ${p[4]}</p><h2>Rules</h2><ul class="bul">${p[5].map(x=>`<li>${x}</li>`).join('')}</ul>${(PATTERN_RAW[p[0]]||[]).map(k=>`<div data-raw="${k}"></div>`).join('')}<h2>Components</h2><div class="linkcards">${p[6].map(n=>lc('#/docs/'+slug(n),'grid',n,SPEC[n].d)).join('')}</div>`;}
 function compBody(n){const s=SPEC[n];let h='';
  if(s.raw==='button'){return `<div data-raw="button"></div>`;}
- h+=`<h2>Import</h2>${cb('tsx',`<span class="tk-k">import</span> { ${n} } <span class="tk-k">from</span> <span class="tk-s">"@openvanta/calmon-react"</span>;`,1)}`;
+ h+=`<h2>Import</h2>${cb('tsx',`<span class="tk-k">import</span> { ${n} } <span class="tk-k">from</span> <span class="tk-s">"@openvanta/pikore-react"</span>;`,1)}`;
  if(s.pattern){const p=PRINC.find(x=>x[0]===s.pattern);h+=`<div class="callout">${I(p[2])}<span>Implements the <a href="#/docs/${p[0]}"><b>${p[1]}</b></a> pattern. The pattern page has the full interactive demo.</span></div>`;}
  if(s.ex&&s.ex.length){h+='<h2>Examples</h2>'+s.ex.map(([t,html,code])=>`<h3>${t}</h3><div class="example" data-tab="preview"><div class="ex-h"><div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-ex="preview">Preview</button><button role="tab" aria-selected="false" data-ex="code">Code</button></div><button class="btn btn-ghost btn-sm" data-copy-next>${I('copy')}Copy</button></div><div class="ex-p">${html}</div><div class="ex-c"><pre>${esc(code)}</pre></div></div>`).join('');}
  if(s.raw) h+=`<div class="embed" data-raw="${s.raw}"></div>`;
@@ -2454,7 +2454,7 @@ const RAWS={};$$('#store > .rawc').forEach(n=>RAWS[n.id.slice(4)]=1);
 SRCH.length=0;
 PAGES.forEach(p=>SRCH.push({g:p.comp?'Components':p.section==='Safety patterns'?'Patterns':p.section==='Foundations'?'Foundations':'Guides',t:p.t,sub:p.d,i:p.comp?'grid':p.section==='Safety patterns'?'pulse':'book',href:'#/docs/'+p.id}));
 EXAMPLES.forEach(e=>SRCH.push({g:'Dashboards',t:e.t,sub:e.s,i:'room',href:'#/examples/'+e.id}));
-[['Toggle theme','Switch between light and dark'],['Copy install command','npm install @openvanta/calmon-react']].forEach(([t,s])=>SRCH.push({g:'Actions',t,sub:s,i:'cmd'}));
+[['Toggle theme','Switch between light and dark'],['Copy install command','npm install @openvanta/pikore-react']].forEach(([t,s])=>SRCH.push({g:'Actions',t,sub:s,i:'cmd'}));
 function buildSide(){
  $('#side').innerHTML=`<div class="filter"><input class="input" id="side-q" placeholder="Filter pages" aria-label="Filter pages" style="height:34px;font-size:13px"></div>`+NAV.map(s=>`<div class="sec">${I(s.icon)}${s.name}</div>`+s.items.map(it=>it.sub?`<div class="sub">${it.sub}</div>`:`<a class="pg" href="#/docs/${it.id}" data-pid="${it.id}">${it.t}${SPEC[it.comp]&&['Monitoring','Safety'].includes(SPEC[it.comp].cat)?'<span class="badge sev-accent">Signature</span>':''}</a>`).join('')).join('');
  $('#side-q').oninput=e=>{const q=e.target.value.toLowerCase();$$('#side a.pg').forEach(a=>a.style.display=a.textContent.toLowerCase().includes(q)?'':'none');};
@@ -2483,23 +2483,23 @@ function renderDoc(id){
  <header class="doc-head"><h1>${p.t}</h1><p class="desc">${p.d}</p>${status||p.comp?`<div class="meta-row">${status}${p.comp?`<span class="badge">v1.4</span><a class="badge" href="#/docs/${p.id}">${I('file')}${p.id}.md</a><a class="badge" href="#/docs/${p.id}">${I('github')}Source</a>`:''}</div>`:''}</header>
  ${body}
  <div class="prevnext">${prev?`<a href="#/docs/${prev.id}"><small>Previous</small><b>${prev.t}</b></a>`:'<span></span>'}${next?`<a class="next" href="#/docs/${next.id}"><small>Next</small><b>${next.t}</b></a>`:''}</div>
- <div class="doc-foot"><span>Calmon 1.4, MIT licensed.</span><a href="#/docs/${p.id}">Edit this page</a></div></div>`;
+ <div class="doc-foot"><span>Pikore UI 1.4, MIT licensed.</span><a href="#/docs/${p.id}">Edit this page</a></div></div>`;
  $$('[data-raw]',$('#doc-host')).forEach(ph=>{const n=document.getElementById('raw-'+ph.dataset.raw);if(n)ph.appendChild(n);});
  if(p.id==='components')mountGallery();if(p.id==='colour'){renderCodes();renderSwatches();}if(p.id==='iconography')$('#icon-grid').innerHTML=[...document.querySelectorAll('symbol')].filter(s=>s.id!=='i-logo').map(s=>`<div>${I(s.id.slice(2))}${s.id.slice(2)}</div>`).join('');
  hydrate($('#doc-host'));toc();
  $$('#side a.pg').forEach(a=>a.toggleAttribute('aria-current',a.dataset.pid===p.id));const cur=$('#side a[aria-current]');if(cur)cur.scrollIntoView({block:'nearest'});
- document.title=p.t+' · Calmon';}
+ document.title=p.t+' · Pikore UI';}
 function mountGallery(){const f=$('#gal-filter');if(!f)return;f.oninput=renderGallery;$$('[data-galf]').forEach(b=>b.onclick=()=>{galMode=b.dataset.galf;$$('[data-galf]').forEach(x=>x.setAttribute('aria-selected',x===b));renderGallery();});renderGallery();}
 function renderExample(id){const ex=EXR[id]?id:'patients';const e=EXAMPLES.find(x=>x.id===ex);
- $('#ex-host').innerHTML=`<div class="exbar"><a class="btn btn-ghost btn-sm" href="#/docs/dashboards">${I('chev-l')}All dashboards</a><div class="tabs seg">${EXAMPLES.map(x=>`<button aria-selected="${x.id===ex}" data-exgo="${x.id}">${x.t}</button>`).join('')}</div><span class="note">Example built with Calmon. Fictional data.</span></div><div id="ex-root">${EXR[ex][0]()}</div>`;
+ $('#ex-host').innerHTML=`<div class="exbar"><a class="btn btn-ghost btn-sm" href="#/docs/dashboards">${I('chev-l')}All dashboards</a><div class="tabs seg">${EXAMPLES.map(x=>`<button aria-selected="${x.id===ex}" data-exgo="${x.id}">${x.t}</button>`).join('')}</div><span class="note">Example built with Pikore UI. Fictional data.</span></div><div id="ex-root">${EXR[ex][0]()}</div>`;
  const root=$('#ex-root');EXR[ex][1](root);hydrate(root);
- $$('[data-exgo]').forEach(b=>b.onclick=()=>go('#/examples/'+b.dataset.exgo));document.title=e.t+' · Calmon';}
+ $$('[data-exgo]').forEach(b=>b.onclick=()=>go('#/examples/'+b.dataset.exgo));document.title=e.t+' · Pikore UI';}
 let CUR='';
 function render(path){path=path||'#/';if(path===CUR)return;CUR=path;
  const m=path.match(/^#\/(docs|examples)\/([\w-]+)/);const r=m?m[1]:'home';
  $$('.route').forEach(x=>x.classList.toggle('on',x.id==='r-'+r));
  $$('.site-nav .links a').forEach(a=>a.toggleAttribute('aria-current',(a.dataset.nav==='examples'&&r==='examples')||(m&&r==='docs'&&a.dataset.nav===navOf(m[2]))));
- if(r==='docs')renderDoc(m[2]);else if(r==='examples')renderExample(m[2]);else{unmount();document.title='Calmon · Calm interfaces for systems that can’t fail';requestAnimationFrame(()=>drawCharts($('#r-home')));}
+ if(r==='docs')renderDoc(m[2]);else if(r==='examples')renderExample(m[2]);else{unmount();document.title='Pikore UI · Calm interfaces for systems that can’t fail';requestAnimationFrame(()=>drawCharts($('#r-home')));}
  try{window.scrollTo(0,0);}catch(_){}}
 function navOf(id){const p=PAGES[PIDX[id]];if(!p)return'';if(p.comp||p.id==='components')return'components';if(p.section==='Safety patterns')return'patterns';if(p.id==='dashboards')return'examples';if(p.section==='Foundations')return'foundations';return'docs';}
 function go(path){try{history.pushState(null,'',path);}catch(_){}render(path);}
@@ -2507,7 +2507,7 @@ window.addEventListener('hashchange',()=>render(location.hash));
 window.addEventListener('popstate',()=>render(location.hash));
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#/"]');if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;e.preventDefault();closePalette&&$('#pal-overlay').classList.contains('open')&&closePalette();go(a.getAttribute('href'));});
 buildSide();
-window.CalmonDocs={pages:PAGES,go,get route(){return CUR;}};
+window.PikoreDocs={pages:PAGES,go,get route(){return CUR;}};
 /* ---------- Misc ---------- */
 $('#home-ex').innerHTML=EXAMPLES.map(exCard).join('');
 

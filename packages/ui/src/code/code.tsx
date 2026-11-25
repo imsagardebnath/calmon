@@ -17,7 +17,7 @@ const TOKENS =
 const COPY_BUTTON =
   'ml-auto inline-flex h-[30px] shrink-0 cursor-pointer items-center gap-2 rounded-[7px] px-[11px] text-ui-sm font-[550] ' +
   'tracking-[-0.005em] whitespace-nowrap text-fg-muted transition-[background-color,color] duration-(--duration-fast) ' +
-  'ease-calmon select-none hover:bg-surface-sunken hover:text-fg'
+  'ease-pikore select-none hover:bg-surface-sunken hover:text-fg'
 
 /* Languages whose lines may start with a `$ ` prompt. */
 const SHELL = new Set(['bash', 'sh', 'shell', 'zsh'])

@@ -1,4 +1,4 @@
-import { BotIcon, GridIcon, InfoIcon, LayersIcon, RoomIcon } from '@openvanta/calmon-react/icons'
+import { BotIcon, GridIcon, InfoIcon, LayersIcon, RoomIcon } from '@openvanta/pikore-react/icons'
 import { Callout, Lead, LinkCard, LinkCards } from '../../site/doc.tsx'
 import { PatternIcon } from '../../site/icons.tsx'
 import { docsHref } from '../../site/router.ts'
@@ -11,13 +11,13 @@ export default function Introduction() {
   return (
     <>
       <p className="lead">
-        Calmon is an open-source component library for operational and enterprise software: monitoring, incident response,
+        Pikore UI is an open-source component library for operational and enterprise software: monitoring, incident response,
         admin consoles, and any dashboard where a missed signal costs something. Use it to build screens people can trust under
         pressure.
       </p>
       <Callout icon={<InfoIcon className="size-4" />}>
         <b>Why safety principles?</b> Screens fail people under pressure in predictable ways: too many alarms, unclear limits,
-        acting on the wrong target. Calmon builds the fixes into components, so every team gets them by default.
+        acting on the wrong target. Pikore UI builds the fixes into components, so every team gets them by default.
       </Callout>
 
       <h2>Seven principles</h2>

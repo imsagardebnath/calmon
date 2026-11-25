@@ -2,7 +2,7 @@
 name: SideNav
 category: Navigation
 principle: alarm-fatigue
-import: "@openvanta/calmon-react/side-nav"
+import: "@openvanta/pikore-react/side-nav"
 status: stable
 related: [Tabs, Breadcrumbs, Badge]
 description: The main app navigation, with groups, icons and alert counts. It collapses to an icon rail.

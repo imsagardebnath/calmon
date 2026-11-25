@@ -131,7 +131,7 @@ describe('Button', () => {
     )
     expect(screen.queryByTestId('start')).toBeNull()
     expect(screen.queryByTestId('end')).toBeNull()
-    expect(screen.getByRole('button', { name: 'Next' }).querySelector('.animate-calmon-spin')).not.toBeNull()
+    expect(screen.getByRole('button', { name: 'Next' }).querySelector('.animate-pikore-spin')).not.toBeNull()
   })
 
   it('lets type="submit" override the default and submits the form', () => {

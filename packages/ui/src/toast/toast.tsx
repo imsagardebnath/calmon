@@ -136,7 +136,7 @@ export function Toast({
           key={`${timer}:${count}`}
           aria-hidden="true"
           className={cn(
-            'absolute bottom-0 left-0 h-0.5 animate-[calmon-bar_linear_forwards] opacity-50 motion-reduce:hidden',
+            'absolute bottom-0 left-0 h-0.5 animate-[pikore-bar_linear_forwards] opacity-50 motion-reduce:hidden',
             'group-focus-within/toast:[animation-play-state:paused] group-hover/toast:[animation-play-state:paused]',
             solid ? 'bg-surface' : 'bg-tone-fg',
           )}
@@ -277,7 +277,7 @@ function ToastItem({
       }}
       className={cn(
         'pointer-events-auto col-start-1 row-start-1 w-full origin-top transition-[translate,scale,opacity] duration-(--duration-base)',
-        leaving ? 'pointer-events-none animate-calmon-toast-out' : 'animate-calmon-pop',
+        leaving ? 'pointer-events-none animate-pikore-toast-out' : 'animate-pikore-pop',
         placement,
       )}
     />
@@ -333,7 +333,7 @@ export function ToastProvider({ children, limit = 3, label = 'Notifications', cl
       const byId = opts.id ? live.find((i) => i.id === opts.id) : undefined
       const match = byId ?? (opts.dedupeKey ? live.find((i) => i.opts.dedupeKey === opts.dedupeKey) : undefined)
       if (!match) {
-        const id = opts.id ?? `calmon-toast-${++seq.current}`
+        const id = opts.id ?? `pikore-toast-${++seq.current}`
         // A toast with this id may still be playing its exit animation: drop it, so the id (the React key) stays unique.
         commit([{ id, count: 1, opts }, ...ref.current.filter((i) => i.id !== id)])
         return id

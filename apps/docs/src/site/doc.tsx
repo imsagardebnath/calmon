@@ -1,8 +1,8 @@
 // Small building blocks for static docs pages, matching the design's .lead, .callout, .linkcards and .example.
 // Pages start with their own h2 sections; the layout supplies the h1, description and table of contents.
 import type { ReactNode } from 'react'
-import { Code } from '@openvanta/calmon-react/code'
-import { InfoIcon } from '@openvanta/calmon-react/icons'
+import { Code } from '@openvanta/pikore-react/code'
+import { InfoIcon } from '@openvanta/pikore-react/icons'
 
 /** An introductory paragraph. */
 export function Lead({ children }: { children: ReactNode }) {

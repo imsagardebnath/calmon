@@ -1,10 +1,10 @@
 import { useState, type CSSProperties } from 'react'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Button } from '@openvanta/calmon-react/button'
-import { Code } from '@openvanta/calmon-react/code'
-import { Input } from '@openvanta/calmon-react/input'
-import { useCalmon, type Density, type Theme } from '@openvanta/calmon-react/provider'
-import { Tab, Tabs, TabsList } from '@openvanta/calmon-react/tabs'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Button } from '@openvanta/pikore-react/button'
+import { Code } from '@openvanta/pikore-react/code'
+import { Input } from '@openvanta/pikore-react/input'
+import { usePikore, type Density, type Theme } from '@openvanta/pikore-react/provider'
+import { Tab, Tabs, TabsList } from '@openvanta/pikore-react/tabs'
 import { Callout, ExampleBox, Lead } from '../../site/doc.tsx'
 import { DENSITIES, useDensityChoice } from '../../site/Header.tsx'
 import { docsHref } from '../../site/router.ts'
@@ -54,7 +54,7 @@ const block = (selector: string, a: Accent) =>
   `${selector} {\n  --accent: ${a.accent}; --accent-on: ${a.on};\n  --accent-soft: ${a.soft}; --accent-fg: ${a.fg}; --accent-border: ${a.border};\n}`
 
 const TAILWIND = `@import "tailwindcss";
-@import "@openvanta/calmon-react/styles.css";
+@import "@openvanta/pikore-react/styles.css";
 
 /* styles.css already maps every token to Tailwind. To expose your own, do the same: */
 @custom-variant dark (&:where(.dark, .dark *));
@@ -69,13 +69,13 @@ const RADIUS = `:root {
   --radius-card: 10px;    /* cards, dialogs, popovers (default 14px) */
 }`
 
-const DENSITY_CODE = `<CalmonProvider density="compact">…</CalmonProvider>
+const DENSITY_CODE = `<PikoreProvider density="compact">…</PikoreProvider>
 
 {/* or on any container */}
 <div data-density="station">…</div>`
 
 export default function Theming() {
-  const { theme, setTheme, resolvedTheme } = useCalmon()
+  const { theme, setTheme, resolvedTheme } = usePikore()
   const [density, setDensity] = useDensityChoice()
   const [preset, setPreset] = useState('Teal')
   const chosen = PRESETS.find((p) => p.name === preset) ?? PRESETS[0]!

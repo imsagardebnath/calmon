@@ -1,9 +1,9 @@
-import { Button } from '@openvanta/calmon-react/button'
-import { IconButton } from '@openvanta/calmon-react/icon-button'
-import { Kbd } from '@openvanta/calmon-react/kbd'
-import { Menu, MenuItem } from '@openvanta/calmon-react/menu'
-import { useCalmon, type Density } from '@openvanta/calmon-react/provider'
-import { CheckIcon, GithubIcon, LogoIcon, MoonIcon, SearchIcon, SunIcon } from '@openvanta/calmon-react/icons'
+import { Button } from '@openvanta/pikore-react/button'
+import { IconButton } from '@openvanta/pikore-react/icon-button'
+import { Kbd } from '@openvanta/pikore-react/kbd'
+import { Menu, MenuItem } from '@openvanta/pikore-react/menu'
+import { usePikore, type Density } from '@openvanta/pikore-react/provider'
+import { CheckIcon, GithubIcon, LogoIcon, MoonIcon, SearchIcon, SunIcon } from '@openvanta/pikore-react/icons'
 import { DENSITY_KEY, REPO_URL, VERSION } from './config.ts'
 import { DensityIcon, MenuIcon } from './icons.tsx'
 import { docsHref } from './router.ts'
@@ -17,7 +17,7 @@ export const DENSITIES: { id: Density; label: string; hint: string }[] = [
 
 /** The current density and a setter that also remembers the choice (the provider does not persist it). */
 export function useDensityChoice() {
-  const { density, setDensity } = useCalmon()
+  const { density, setDensity } = usePikore()
   const choose = (next: Density) => {
     setDensity(next)
     try {
@@ -44,9 +44,9 @@ const hrefFor = (link: { id: TopLink; href: string }) => {
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <a className={className ? `logo ${className}` : 'logo'} href="#/" aria-label="Calmon, home">
+    <a className={className ? `logo ${className}` : 'logo'} href="#/" aria-label="Pikore UI, home">
       <LogoIcon aria-hidden="true" className="size-6" />
-      Calmon
+      Pikore UI
     </a>
   )
 }
@@ -61,14 +61,14 @@ export function Header({
   onSearch: () => void
   onMenu: () => void
 }) {
-  const { resolvedTheme, setTheme } = useCalmon()
+  const { resolvedTheme, setTheme } = usePikore()
   const [density, setDensity] = useDensityChoice()
   const dark = resolvedTheme === 'dark'
 
   return (
     <header className="site-nav">
       <Logo />
-      <span className="ver hidden sm:inline-block" title={`Calmon ${VERSION}`}>
+      <span className="ver hidden sm:inline-block" title={`Pikore UI ${VERSION}`}>
         v{VERSION}
       </span>
       <nav className="links ml-2 hidden lg:flex" aria-label="Primary">

@@ -2,7 +2,7 @@
 name: PausePoint
 category: Safety
 principle: pause-points
-import: "@openvanta/calmon-react/pause-point"
+import: "@openvanta/pikore-react/pause-point"
 status: stable
 related: [ConfirmTarget, Checkbox, Dialog, Button]
 description: A short checklist before a risky action. The action unlocks when every item is checked.

@@ -49,7 +49,7 @@ export function Drawer({
   const start = side === 'start'
   const { isOpen } = modal
 
-  // The slide-in keyframe (`animate-calmon-slide`) moves in from the right, so a start drawer
+  // The slide-in keyframe (`animate-pikore-slide`) moves in from the right, so a start drawer
   // plays the same motion from the left with the Web Animations API, on the same motion tokens.
   useEffect(() => {
     const d = modal.props.ref.current
@@ -57,7 +57,7 @@ export function Drawer({
     const css = getComputedStyle(d)
     d.animate(
       { opacity: [0, 1], transform: ['translateX(-30px)', 'none'] },
-      { duration: parseFloat(css.getPropertyValue('--duration-slow')) || 0, easing: css.getPropertyValue('--ease-calmon-curve').trim() || 'ease-out' },
+      { duration: parseFloat(css.getPropertyValue('--duration-slow')) || 0, easing: css.getPropertyValue('--ease-pikore-curve').trim() || 'ease-out' },
     )
   }, [start, isOpen, modal.props.ref])
 
@@ -71,7 +71,7 @@ export function Drawer({
       style={{ width: size, ...style }}
       className={cn(
         'm-0 h-dvh max-h-dvh max-w-full',
-        start ? 'mr-auto' : 'ml-auto open:animate-calmon-slide',
+        start ? 'mr-auto' : 'ml-auto open:animate-pikore-slide',
         MODAL,
         className,
       )}

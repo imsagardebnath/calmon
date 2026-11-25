@@ -1,5 +1,5 @@
 {
-  "name": "calmon-monorepo",
+  "name": "pikore-monorepo",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -7,14 +7,14 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "npm run agent-docs && npm run dev -w @openvanta/calmon-docs",
-    "build": "npm run build -w @openvanta/calmon-react && npm run agent-docs && npm run build -w @openvanta/calmon-docs",
+    "dev": "npm run agent-docs && npm run dev -w @openvanta/pikore-docs",
+    "build": "npm run build -w @openvanta/pikore-react && npm run agent-docs && npm run build -w @openvanta/pikore-docs",
     "agent-docs": "node scripts/sync-exports.mjs && node scripts/build-agent-docs.mjs",
-    "test": "npm run test -w @openvanta/calmon-react",
+    "test": "npm run test -w @openvanta/pikore-react",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "check:size": "node scripts/check-size.mjs",
     "ci": "npm run typecheck && npm run test && npm run build && npm run check:size",
-    "preview": "npm run preview -w @openvanta/calmon-docs"
+    "preview": "npm run preview -w @openvanta/pikore-docs"
   },
   "devDependencies": {
     "react-docgen-typescript": "^2.4.0",

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Drawer } from '@openvanta/calmon-react/drawer'
+import { Button } from '@openvanta/pikore-react/button'
+import { Drawer } from '@openvanta/pikore-react/drawer'
 
 /** Detail and actions for the item you were looking at. The primary action stays in the footer. */
 export function DetailSheet() {

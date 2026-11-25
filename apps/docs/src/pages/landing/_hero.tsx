@@ -1,8 +1,8 @@
 // The hero: the "New" pill, the headline, the pitch, two calls to action, the install command and the live monitor.
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Button } from '@openvanta/calmon-react/button'
-import { IconButton } from '@openvanta/calmon-react/icon-button'
-import { CheckIcon, ChevronRightIcon, CopyIcon } from '@openvanta/calmon-react/icons'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Button } from '@openvanta/pikore-react/button'
+import { IconButton } from '@openvanta/pikore-react/icon-button'
+import { CheckIcon, ChevronRightIcon, CopyIcon } from '@openvanta/pikore-react/icons'
 import { INSTALL_COMMAND, VERSION } from '../../site/config.ts'
 import { useCopy } from '../../site/hooks.ts'
 import { docsHref } from '../../site/router.ts'
@@ -27,7 +27,7 @@ function Announce() {
   )
 }
 
-/** `$ npm install @openvanta/calmon-react` with a copy button. */
+/** `$ npm install @openvanta/pikore-react` with a copy button. */
 function InstallCommand() {
   const { copied, copy } = useCopy()
   return (

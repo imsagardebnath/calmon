@@ -15,7 +15,7 @@ import { CheckboxGroupContext } from './checkbox-group.tsx'
 
 /*
  * The box and its check mark are drawn on the native <input> with appearance-none, as in the design:
- * `.check input` in design/calmon-design.html. The tick is the ::after of a checked box, the dash of an indeterminate one.
+ * `.check input` in design/pikore-design.html. The tick is the ::after of a checked box, the dash of an indeterminate one.
  */
 const BOX =
   'm-0 grid size-[18px] flex-none cursor-pointer appearance-none place-items-center rounded-[5px] border border-border-strong ' +

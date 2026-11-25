@@ -2,7 +2,7 @@
 name: Chart
 category: Data display
 principle: limits
-import: "@openvanta/calmon-react/chart"
+import: "@openvanta/pikore-react/chart"
 status: stable
 related: [Sparkline, VitalTile, Table]
 description: Line, area and bar charts with a threshold band, a hover and keyboard readout, and a legend. A generated summary and a hidden data table make it readable without sight.
@@ -36,7 +36,7 @@ description: Line, area and bar charts with a threshold band, a hover and keyboa
 - The readout (a crosshair, a dot per series and a tooltip with every series' value) also follows the mouse and touch.
 - The threshold is a dashed line and a band, named with a text label. Colour is never the only signal. Series are named in the legend and the readout.
 - Axis numerals are tabular, so digits line up.
-- The line draws in once with the `calmon-trace` animation. Under `prefers-reduced-motion` it is simply there.
+- The line draws in once with the `pikore-trace` animation. Under `prefers-reduced-motion` it is simply there.
 
 ## Common mistakes
 

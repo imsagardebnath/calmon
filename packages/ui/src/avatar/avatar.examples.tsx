@@ -1,4 +1,4 @@
-import { Avatar, AvatarGroup } from '@openvanta/calmon-react/avatar'
+import { Avatar, AvatarGroup } from '@openvanta/pikore-react/avatar'
 
 /** Initials come from the name, on a tint chosen from the name, so the same person always looks the same. */
 export function Initials() {

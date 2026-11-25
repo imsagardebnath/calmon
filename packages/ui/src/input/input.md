@@ -2,7 +2,7 @@
 name: Input
 category: Forms
 principle: none
-import: "@openvanta/calmon-react/input"
+import: "@openvanta/pikore-react/input"
 status: stable
 related: [Field, NumberInput, Textarea, Search, Select]
 description: Single-line text entry. Wrap it in Field for a label, hint and error.

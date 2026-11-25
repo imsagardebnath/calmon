@@ -2,7 +2,7 @@
 name: Tooltip
 category: Overlays
 principle: none
-import: "@openvanta/calmon-react/tooltip"
+import: "@openvanta/pikore-react/tooltip"
 status: stable
 related: [Popover, IconButton, Button]
 description: A short label on hover or keyboard focus. Never holds essential information or interactive content.

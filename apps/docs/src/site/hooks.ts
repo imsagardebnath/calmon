@@ -77,7 +77,7 @@ export function useTextFile(path: string): string | null | undefined {
   return state?.path === path ? state.text : undefined
 }
 
-const RECENT_KEY = 'calmon-docs-recent'
+const RECENT_KEY = 'pikore-docs-recent'
 
 export function readRecent(): string[] {
   try {

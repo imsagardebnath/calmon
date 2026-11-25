@@ -3,9 +3,9 @@
 import type { ComponentPropsWithRef } from 'react'
 import { cn } from '../lib/cn.ts'
 
-/** The shimmering placeholder fill: a soft gradient that slides across (`animate-calmon-shim`). */
+/** The shimmering placeholder fill: a soft gradient that slides across (`animate-pikore-shim`). */
 const FILL =
-  'rounded-[6px] bg-[linear-gradient(90deg,var(--surface-sunken)_0%,color-mix(in_oklab,var(--border),var(--surface-sunken))_50%,var(--surface-sunken)_100%)] bg-[length:200%_100%] animate-calmon-shim'
+  'rounded-[6px] bg-[linear-gradient(90deg,var(--surface-sunken)_0%,color-mix(in_oklab,var(--border),var(--surface-sunken))_50%,var(--surface-sunken)_100%)] bg-[length:200%_100%] animate-pikore-shim'
 
 /** Widths of the last line and the one before it. Earlier lines are full width. */
 const TAPER = ['w-[45%]', 'w-[70%]']

@@ -2,7 +2,7 @@
 // example, an error boundary so one broken example never breaks the page, and the card around them.
 // Underscore files are not routes.
 import { Component, useEffect, useLayoutEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
-import { Badge } from '@openvanta/calmon-react/badge'
+import { Badge } from '@openvanta/pikore-react/badge'
 import type { DocEntry } from '../../registry.ts'
 
 /** Categories whose components carry the safety patterns. They get a "Signature" badge and a filter. */
@@ -144,7 +144,7 @@ export function Preview({ entry }: { entry: DocEntry }) {
  */
 export function ComponentCard({ entry }: { entry: DocEntry }) {
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface-raised shadow-[0_0_0_1px_var(--border),var(--shadow-1)] transition-[box-shadow,transform] duration-(--duration-base) ease-calmon hover:-translate-y-px hover:shadow-[0_0_0_1px_var(--border-strong),var(--shadow-2)]">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface-raised shadow-[0_0_0_1px_var(--border),var(--shadow-1)] transition-[box-shadow,transform] duration-(--duration-base) ease-pikore hover:-translate-y-px hover:shadow-[0_0_0_1px_var(--border-strong),var(--shadow-2)]">
       <Preview entry={entry} />
       <div className="flex flex-1 flex-col gap-0.5 px-3.5 pt-3 pb-3.5">
         <b className="flex items-center gap-2 text-ui font-semibold">

@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@import "@openvanta/calmon-react/styles.css";
+@import "@openvanta/pikore-react/styles.css";
 
 /*
- * Docs site styles, ported from the approved design (design/calmon-design.html, "Site chrome, landing,
+ * Docs site styles, ported from the approved design (design/pikore-design.html, "Site chrome, landing,
  * docs" CSS). Everything reads the library tokens, so light, dark and density follow the provider.
  */
 
@@ -45,7 +45,7 @@
     display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 6px 0 12px; width: 230px;
     border-radius: 10px; border: 0; background: var(--surface-sunken); box-shadow: inset 0 0 0 1px var(--border);
     color: var(--fg-subtle); font-size: var(--fs-sm); cursor: pointer; text-align: left;
-    transition: box-shadow var(--duration-fast) var(--ease-calmon-curve), color var(--duration-fast) var(--ease-calmon-curve);
+    transition: box-shadow var(--duration-fast) var(--ease-pikore-curve), color var(--duration-fast) var(--ease-pikore-curve);
   }
   .searchbtn:hover { box-shadow: inset 0 0 0 1px var(--border-strong); color: var(--fg-muted); }
   .searchbtn .kk { margin-left: auto; display: flex; gap: 3px; }

@@ -1,10 +1,10 @@
 // Pause points: a short checklist before publishing a price list, with evidence, and a record left on the timeline.
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Checkbox } from '@openvanta/calmon-react/checkbox'
-import { PausePoint, type PausePointItem } from '@openvanta/calmon-react/pause-point'
-import { Timeline, type TimelineEvent } from '@openvanta/calmon-react/timeline'
-import { Toast } from '@openvanta/calmon-react/toast'
+import { Button } from '@openvanta/pikore-react/button'
+import { Checkbox } from '@openvanta/pikore-react/checkbox'
+import { PausePoint, type PausePointItem } from '@openvanta/pikore-react/pause-point'
+import { Timeline, type TimelineEvent } from '@openvanta/pikore-react/timeline'
+import { Toast } from '@openvanta/pikore-react/toast'
 import { Panel, PatternPage, PRINCIPLES, type DoDontPair, type PatternComponent } from './_pattern.tsx'
 
 const HOUR = 60 * 60_000

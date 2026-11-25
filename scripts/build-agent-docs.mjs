@@ -8,7 +8,7 @@
 //   /AGENTS.snippet.md           paste into a consuming project's AGENTS.md
 //
 // Also validates that every component has its doc, examples, test and package export.
-// Env: SITE_URL (e.g. https://user.github.io/calmon) makes links absolute.
+// Env: SITE_URL (e.g. https://user.github.io/pikore-ui) makes links absolute.
 
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join, relative } from 'node:path'
@@ -178,11 +178,11 @@ const llms = [
 const full = [usage.trim(), '', ...components.map((c) => '\n---\n\n' + componentMd(c).trim()), ''].join('\n')
 
 const snippet = [
-  '## UI components: Calmon',
+  '## UI components: Pikore UI',
   '',
-  `This project uses Calmon (\`@openvanta/calmon-react\`). Docs for agents: ${url('llms.txt')}`,
+  `This project uses Pikore UI (\`@openvanta/pikore-react\`). Docs for agents: ${url('llms.txt')}`,
   '',
-  '- Import per component: `import { Button } from \'@openvanta/calmon-react/button\'`.',
+  '- Import per component: `import { Button } from \'@openvanta/pikore-react/button\'`.',
   '- Status is always `severity`: `normal | info | advisory | caution | critical`. Use tokens (`bg-critical`, `text-caution-fg`), never raw `red-*`/`amber-*`.',
   '- Colour is never the only signal; pair it with text.',
   '- Shared prop names: `variant`, `size`, `severity`, `value/defaultValue/onValueChange`, `open/defaultOpen/onOpenChange`.',
@@ -191,7 +191,7 @@ const snippet = [
 ].join('\n')
 
 const catalogue = {
-  name: '@openvanta/calmon-react',
+  name: '@openvanta/pikore-react',
   version: uiPkg.version,
   generatedAt: new Date().toISOString(),
   severities: ['normal', 'info', 'advisory', 'caution', 'critical'],

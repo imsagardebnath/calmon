@@ -1,10 +1,10 @@
 // One timeline per entity: an incident on checkout-web, with every deploy, change, alert and message in order.
 import { useState, type FormEvent } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { EnvironmentBadge } from '@openvanta/calmon-react/confirm-target'
-import { Input } from '@openvanta/calmon-react/input'
-import { Tab, Tabs } from '@openvanta/calmon-react/tabs'
-import { Timeline, type TimelineEvent } from '@openvanta/calmon-react/timeline'
+import { Button } from '@openvanta/pikore-react/button'
+import { EnvironmentBadge } from '@openvanta/pikore-react/confirm-target'
+import { Input } from '@openvanta/pikore-react/input'
+import { Tab, Tabs } from '@openvanta/pikore-react/tabs'
+import { Timeline, type TimelineEvent } from '@openvanta/pikore-react/timeline'
 import { Panel, PatternPage, PRINCIPLES, type DoDontPair, type PatternComponent } from './_pattern.tsx'
 
 /** A fixed moment, so the page reads the same on every visit: 12 March 2026, 14:34 UTC. */

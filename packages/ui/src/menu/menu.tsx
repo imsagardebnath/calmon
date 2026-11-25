@@ -125,7 +125,7 @@ export function Menu({
             className={cn(
               'z-50 max-h-[calc(100dvh-16px)] w-[230px] max-w-[calc(100vw-16px)] overflow-y-auto rounded-xl bg-surface-raised p-[5px] text-ui-sm text-fg',
               'shadow-[0_0_0_1px_var(--border),var(--shadow-2)]',
-              isPositioned ? 'animate-calmon-dialog' : 'invisible',
+              isPositioned ? 'animate-pikore-dialog' : 'invisible',
               className,
             )}
           >

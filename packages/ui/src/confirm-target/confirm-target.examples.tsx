@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { ConfirmTarget, EnvironmentBadge } from '@openvanta/calmon-react/confirm-target'
+import { Button } from '@openvanta/pikore-react/button'
+import { ConfirmTarget, EnvironmentBadge } from '@openvanta/pikore-react/confirm-target'
 
 /** Pass the button that opens it as the child. The person types the exact name, and the environment shows beside it. */
 export function Basic() {

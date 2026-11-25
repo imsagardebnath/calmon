@@ -124,7 +124,7 @@ export function Popover({
             className={cn(
               'z-50 w-[250px] max-w-[calc(100vw-16px)] rounded-xl bg-surface-raised px-4 py-3.5 text-ui-sm leading-normal text-fg',
               'shadow-[0_0_0_1px_var(--border),var(--shadow-2)] outline-none',
-              isPositioned ? 'animate-calmon-dialog' : 'invisible',
+              isPositioned ? 'animate-pikore-dialog' : 'invisible',
               className,
             )}
           >

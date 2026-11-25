@@ -1,9 +1,9 @@
 // Soft and hard limits: 25% asks for a reason, 60% is blocked, and the reason lands on the timeline.
 import { useState, type FormEvent } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Input } from '@openvanta/calmon-react/input'
-import { LimitedNumberInput, type LimitState } from '@openvanta/calmon-react/limited-number-input'
-import { Timeline, type TimelineEvent } from '@openvanta/calmon-react/timeline'
+import { Button } from '@openvanta/pikore-react/button'
+import { Input } from '@openvanta/pikore-react/input'
+import { LimitedNumberInput, type LimitState } from '@openvanta/pikore-react/limited-number-input'
+import { Timeline, type TimelineEvent } from '@openvanta/pikore-react/timeline'
 import { Panel, PatternPage, PRINCIPLES, type DoDontPair, type PatternComponent } from './_pattern.tsx'
 
 const MIN = 60_000

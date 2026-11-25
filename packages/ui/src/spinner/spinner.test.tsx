@@ -29,7 +29,7 @@ describe('Spinner', () => {
     expect(cls('sm')).toContain('size-4')
     expect(cls('md')).toContain('size-5')
     expect(cls('lg')).toContain('size-8')
-    expect(cls('md')).toContain('animate-calmon-spin')
+    expect(cls('md')).toContain('animate-pikore-spin')
   })
 
   it('lets className override defaults and passes props through', () => {

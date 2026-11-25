@@ -11,7 +11,7 @@ export default function Responsive() {
     <>
       <h2>Home and docs on a phone</h2>
       <Lead>
-        These are this site, loaded in two 390 px frames. Everything you see is built from Calmon and the same tokens.
+        These are this site, loaded in two 390 px frames. Everything you see is built from Pikore UI and the same tokens.
       </Lead>
       <div className="mt-6 flex flex-wrap justify-center gap-12" data-no-prose>
         {PHONES.map((p) => (

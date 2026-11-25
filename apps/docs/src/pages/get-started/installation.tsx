@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Code } from '@openvanta/calmon-react/code'
-import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/calmon-react/tabs'
-import { GridIcon, LayersIcon } from '@openvanta/calmon-react/icons'
+import { Button } from '@openvanta/pikore-react/button'
+import { Code } from '@openvanta/pikore-react/code'
+import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/pikore-react/tabs'
+import { GridIcon, LayersIcon } from '@openvanta/pikore-react/icons'
 import { ExampleBox, Lead, LinkCard, LinkCards, StepHeading, Bullets } from '../../site/doc.tsx'
 import { docsHref } from '../../site/router.ts'
 import { PACKAGE } from '../../site/config.ts'
@@ -24,13 +24,13 @@ const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com" />
   rel="stylesheet"
 />`
 
-const PROVIDER = `import { CalmonProvider, Button } from '${PACKAGE}'
+const PROVIDER = `import { PikoreProvider, Button } from '${PACKAGE}'
 
 export default function App() {
   return (
-    <CalmonProvider theme="system" density="comfortable">
+    <PikoreProvider theme="system" density="comfortable">
       <Button variant="primary">Save changes</Button>
-    </CalmonProvider>
+    </PikoreProvider>
   )
 }`
 
@@ -89,7 +89,7 @@ export default function Installation() {
 
       <StepHeading n={3}>Add the provider</StepHeading>
       <Lead>
-        <code>CalmonProvider</code> sets the theme (class <code>dark</code> on <code>&lt;html&gt;</code>) and the density (
+        <code>PikoreProvider</code> sets the theme (class <code>dark</code> on <code>&lt;html&gt;</code>) and the density (
         <code>data-density</code>). It is optional: without it you get the light theme and comfortable density.
       </Lead>
       <Code language="tsx" label="App.tsx">

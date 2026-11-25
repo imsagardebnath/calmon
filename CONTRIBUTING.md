@@ -1,6 +1,6 @@
-# Contributing to Calmon
+# Contributing to Pikore UI
 
-Thanks for helping. Calmon (`@openvanta/calmon-react`) is a React 19 + Tailwind CSS v4 component library with a "Clinical monitor"
+Thanks for helping. Pikore UI (`@openvanta/pikore-react`) is a React 19 + Tailwind CSS v4 component library with a "Clinical monitor"
 look. The visual design lives in `design/` and is the reference for styles and props.
 
 ## Setup
@@ -20,7 +20,7 @@ Run `npm run ci` before you open a pull request. Pull requests are released unde
 | `packages/ui/src/styles.css` | Design tokens (light and dark), the tone system, density, Tailwind theme, keyframes |
 | `packages/ui/src/lib/` | `cn()`, `Slot`, tone helpers, `useControllable` |
 | `packages/ui/src/icons/` | Icon components and `SeverityIcon` |
-| `packages/ui/src/provider/` | `CalmonProvider` and `useCalmon` (theme and density) |
+| `packages/ui/src/provider/` | `PikoreProvider` and `usePikore` (theme and density) |
 | `packages/ui/src/<name>/` | One folder per component |
 | `apps/docs/` | The documentation website |
 | `design/` | The design reference and the extracted component specification |

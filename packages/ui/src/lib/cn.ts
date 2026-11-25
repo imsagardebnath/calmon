@@ -4,7 +4,7 @@ import { extendTailwindMerge } from 'tailwind-merge'
 const tones = ['accent', 'normal', 'info', 'advisory', 'caution', 'critical']
 const suffixes = ['', '-on', '-soft', '-fg', '-border']
 
-/** Teach tailwind-merge the Calmon token names so overrides merge predictably. */
+/** Teach tailwind-merge the Pikore UI token names so overrides merge predictably. */
 const twMerge = extendTailwindMerge({
   extend: {
     theme: {
@@ -23,17 +23,17 @@ const twMerge = extendTailwindMerge({
       radius: ['control', 'card', 'pill'],
       shadow: ['low', 'mid', 'high'],
       animate: [
-        'calmon-spin',
-        'calmon-shim',
-        'calmon-indet',
-        'calmon-crit',
-        'calmon-blink',
-        'calmon-pop',
-        'calmon-dialog',
-        'calmon-slide',
-        'calmon-toast-out',
+        'pikore-spin',
+        'pikore-shim',
+        'pikore-indet',
+        'pikore-crit',
+        'pikore-blink',
+        'pikore-pop',
+        'pikore-dialog',
+        'pikore-slide',
+        'pikore-toast-out',
       ],
-      ease: ['calmon'],
+      ease: ['pikore'],
     },
   },
 })

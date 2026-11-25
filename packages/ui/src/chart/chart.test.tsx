@@ -55,7 +55,7 @@ describe('Chart', () => {
     const { container } = render(<Chart data={data} x="time" series={[...series]} />)
     const lines = container.querySelectorAll('svg path')
     expect(lines).toHaveLength(2)
-    expect(lines[0]?.getAttribute('class')).toContain('calmon-trace')
+    expect(lines[0]?.getAttribute('class')).toContain('pikore-trace')
     expect(lines[0]?.getAttribute('class')).toContain('motion-reduce:animate-none')
   })
 
@@ -191,10 +191,10 @@ describe('Chart', () => {
       <Chart data={data} x="time" series={[{ key: 'p95', label: 'p95' }, { key: 'p50', label: 'p50', dashed: true }]} />,
     )
     const [solid, dashed] = Array.from(container.querySelectorAll('svg path'))
-    expect(solid?.getAttribute('class')).toContain('calmon-trace')
+    expect(solid?.getAttribute('class')).toContain('pikore-trace')
     expect(solid?.getAttribute('pathLength')).toBe('1')
     expect(dashed?.getAttribute('class')).toContain('stroke-dasharray:4_4')
-    expect(dashed?.getAttribute('class')).not.toContain('calmon-trace')
+    expect(dashed?.getAttribute('class')).not.toContain('pikore-trace')
     expect(dashed?.hasAttribute('pathLength')).toBe(false)
   })
 

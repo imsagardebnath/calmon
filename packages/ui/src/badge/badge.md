@@ -1,7 +1,7 @@
 ---
 name: Badge
 category: Feedback
-import: "@openvanta/calmon-react/badge"
+import: "@openvanta/pikore-react/badge"
 status: stable
 related: [Banner, Toast]
 description: A short status label. Every severity badge carries an icon or a dot with its text, never colour alone.

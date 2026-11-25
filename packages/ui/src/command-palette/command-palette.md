@@ -2,7 +2,7 @@
 name: CommandPalette
 category: Navigation
 principle: none
-import: "@openvanta/calmon-react/command-palette"
+import: "@openvanta/pikore-react/command-palette"
 status: stable
 related: [Dialog, Search, Kbd, SideNav]
 description: Search and run commands from anywhere with Ctrl K. A fuzzy search over grouped commands, driven entirely from the keyboard.

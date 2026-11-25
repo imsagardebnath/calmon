@@ -117,7 +117,7 @@ describe('StationGrid', () => {
   it('tints and pulses only critical tiles, and turns the pulse off for reduced motion', () => {
     render(<StationGrid items={items} />)
     const cls = (name: RegExp) => screen.getByRole('group', { name }).className
-    expect(cls(/^payments-api/)).toContain('after:animate-calmon-crit')
+    expect(cls(/^payments-api/)).toContain('after:animate-pikore-crit')
     expect(cls(/^payments-api/)).toContain('motion-reduce:after:animate-none')
     expect(cls(/^payments-api/)).toContain('bg-tone-soft')
     for (const name of [/^checkout-web/, /^auth-service/, /^ledger/]) {

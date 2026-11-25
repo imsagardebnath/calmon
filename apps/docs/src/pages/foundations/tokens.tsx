@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Card } from '@openvanta/calmon-react/card'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Card } from '@openvanta/pikore-react/card'
 import {
   A,
   B,
@@ -65,7 +65,7 @@ const USE: Record<string, string> = {
   '--duration-fast': 'Hover and colour changes',
   '--duration-base': 'Switches, tabs, popovers',
   '--duration-slow': 'Dialogs and sheets',
-  '--ease-calmon-curve': 'The one easing curve',
+  '--ease-pikore-curve': 'The one easing curve',
   '--ring-width': 'Focus ring thickness',
   '--ring-offset': 'Gap between control and ring',
   '--btn-h': 'Button and IconButton height',
@@ -395,7 +395,7 @@ function Notes({ tokens }: { tokens: ThemeTokens | null }) {
       <Card title="Motion" as="h3">
         <p className={body}>
           Durations {fast} (hover, colour), {base} (switches, tabs, popovers) and {slow} (dialogs, drawers), all on{' '}
-          <C>--ease-calmon-curve</C>. Motion only answers an action, with two exceptions: the live dot and critical station tiles
+          <C>--ease-pikore-curve</C>. Motion only answers an action, with two exceptions: the live dot and critical station tiles
           pulse slowly. <B>prefers-reduced-motion</B> sets every duration to 0 and stops both. Never animate numerals
           counting up.
         </p>
@@ -515,8 +515,8 @@ export default function Tokens() {
       </Lead>
       {tokens ? (
         <div className="flex flex-col gap-4">
-          <CodeFrame title="calmon-tokens.css: :root" text={buildCss(tokens, ':root')} copyLabel="Copy :root" />
-          <CodeFrame title="calmon-tokens.css: .dark" text={buildCss(tokens, '.dark')} copyLabel="Copy .dark" />
+          <CodeFrame title="pikore-tokens.css: :root" text={buildCss(tokens, ':root')} copyLabel="Copy :root" />
+          <CodeFrame title="pikore-tokens.css: .dark" text={buildCss(tokens, '.dark')} copyLabel="Copy .dark" />
         </div>
       ) : (
         <p className="text-ui-sm text-fg-muted">Reading the stylesheet…</p>
@@ -524,7 +524,7 @@ export default function Tokens() {
 
       <h2 id="change-the-accent" className={H2}>Change the accent</h2>
       <Lead>
-        Override the accent tokens for both themes, after the Calmon stylesheet. Keep <C>-on</C> at 4.5:1 against the fill,
+        Override the accent tokens for both themes, after the Pikore UI stylesheet. Keep <C>-on</C> at 4.5:1 against the fill,
         and <C>-fg</C> at 4.5:1 against both the page and the soft background. See <A href="#/docs/theming">Theming</A>.
       </Lead>
       <CodeFrame title="theme.css" text={ACCENT_OVERRIDE} copyLabel="Copy override" maxHeight={360} />

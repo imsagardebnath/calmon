@@ -1,10 +1,10 @@
 // Shared building blocks for the Foundations pages: headings, copy, callouts, specimen frames, tables,
 // link cards and colour swatches. Underscore files are not routes.
 import { useEffect, useRef, useState, type ComponentPropsWithoutRef, type ReactNode } from 'react'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Button } from '@openvanta/calmon-react/button'
-import { Code } from '@openvanta/calmon-react/code'
-import { CheckIcon, CopyIcon, GridIcon, XIcon } from '@openvanta/calmon-react/icons'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Button } from '@openvanta/pikore-react/button'
+import { Code } from '@openvanta/pikore-react/code'
+import { CheckIcon, CopyIcon, GridIcon, XIcon } from '@openvanta/pikore-react/icons'
 import { entries } from '../../registry.ts'
 import { formatRatio, showValue } from './_tokens.ts'
 
@@ -176,7 +176,7 @@ export function LinkCard({ href, icon, title, children }: { href: string; icon?:
   return (
     <a
       href={href}
-      className="flex flex-col gap-1.5 rounded-card bg-surface-raised p-[18px] text-fg no-underline shadow-[0_0_0_1px_var(--border),var(--shadow-1)] transition-[box-shadow,transform] duration-(--duration-base) ease-calmon hover:-translate-y-px hover:shadow-[0_0_0_1px_var(--border-strong),var(--shadow-2)]"
+      className="flex flex-col gap-1.5 rounded-card bg-surface-raised p-[18px] text-fg no-underline shadow-[0_0_0_1px_var(--border),var(--shadow-1)] transition-[box-shadow,transform] duration-(--duration-base) ease-pikore hover:-translate-y-px hover:shadow-[0_0_0_1px_var(--border-strong),var(--shadow-2)]"
     >
       <span aria-hidden="true" className="mb-1.5 grid size-9 place-items-center rounded-[10px] bg-accent-soft text-accent-fg">
         {icon ?? <GridIcon width={20} height={20} />}

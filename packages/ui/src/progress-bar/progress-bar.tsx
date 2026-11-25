@@ -75,7 +75,7 @@ export function ProgressBar({
         className="h-1.5 w-full overflow-hidden rounded-pill bg-surface-sunken"
       >
         <span
-          className={cn('block h-full rounded-[inherit] bg-tone', pct === undefined && 'w-[30%] animate-calmon-indet')}
+          className={cn('block h-full rounded-[inherit] bg-tone', pct === undefined && 'w-[30%] animate-pikore-indet')}
           style={pct === undefined ? undefined : { width: `${pct}%` }}
         />
       </div>

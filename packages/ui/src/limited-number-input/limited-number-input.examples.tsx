@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Field } from '@openvanta/calmon-react/field'
-import { LimitedNumberInput, type LimitState } from '@openvanta/calmon-react/limited-number-input'
+import { Button } from '@openvanta/pikore-react/button'
+import { Field } from '@openvanta/pikore-react/field'
+import { LimitedNumberInput, type LimitState } from '@openvanta/pikore-react/limited-number-input'
 
 /** Two limits: past 25% asks for a reason, past 60% is blocked. The usual range shows before anyone types. */
 export function Basic() {

@@ -1,5 +1,5 @@
 // Sample data for the landing page. Fictional services, the same ones as the approved design.
-import type { StationItem } from '@openvanta/calmon-react/station-grid'
+import type { StationItem } from '@openvanta/pikore-react/station-grid'
 import { STATIC_SECTIONS } from '../../nav.ts'
 import { pages } from '../../site/pages.ts'
 

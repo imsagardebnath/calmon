@@ -1,14 +1,14 @@
 /*
- * Calmon styles. Import once, after Tailwind:
+ * Pikore UI styles. Import once, after Tailwind:
  *
  *   @import "tailwindcss";
- *   @import "@openvanta/calmon-react/styles.css";
+ *   @import "@openvanta/pikore-react/styles.css";
  *
  * Contents: design tokens (light + dark), the tone system, density, the Tailwind v4
  * theme mapping, and a small base layer. Tokens are plain CSS variables: override any of
  * them on :root / .dark (see docs "Theming").
  *
- * Dark mode: add class "dark" (or data-theme="dark") to <html>; CalmonProvider does this.
+ * Dark mode: add class "dark" (or data-theme="dark") to <html>; PikoreProvider does this.
  * Density:   data-density="comfortable | compact | station" on <html> or any container.
  */
 
@@ -18,7 +18,7 @@
 @custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
 
 /* ===================================================================
-   1. Design tokens (source of truth: design/calmon-design.html)
+   1. Design tokens (source of truth: design/pikore-design.html)
    =================================================================== */
 :root {
   /* Neutrals */
@@ -109,7 +109,7 @@
   --duration-fast: 120ms;
   --duration-base: 200ms;
   --duration-slow: 320ms;
-  --ease-calmon-curve: cubic-bezier(.2, .7, .2, 1);  /* the one easing curve (Tailwind keeps --ease-out for its own) */
+  --ease-pikore-curve: cubic-bezier(.2, .7, .2, 1);  /* the one easing curve (Tailwind keeps --ease-out for its own) */
 
   /* Focus ring */
   --ring-width: 2px;
@@ -319,42 +319,42 @@
   --shadow-mid: var(--shadow-2);
   --shadow-high: var(--shadow-3);
 
-  --ease-calmon: var(--ease-calmon-curve);
+  --ease-pikore: var(--ease-pikore-curve);
 
   /* Animations. Durations come from the motion tokens, which are 0 under prefers-reduced-motion. */
-  --animate-calmon-spin: calmon-spin 0.75s linear infinite;
-  --animate-calmon-shim: calmon-shim 1.8s ease-in-out infinite;
-  --animate-calmon-indet: calmon-indet 1.4s var(--ease-calmon-curve) infinite;
-  --animate-calmon-crit: calmon-crit 2.6s ease-in-out infinite;
-  --animate-calmon-blink: calmon-blink 2.4s ease-in-out infinite;
-  --animate-calmon-pop: calmon-pop var(--duration-slow) var(--ease-calmon-curve);
-  --animate-calmon-dialog: calmon-dialog var(--duration-base) var(--ease-calmon-curve);
-  --animate-calmon-slide: calmon-slide var(--duration-slow) var(--ease-calmon-curve);
-  --animate-calmon-toast-out: calmon-toast-out var(--duration-base) ease-in forwards;
+  --animate-pikore-spin: pikore-spin 0.75s linear infinite;
+  --animate-pikore-shim: pikore-shim 1.8s ease-in-out infinite;
+  --animate-pikore-indet: pikore-indet 1.4s var(--ease-pikore-curve) infinite;
+  --animate-pikore-crit: pikore-crit 2.6s ease-in-out infinite;
+  --animate-pikore-blink: pikore-blink 2.4s ease-in-out infinite;
+  --animate-pikore-pop: pikore-pop var(--duration-slow) var(--ease-pikore-curve);
+  --animate-pikore-dialog: pikore-dialog var(--duration-base) var(--ease-pikore-curve);
+  --animate-pikore-slide: pikore-slide var(--duration-slow) var(--ease-pikore-curve);
+  --animate-pikore-toast-out: pikore-toast-out var(--duration-base) ease-in forwards;
 }
 
 /* Reduced motion: stop the decorative loops (critical pulse, blink, shimmer). Loading indicators
    (spin, indeterminate bar) keep running because they carry meaning. Unlayered, so it beats utilities. */
 @media (prefers-reduced-motion: reduce) {
-  .animate-calmon-crit,
-  .animate-calmon-blink,
-  .animate-calmon-shim {
+  .animate-pikore-crit,
+  .animate-pikore-blink,
+  .animate-pikore-shim {
     animation: none;
   }
 }
 
-/* Keyframes (also usable directly: animate-[calmon-trace_3.4s_...]) */
-@keyframes calmon-spin { to { transform: rotate(360deg); } }
-@keyframes calmon-shim { from { background-position: 100% 0; } to { background-position: -100% 0; } }
-@keyframes calmon-indet { from { transform: translateX(-100%); } to { transform: translateX(340%); } }
-@keyframes calmon-crit { 50% { opacity: 1; } }
-@keyframes calmon-blink { 50% { opacity: 0.35; } }
-@keyframes calmon-trace { to { stroke-dashoffset: 0; } }
-@keyframes calmon-pop { from { opacity: 0; transform: translateY(12px) scale(0.98); } }
-@keyframes calmon-toast-out { to { opacity: 0; transform: translateX(24px); } }
-@keyframes calmon-bar { from { width: 100%; } to { width: 0; } }
-@keyframes calmon-dialog { from { opacity: 0; transform: translateY(8px) scale(0.98); } }
-@keyframes calmon-slide { from { transform: translateX(30px); opacity: 0; } }
+/* Keyframes (also usable directly: animate-[pikore-trace_3.4s_...]) */
+@keyframes pikore-spin { to { transform: rotate(360deg); } }
+@keyframes pikore-shim { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+@keyframes pikore-indet { from { transform: translateX(-100%); } to { transform: translateX(340%); } }
+@keyframes pikore-crit { 50% { opacity: 1; } }
+@keyframes pikore-blink { 50% { opacity: 0.35; } }
+@keyframes pikore-trace { to { stroke-dashoffset: 0; } }
+@keyframes pikore-pop { from { opacity: 0; transform: translateY(12px) scale(0.98); } }
+@keyframes pikore-toast-out { to { opacity: 0; transform: translateX(24px); } }
+@keyframes pikore-bar { from { width: 100%; } to { width: 0; } }
+@keyframes pikore-dialog { from { opacity: 0; transform: translateY(8px) scale(0.98); } }
+@keyframes pikore-slide { from { transform: translateX(30px); opacity: 0; } }
 
 /* ===================================================================
    5. Base layer

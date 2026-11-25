@@ -2,7 +2,7 @@
 name: Pagination
 category: Navigation
 principle: none
-import: "@openvanta/calmon-react/pagination"
+import: "@openvanta/pikore-react/pagination"
 status: stable
 related: [Table, Tabs]
 description: Moves through pages of a table or list, with a range summary such as "1–25 of 289".

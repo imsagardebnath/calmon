@@ -34,7 +34,7 @@ describe('IconButton', () => {
     render(<IconButton label="Save" loading icon={<svg data-testid="icon" />} onClick={onClick} />)
     const button = screen.getByRole('button', { name: 'Save' })
     expect(screen.queryByTestId('icon')).toBeNull()
-    expect(button.querySelector('.animate-calmon-spin')).not.toBeNull()
+    expect(button.querySelector('.animate-pikore-spin')).not.toBeNull()
     expect(button.getAttribute('aria-busy')).toBe('true')
     fireEvent.click(button)
     expect(onClick).not.toHaveBeenCalled()
@@ -44,7 +44,7 @@ describe('IconButton', () => {
     const { rerender } = render(<IconButton label="Save" loading icon={<svg data-testid="icon" />} />)
     rerender(<IconButton label="Save" icon={<svg data-testid="icon" />} />)
     expect(screen.getByTestId('icon')).toBeTruthy()
-    expect(screen.getByRole('button', { name: 'Save' }).querySelector('.animate-calmon-spin')).toBeNull()
+    expect(screen.getByRole('button', { name: 'Save' }).querySelector('.animate-pikore-spin')).toBeNull()
   })
 
   it('is natively disabled with disabled', () => {

@@ -2,7 +2,7 @@
 name: Dialog
 category: Overlays
 principle: confirm-target
-import: "@openvanta/calmon-react/dialog"
+import: "@openvanta/pikore-react/dialog"
 status: stable
 related: [Drawer, Button, ConfirmTarget, PausePoint]
 description: Blocks the page for a decision. Use it for confirmations and short forms, and set an intent when the choice is risky.

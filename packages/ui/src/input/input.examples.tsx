@@ -1,6 +1,6 @@
-import { Field } from '@openvanta/calmon-react/field'
-import { Input } from '@openvanta/calmon-react/input'
-import { SearchIcon } from '@openvanta/calmon-react/icons'
+import { Field } from '@openvanta/pikore-react/field'
+import { Input } from '@openvanta/pikore-react/input'
+import { SearchIcon } from '@openvanta/pikore-react/icons'
 
 /** Wrap an Input in a Field for a visible label. A placeholder is not a label. */
 export function Basic() {

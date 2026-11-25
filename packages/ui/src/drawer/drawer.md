@@ -2,7 +2,7 @@
 name: Drawer
 category: Overlays
 principle: none
-import: "@openvanta/calmon-react/drawer"
+import: "@openvanta/pikore-react/drawer"
 status: stable
 related: [Dialog, Popover]
 description: A side sheet for detail and editing without losing your place. Modal like Dialog, anchored to a screen edge.

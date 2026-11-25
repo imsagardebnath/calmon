@@ -1,4 +1,4 @@
-import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/calmon-react/tabs'
+import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/pikore-react/tabs'
 import { useState } from 'react'
 
 /** Tabs directly inside Tabs make a plain tab list. Name the list with aria-label. */

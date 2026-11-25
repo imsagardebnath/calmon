@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Spinner } from '@openvanta/calmon-react/spinner'
+import { Button } from '@openvanta/pikore-react/button'
+import { Spinner } from '@openvanta/pikore-react/spinner'
 
 /** Three sizes: 16, 20 and 32px. */
 export function Sizes() {

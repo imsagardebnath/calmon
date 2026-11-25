@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { CalmonProvider, type Density } from '@openvanta/calmon-react/provider'
+import { PikoreProvider, type Density } from '@openvanta/pikore-react/provider'
 import { App } from './App.tsx'
 import { DENSITY_KEY } from './site/config.ts'
 import './styles.css'
@@ -17,9 +17,9 @@ function savedDensity(): Density {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* Dark by default; the choice is remembered in localStorage ("calmon-theme"). */}
-    <CalmonProvider theme="dark" density={savedDensity()}>
+    {/* Dark by default; the choice is remembered in localStorage ("pikore-theme"). */}
+    <PikoreProvider theme="dark" density={savedDensity()}>
       <App />
-    </CalmonProvider>
+    </PikoreProvider>
   </StrictMode>,
 )

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Radio, RadioGroup } from '@openvanta/calmon-react/radio'
+import { Radio, RadioGroup } from '@openvanta/pikore-react/radio'
 
 /** Pick exactly one. Preselect the safest option, and say why an option is unavailable. */
 export function DeployStrategy() {

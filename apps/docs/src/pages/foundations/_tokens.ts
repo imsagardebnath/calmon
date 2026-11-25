@@ -110,7 +110,7 @@ export const TOKEN_GROUPS: TokenGroup[] = [
     title: 'Motion',
     blurb: 'Three durations and one easing. All durations are 0 under reduced motion.',
     comment: 'Motion',
-    names: ['--duration-fast', '--duration-base', '--duration-slow', '--ease-calmon-curve'],
+    names: ['--duration-fast', '--duration-base', '--duration-slow', '--ease-pikore-curve'],
   },
   { id: 'focus', title: 'Focus', blurb: 'One ring for every focusable thing.', comment: 'Focus ring', names: ['--ring-width', '--ring-offset'] },
   {

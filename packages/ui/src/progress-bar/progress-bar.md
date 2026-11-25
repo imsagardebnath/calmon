@@ -1,7 +1,7 @@
 ---
 name: ProgressBar
 category: Feedback
-import: "@openvanta/calmon-react/progress-bar"
+import: "@openvanta/pikore-react/progress-bar"
 status: stable
 related: [Spinner, Skeleton, Badge]
 description: Shows known progress, or a level against capacity with severity.

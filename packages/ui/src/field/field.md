@@ -2,7 +2,7 @@
 name: Field
 category: Forms
 principle: none
-import: "@openvanta/calmon-react/field"
+import: "@openvanta/pikore-react/field"
 status: stable
 related: [Input, NumberInput, Textarea, Select, Checkbox, Switch]
 description: Wraps any input with a label, hint, warning or error, and wires up the accessibility attributes.
@@ -41,7 +41,7 @@ description: Wraps any input with a label, hint, warning or error, and wires up 
 Field shares what it computes through `useFieldContext()`, which returns `null` outside a Field, so a custom control works with or without one:
 
 ```tsx
-import { useFieldContext } from '@openvanta/calmon-react/field'
+import { useFieldContext } from '@openvanta/pikore-react/field'
 
 function MyControl() {
   const field = useFieldContext() // { id, describedBy, invalid, warning, required } | null

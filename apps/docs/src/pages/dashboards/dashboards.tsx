@@ -2,13 +2,13 @@
 // The screens live in _*.tsx files next to this one. They are lazy, so only the one on show is downloaded, and
 // their source is loaded with ?raw only when someone asks for it, so the code on screen is the code that runs.
 import { lazy, Suspense, useEffect, useRef, useState, type ComponentType, type LazyExoticComponent } from 'react'
-import { Badge } from '@openvanta/calmon-react/badge'
-import { Button } from '@openvanta/calmon-react/button'
-import { Card } from '@openvanta/calmon-react/card'
-import { Code } from '@openvanta/calmon-react/code'
-import { CheckIcon, CopyIcon } from '@openvanta/calmon-react/icons'
-import { Skeleton } from '@openvanta/calmon-react/skeleton'
-import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/calmon-react/tabs'
+import { Badge } from '@openvanta/pikore-react/badge'
+import { Button } from '@openvanta/pikore-react/button'
+import { Card } from '@openvanta/pikore-react/card'
+import { Code } from '@openvanta/pikore-react/code'
+import { CheckIcon, CopyIcon } from '@openvanta/pikore-react/icons'
+import { Skeleton } from '@openvanta/pikore-react/skeleton'
+import { Tab, Tabs, TabsList, TabsPanel } from '@openvanta/pikore-react/tabs'
 import { pages } from '../../site/pages.ts'
 import { docsHref } from '../../site/router.ts'
 import { Bullets, Callout, Lead } from '../../site/doc.tsx'
@@ -213,7 +213,7 @@ function Frame({ dash }: { dash: Dashboard }) {
         ) : null}
       </div>
       <figcaption className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-fg-subtle">
-        <span>Fictional data. Everything on the screen is a Calmon component, so it follows the theme and the density.</span>
+        <span>Fictional data. Everything on the screen is a Pikore UI component, so it follows the theme and the density.</span>
       </figcaption>
     </figure>
   )
@@ -243,7 +243,7 @@ export default function Dashboards() {
   return (
     <>
       <Lead>
-        Four complete screens, built only from Calmon components and Tailwind with the tokens. They run on fictional data, they look right in
+        Four complete screens, built only from Pikore UI components and Tailwind with the tokens. They run on fictional data, they look right in
         both themes, and every control works. Open the code to see how any of it is put together, then copy what you need.
       </Lead>
 

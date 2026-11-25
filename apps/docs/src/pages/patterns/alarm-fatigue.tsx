@@ -1,10 +1,10 @@
 // Fight alarm fatigue: a station grid sorted worst first with calm tiles, and toasts that group by cause.
 import { useRef, useState } from 'react'
-import { Banner } from '@openvanta/calmon-react/banner'
-import { Button } from '@openvanta/calmon-react/button'
-import { StationGrid, StationTile, type StationItem } from '@openvanta/calmon-react/station-grid'
-import { Switch } from '@openvanta/calmon-react/switch'
-import { Toast, ToastProvider, useToast } from '@openvanta/calmon-react/toast'
+import { Banner } from '@openvanta/pikore-react/banner'
+import { Button } from '@openvanta/pikore-react/button'
+import { StationGrid, StationTile, type StationItem } from '@openvanta/pikore-react/station-grid'
+import { Switch } from '@openvanta/pikore-react/switch'
+import { Toast, ToastProvider, useToast } from '@openvanta/pikore-react/toast'
 import { PatternPage, PRINCIPLES, type DoDontPair, type PatternComponent } from './_pattern.tsx'
 
 /** The services of the eu-west-1 production cluster. payments-api is added in `AlarmDemo`, because its state changes. */

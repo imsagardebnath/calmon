@@ -1,6 +1,6 @@
-import { Button } from '@openvanta/calmon-react/button'
-import { Card, CardBody, CardFooter, CardHeader } from '@openvanta/calmon-react/card'
-import { CautionIcon, NormalIcon, PulseIcon } from '@openvanta/calmon-react/icons'
+import { Button } from '@openvanta/pikore-react/button'
+import { Card, CardBody, CardFooter, CardHeader } from '@openvanta/pikore-react/card'
+import { CautionIcon, NormalIcon, PulseIcon } from '@openvanta/pikore-react/icons'
 
 /** A title, a status on the right and a short body. Keep one topic per card. */
 export function Panel() {

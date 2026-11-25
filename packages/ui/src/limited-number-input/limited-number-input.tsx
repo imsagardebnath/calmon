@@ -103,7 +103,7 @@ function LimitScale({ value, softMin, softMax, hardMin, hardMax }: Limits & { va
         {b < 100 ? tick(b) : null}
         {value === null ? null : (
           <span
-            className="absolute top-1/2 size-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_0_1px_var(--border-strong),var(--shadow-2)] transition-[left] duration-(--duration-base) ease-calmon"
+            className="absolute top-1/2 size-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_0_1px_var(--border-strong),var(--shadow-2)] transition-[left] duration-(--duration-base) ease-pikore"
             style={{ left: `${at(value)}%` }}
           />
         )}

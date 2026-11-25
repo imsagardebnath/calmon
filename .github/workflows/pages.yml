@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.repository == 'imsagardebnath/calmon'
+    if: github.repository == 'imsagardebnath/pikore-ui'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -38,7 +38,7 @@ jobs:
           path: apps/docs/dist
 
   deploy:
-    if: github.repository == 'imsagardebnath/calmon'
+    if: github.repository == 'imsagardebnath/pikore-ui'
     needs: build
     runs-on: ubuntu-latest
     environment:

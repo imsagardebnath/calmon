@@ -70,9 +70,9 @@ const PAD = { r: 14, t: 14, b: 26 }
 
 const AX = 'fill-fg-subtle font-mono text-[10.5px] tabular-nums'
 const LINE = 'fill-none stroke-tone [stroke-linecap:round] [stroke-linejoin:round] [stroke-width:1.8]'
-/* calmon-trace draws the line in; with reduced motion the line is simply there. */
+/* pikore-trace draws the line in; with reduced motion the line is simply there. */
 const DRAW =
-  '[stroke-dasharray:1] [stroke-dashoffset:1] animate-[calmon-trace_1.1s_var(--ease-calmon-curve)_forwards] motion-reduce:animate-none motion-reduce:[stroke-dashoffset:0]'
+  '[stroke-dasharray:1] [stroke-dashoffset:1] animate-[pikore-trace_1.1s_var(--ease-pikore-curve)_forwards] motion-reduce:animate-none motion-reduce:[stroke-dashoffset:0]'
 
 const r2 = (n: number) => Math.round(n * 100) / 100
 const nice = (v: number) => {

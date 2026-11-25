@@ -1,11 +1,11 @@
 // Confirm the target: look-alike production databases, and a dialog that asks for the exact name.
 import { useEffect, useRef, useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { Code } from '@openvanta/calmon-react/code'
-import { ConfirmTarget, EnvironmentBadge } from '@openvanta/calmon-react/confirm-target'
-import { TrashIcon } from '@openvanta/calmon-react/icons'
-import { Input } from '@openvanta/calmon-react/input'
-import { Toast } from '@openvanta/calmon-react/toast'
+import { Button } from '@openvanta/pikore-react/button'
+import { Code } from '@openvanta/pikore-react/code'
+import { ConfirmTarget, EnvironmentBadge } from '@openvanta/pikore-react/confirm-target'
+import { TrashIcon } from '@openvanta/pikore-react/icons'
+import { Input } from '@openvanta/pikore-react/input'
+import { Toast } from '@openvanta/pikore-react/toast'
 import { Panel, PatternPage, PRINCIPLES, type DoDontPair, type PatternComponent } from './_pattern.tsx'
 
 interface Database {

@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Button } from '@openvanta/calmon-react/button'
-import { GaugeIcon } from '@openvanta/calmon-react/icons'
-import { Popover } from '@openvanta/calmon-react/popover'
+import { Button } from '@openvanta/pikore-react/button'
+import { GaugeIcon } from '@openvanta/pikore-react/icons'
+import { Popover } from '@openvanta/pikore-react/popover'
 
 /** Explain a number in place. Focus moves into the popover, and Escape brings it back to the button. */
 export function ExplainScore() {

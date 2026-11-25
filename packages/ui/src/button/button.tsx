@@ -37,7 +37,7 @@ export const buttonVariants = cva(
   [
     'relative inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap select-none no-underline',
     'font-[550] tracking-[-0.005em] transition-[background-color,box-shadow,color,transform]',
-    'duration-(--duration-fast) ease-calmon active:translate-y-[.5px] data-loading:pointer-events-none',
+    'duration-(--duration-fast) ease-pikore active:translate-y-[.5px] data-loading:pointer-events-none',
     DISABLED,
   ],
   {
@@ -154,7 +154,7 @@ export function Button({
       {loading ? (
         <span
           aria-hidden="true"
-          className="size-3.5 animate-calmon-spin rounded-full border-2 border-current/25 border-t-current"
+          className="size-3.5 animate-pikore-spin rounded-full border-2 border-current/25 border-t-current"
         />
       ) : iconStart ? (
         <span aria-hidden="true" className="inline-flex">

@@ -1,6 +1,6 @@
-import { Button } from '@openvanta/calmon-react/button'
-import { EmptyState } from '@openvanta/calmon-react/empty-state'
-import { PlusIcon } from '@openvanta/calmon-react/icons'
+import { Button } from '@openvanta/pikore-react/button'
+import { EmptyState } from '@openvanta/pikore-react/empty-state'
+import { PlusIcon } from '@openvanta/pikore-react/icons'
 
 /** Say what is empty and why, plainly. */
 export function NoData() {

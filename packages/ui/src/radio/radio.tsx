@@ -4,7 +4,7 @@ import { useContext, type ComponentPropsWithRef, type ReactNode } from 'react'
 import { cn } from '../lib/cn.ts'
 import { RadioGroupContext } from './radio-group.tsx'
 
-/* `.radio input` in design/calmon-design.html: a ring that thickens to a dot when checked. */
+/* `.radio input` in design/pikore-design.html: a ring that thickens to a dot when checked. */
 const DOT =
   'm-0 size-[18px] flex-none cursor-pointer appearance-none rounded-full border border-border-strong bg-surface-raised ' +
   'shadow-[0_1px_2px_rgb(16_24_40/.05)] transition-[background-color,border-color] duration-(--duration-fast) ' +

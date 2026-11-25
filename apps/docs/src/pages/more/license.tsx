@@ -1,10 +1,10 @@
-import { CheckIcon, InfoIcon } from '@openvanta/calmon-react/icons'
+import { CheckIcon, InfoIcon } from '@openvanta/pikore-react/icons'
 import { Callout, Lead } from '../../site/doc.tsx'
 // The canonical license text. Importing the real file means this page can never drift from it.
 import licenseText from '../../../../../LICENSE?raw'
 
 const YOU_CAN = [
-  'Use Calmon in personal, commercial and internal projects, with no fee.',
+  'Use Pikore UI in personal, commercial and internal projects, with no fee.',
   'Copy it, modify it, and merge it into your own code.',
   'Publish and distribute your changes, including your own forks and derived libraries.',
   'Sublicense it and sell products that include it.',
@@ -16,11 +16,11 @@ const YOU_MUST = [
 
 const FAQ: { q: string; a: string }[] = [
   {
-    q: 'Can I use Calmon in a commercial product?',
+    q: 'Can I use Pikore UI in a commercial product?',
     a: 'Yes. MIT places no limit on commercial use and asks for no fee.',
   },
   {
-    q: 'Do I need to show “Powered by Calmon”?',
+    q: 'Do I need to show “Powered by Pikore UI”?',
     a: 'No. The notice is only required in copies of the source code, not in your application’s interface.',
   },
   {
@@ -37,7 +37,7 @@ export default function License() {
   return (
     <>
       <Lead>
-        Calmon is open source under the MIT license: use it, change it and share it, as long as you keep the notice. This
+        Pikore UI is open source under the MIT license: use it, change it and share it, as long as you keep the notice. This
         page is a plain-language summary; the full license text is at the bottom and is the only binding version.
       </Lead>
 
