@@ -156,7 +156,7 @@ export function NumberInput({
       {unit ? (
         <span
           className={cn(
-            'flex items-center border border-l-0 border-border-strong bg-surface-sunken px-[11px] text-ui-sm text-fg-muted',
+            'flex shrink-0 items-center border border-l-0 border-border-strong bg-surface-sunken px-[11px] text-ui-sm text-fg-muted',
             !steppers && 'rounded-r-control',
           )}
         >
@@ -164,7 +164,7 @@ export function NumberInput({
         </span>
       ) : null}
       {steppers ? (
-        <span className="flex flex-col overflow-hidden rounded-r-control border border-l-0 border-border-strong">
+        <span className="flex shrink-0 flex-col overflow-hidden rounded-r-control border border-l-0 border-border-strong">
           {[1, -1].map((dir) => (
             <button
               key={dir}

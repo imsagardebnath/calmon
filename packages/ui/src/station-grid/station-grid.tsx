@@ -1,6 +1,6 @@
 'use client'
 
-import type { ComponentPropsWithRef, MouseEvent } from 'react'
+import type { ComponentPropsWithRef, CSSProperties, MouseEvent } from 'react'
 import { SeverityIcon } from '../icons/index.ts'
 import { cn } from '../lib/cn.ts'
 import { SEVERITIES, SEVERITY_LABEL, bySeverityDesc, type Severity } from '../lib/tone.ts'
@@ -25,6 +25,16 @@ export type StationItem = {
   /** Called when the tile is clicked. Makes the tile a button, or runs in addition to `href`. Wins over the grid's `onSelect`. */
   onSelect?: (item: StationItem) => void
 }
+
+/** As many tiles per row as the width allows, each at least 190px wide. */
+const FIT = 'grid-cols-[repeat(auto-fill,minmax(190px,1fr))]'
+/**
+ * `columns` is a ceiling, not a promise: the minimum tile width is the larger of 130px and the width that gives
+ * exactly `--cols` columns (less half a pixel, so rounding never costs a column). On a phone the grid drops to fewer
+ * columns instead of squeezing the tiles.
+ */
+const CAPPED =
+  'grid-cols-[repeat(auto-fill,minmax(max(130px,calc((100%_-_(var(--cols)_-_1)_*_0.625rem)_/_var(--cols)_-_0.5px)),1fr))]'
 
 const TILE =
   'relative flex min-w-0 flex-col gap-2 overflow-hidden rounded-[12px] border border-border bg-surface-raised px-3.5 py-3 text-left text-fg no-underline ' +
@@ -89,14 +99,14 @@ export function StationTile({
         <span className="truncate text-[12.5px] font-[550] text-fg">{name}</span>
       </div>
       <div className="flex items-end justify-between gap-2">
-        <span className={cn('num text-numeral-md leading-[.9]', normal ? 'text-fg' : 'text-tone-fg')}>{score}</span>
+        <span className={cn('num shrink-0 text-numeral-md leading-[.9]', normal ? 'text-fg' : 'text-tone-fg')}>{score}</span>
         {data && data.length > 1 && (
           <Sparkline
             data={data}
             severity={normal ? undefined : severity}
             intent={normal ? 'secondary' : undefined}
             aria-hidden="true"
-            className="h-[26px] w-[72px]"
+            className="h-[26px] w-[72px] min-w-0"
           />
         )}
       </div>
@@ -132,7 +142,7 @@ export type StationGridProps = Omit<ComponentPropsWithRef<'div'>, 'children' | '
   items: StationItem[]
   /** Order of the tiles. `worst-first` puts the most severe first, then the lowest score. `name` is A to Z. Default `worst-first`. */
   sort?: 'worst-first' | 'name'
-  /** Fixed number of columns. By default the grid fits as many tiles as the width allows. */
+  /** Number of columns on a wide grid. Tiles never get narrower than 130px, so a narrow screen gets fewer columns. By default the grid fits as many tiles as the width allows. */
   columns?: number
   /** Accessible name of the list of tiles, such as "Production services". Default `Stations`. */
   label?: string
@@ -187,8 +197,8 @@ export function StationGrid({
       )}
       <ul
         aria-label={label}
-        className="m-0 grid list-none grid-cols-[repeat(auto-fill,minmax(190px,1fr))] gap-2.5 p-0"
-        style={columns ? { gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` } : undefined}
+        className={cn('m-0 grid list-none gap-2.5 p-0', columns ? CAPPED : FIT)}
+        style={columns ? ({ '--cols': columns } as CSSProperties) : undefined}
       >
         {sorted.map((item) => {
           const { id, onSelect: own, ...tile } = item

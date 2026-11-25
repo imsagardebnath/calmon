@@ -11,7 +11,8 @@ export default function Responsive() {
     <>
       <h2>Home and docs on a phone</h2>
       <Lead>
-        These are this site, loaded in two 390 px frames. Everything you see is built from Pikore UI and the same tokens.
+        These are this site, loaded in two phone frames up to 390 px wide (narrower on a small screen). Everything you see is
+        built from Pikore UI and the same tokens.
       </Lead>
       <div className="mt-6 flex flex-wrap justify-center gap-12" data-no-prose>
         {PHONES.map((p) => (
@@ -54,10 +55,11 @@ export default function Responsive() {
           <b>1024 px to 1279 px:</b> the “On this page” list hides.
         </li>
         <li>
-          <b>Below 1024 px:</b> the sidebar moves into the menu drawer, opened from the header.
+          <b>Below 1024 px:</b> the sidebar and the header links move into the menu drawer, opened from the header, and
+          search shows as an icon.
         </li>
         <li>
-          <b>Below 768 px:</b> the header links collapse into the menu and search shows as an icon.
+          <b>Below 640 px:</b> the version badge and the GitHub icon are hidden, and the page padding shrinks.
         </li>
       </Bullets>
       <Callout>

@@ -62,7 +62,7 @@ export function CardBody({ className, ...props }: ComponentPropsWithRef<'div'>) 
 export function CardFooter({ className, ...props }: ComponentPropsWithRef<'div'>) {
   return (
     <div
-      className={cn('flex justify-end gap-2 rounded-b-card border-t border-border px-[18px] py-3', className)}
+      className={cn('flex flex-wrap justify-end gap-2 rounded-b-card border-t border-border px-[18px] py-3', className)}
       {...props}
     />
   )

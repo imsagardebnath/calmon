@@ -55,6 +55,12 @@
     .searchbtn .lbl, .searchbtn .kk { display: none; }
   }
 
+  /* The responsive-previews frames can be as narrow as 260px on a small phone: tighten the header so its four buttons fit. */
+  @media (max-width: 400px) {
+    .site-nav { gap: var(--space-3); padding: 0 var(--space-4); }
+    .site-nav .right { gap: 2px; }
+  }
+
   /* ------------------------------------------------------------------ Docs layout */
   .docs { display: grid; grid-template-columns: minmax(0, 1fr); max-width: 1520px; margin: 0 auto; min-height: calc(100dvh - 60px); }
   .docs-l {
@@ -229,8 +235,9 @@
   .toc a[aria-current] { color: var(--fg); border-left-color: var(--fg); font-weight: 550; }
 
   /* Previous / next, footer of a page */
-  .prevnext { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-16); }
+  .prevnext { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-16); }
   .prevnext a {
+    min-width: 0; overflow-wrap: anywhere;
     border: 1px solid var(--border); border-radius: var(--radius-card); padding: 16px 18px; text-decoration: none; color: var(--fg);
     display: flex; flex-direction: column; gap: 4px; background: var(--surface-raised);
     transition: border-color var(--duration-fast), box-shadow var(--duration-base);

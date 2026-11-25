@@ -207,4 +207,13 @@ describe('PausePoint', () => {
   })
 })
 
+describe('PausePoint on a narrow screen', () => {
+  it('wraps the footer so the action button never leaves the card', () => {
+    render(<PausePoint {...base} />)
+    const status = screen.getByRole('status')
+    expect(status.parentElement?.className).toContain('flex-wrap')
+    expect(status.nextElementSibling?.className).toContain('flex-wrap')
+  })
+})
+
 testExamplesAxe(examples)

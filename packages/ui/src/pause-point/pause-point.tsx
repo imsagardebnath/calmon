@@ -156,11 +156,11 @@ export function PausePoint({
           )
         })}
       </ul>
-      <div className="flex items-center gap-2.5 border-t border-border bg-surface-sunken px-[18px] py-3.5">
+      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-2 border-t border-border bg-surface-sunken px-[18px] py-3.5">
         <span role="status" className="font-mono text-ui-sm text-fg-muted tabular-nums">
           {`${done} of ${items.length} checked`}
         </span>
-        <span className="ml-auto flex items-center gap-2.5">
+        <span className="ml-auto flex flex-wrap items-center justify-end gap-2.5">
           {onCancel ? <Button onClick={onCancel}>Cancel</Button> : null}
           <Button variant="primary" disabled={!complete} onClick={() => onConfirm?.()}>
             {action}

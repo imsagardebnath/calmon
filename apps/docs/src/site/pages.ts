@@ -22,7 +22,7 @@ for (const [path, load] of Object.entries(modules)) {
 /** Component categories that hold the library's signature components (shown with an accent badge). */
 const SIGNATURE = new Set(['Monitoring', 'Safety'])
 /** Pages whose content uses the full width instead of the reading column. */
-const WIDE = new Set(['dashboards', 'components', 'colour', 'tokens', 'responsive'])
+const WIDE = new Set(['components', 'colour', 'tokens', 'responsive'])
 
 export interface DocPage extends NavPage {
   /** Sidebar section name, e.g. "Get started". */
@@ -116,12 +116,11 @@ export const pageSources = import.meta.glob<string>('../pages/**/*.tsx', { query
 export const sourcePathOf = (id: string) => loaders.get(id)?.path
 
 /** Which top-nav link a page belongs under. */
-export type TopLink = 'docs' | 'patterns' | 'components' | 'dashboards'
+export type TopLink = 'docs' | 'patterns' | 'components'
 export function topLinkOf(page: DocPage | undefined): TopLink | undefined {
   if (!page) return undefined
   if (page.section === 'Components') return 'components'
   if (page.section === 'Safety patterns') return 'patterns'
-  if (page.id === 'dashboards') return 'dashboards'
   return 'docs'
 }
 

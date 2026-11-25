@@ -104,11 +104,10 @@ export const COMPONENTS_OVERVIEW: NavPage = {
   description: 'Every component, grouped by what it helps people do.',
 }
 
-export const DASHBOARDS_SECTION: NavSection = {
-  name: 'Dashboards',
+export const MORE_SECTION: NavSection = {
+  name: 'More',
   icon: 'room',
   pages: [
-    { id: 'dashboards', title: 'Example dashboards', description: 'Four complete screens built only from Pikore UI components.' },
     { id: 'responsive', title: 'Responsive previews', description: 'Home and docs at phone width.' },
     { id: 'changelog', title: 'Changelog', description: 'What changed in each release.' },
     {
@@ -126,7 +125,7 @@ export interface ComponentNavInput {
   description: string
 }
 
-/** Full sidebar: static sections, then Components (overview + one sub-group per category), then Dashboards. */
+/** Full sidebar: static sections, then Components (overview + one sub-group per category), then More. */
 export function buildNav(components: ComponentNavInput[]): NavSection[] {
   const byGroup = new Map<string, ComponentNavInput[]>()
   for (const c of components) {
@@ -147,5 +146,5 @@ export function buildNav(components: ComponentNavInput[]): NavSection[] {
       pages: byGroup.get(g)!.map((c) => ({ id: c.slug, title: c.name, description: c.description })),
     })),
   }
-  return [...STATIC_SECTIONS, componentSection, DASHBOARDS_SECTION]
+  return [...STATIC_SECTIONS, componentSection, MORE_SECTION]
 }

@@ -173,7 +173,7 @@ function FamilyTable({ row, tokens }: { row: (typeof FAMILY_ROWS)[number]; token
           {use}
         </div>
       </div>
-      <div className="overflow-x-auto">
+      <div className="relative overflow-x-auto">
         <table className="w-full border-collapse text-ui-sm [&_tbody_tr:last-child_td]:border-b-0">
           <thead>
             <tr>

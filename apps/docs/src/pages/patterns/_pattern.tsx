@@ -20,7 +20,7 @@ import {
   XIcon,
   type IconProps,
 } from '@openvanta/pikore-react/icons'
-import { DASHBOARDS_SECTION, STATIC_SECTIONS } from '../../nav.ts'
+import { MORE_SECTION, STATIC_SECTIONS } from '../../nav.ts'
 import { entries } from '../../registry.ts'
 
 /* ------------------------------------------------------------------------------------------------
@@ -383,7 +383,7 @@ function DoDont({ doPreview, dontPreview, doText, dontText }: DoDontPair) {
   const side = (tone: 'normal' | 'critical', label: string, icon: ReactNode, preview: ReactNode, text: ReactNode) => (
     <div
       data-tone={tone}
-      className="min-w-0 overflow-hidden rounded-card bg-surface-raised shadow-[0_0_0_1px_var(--border)] sm:row-span-2 sm:grid sm:grid-rows-subgrid sm:gap-y-0"
+      className="min-w-0 overflow-hidden rounded-card bg-surface-raised shadow-[0_0_0_1px_var(--border)] sm:row-span-2 sm:grid sm:grid-cols-[minmax(0,1fr)] sm:grid-rows-subgrid sm:gap-y-0"
     >
       <div
         inert
@@ -403,7 +403,7 @@ function DoDont({ doPreview, dontPreview, doText, dontText }: DoDontPair) {
     </div>
   )
   return (
-    <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:grid-rows-[1fr_auto]">
+    <div className="mt-4 grid grid-cols-[minmax(0,1fr)] gap-4 sm:grid-cols-[repeat(2,minmax(0,1fr))] sm:grid-rows-[1fr_auto]">
       {side('normal', 'Do', <CheckIcon />, doPreview, doText)}
       {side('critical', 'Don’t', <XIcon />, dontPreview, dontText)}
     </div>
@@ -422,7 +422,7 @@ const componentSlug = (name: string) => name.replace(/([a-z0-9])([A-Z])/g, '$1-$
  * component next to the "confirm-target" pattern, Timeline next to "timeline") is served at "<slug>-component".
  */
 const STATIC_IDS = new Set(
-  [...STATIC_SECTIONS, DASHBOARDS_SECTION].flatMap((s) => s.pages.map((p) => p.id)).concat('components'),
+  [...STATIC_SECTIONS, MORE_SECTION].flatMap((s) => s.pages.map((p) => p.id)).concat('components'),
 )
 
 /** The docs link of a component page: `#/docs/<slug>`, or `#/docs/<slug>-component` when the slug is taken. */

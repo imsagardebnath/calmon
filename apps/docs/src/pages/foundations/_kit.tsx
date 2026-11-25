@@ -145,7 +145,7 @@ export function DoDont({
 
 export function TableWrap({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`overflow-x-auto rounded-card border border-border bg-surface-raised ${className}`}>
+    <div className={`relative overflow-x-auto rounded-card border border-border bg-surface-raised ${className}`}>
       <table className="w-full border-collapse text-ui-sm [&_tbody_tr:last-child_td]:border-b-0">{children}</table>
     </div>
   )

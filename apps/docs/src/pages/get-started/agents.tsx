@@ -84,9 +84,6 @@ export default function Agents() {
         <li>
           <b>Props that exist.</b> Each component’s Props table is generated from its source, so an agent cannot invent one.
         </li>
-        <li>
-          <b>Example dashboards</b> as complete starting points.
-        </li>
       </Bullets>
       <Callout icon={<BotIcon className="size-4" />}>
         <b>Tip:</b> tell your agent to read the doc for each component before it uses it. That one sentence prevents most wrong

@@ -208,4 +208,13 @@ describe('HealthScore', () => {
   })
 })
 
+describe('HealthScore on a narrow screen', () => {
+  it('lets the factors wrap below the ring instead of squeezing them', () => {
+    render(<HealthScore value={62} factors={factors} />)
+    const meter = screen.getByRole('meter')
+    expect(meter.parentElement?.className).toContain('flex-wrap')
+    expect(meter.nextElementSibling?.className).toContain('min-w-40')
+  })
+})
+
 testExamplesAxe(examples)

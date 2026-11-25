@@ -63,7 +63,9 @@ export function Hero() {
         className="pointer-events-none absolute top-0 left-1/2 h-[360px] w-[min(900px,100%)] -translate-x-1/2 rounded-full bg-accent/10 blur-[110px]"
       />
 
-      <div className="relative mx-auto grid max-w-[1180px] items-end gap-8 min-[64rem]:grid-cols-[minmax(0,7fr)_minmax(0,4fr)] min-[64rem]:gap-12">
+      {/* One shrinkable column below 64rem: an implicit `auto` column grows to the install command's width and the
+          section then clips the headline, pitch and buttons at phone width. */}
+      <div className="relative mx-auto grid max-w-[1180px] grid-cols-[minmax(0,1fr)] items-end gap-8 min-[64rem]:grid-cols-[minmax(0,7fr)_minmax(0,4fr)] min-[64rem]:gap-12">
         <div>
           <Announce />
           <h1
@@ -83,7 +85,7 @@ export function Hero() {
               <a href={docsHref('installation')}>Get started</a>
             </Button>
             <Button asChild variant="secondary" size="lg">
-              <a href={docsHref('dashboards')}>See example dashboards</a>
+              <a href={docsHref('components')}>Browse components</a>
             </Button>
           </div>
           <InstallCommand />

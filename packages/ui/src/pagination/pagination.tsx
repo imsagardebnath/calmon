@@ -69,7 +69,7 @@ export function Pagination({
 
   return (
     <nav aria-label="Pagination" className={cn('flex flex-wrap items-center gap-1', className)} {...props}>
-      <ul ref={list} className="m-0 flex list-none items-center gap-1 p-0">
+      <ul ref={list} className="m-0 flex list-none flex-wrap items-center gap-1 p-0">
         <li>
           <button
             type="button"

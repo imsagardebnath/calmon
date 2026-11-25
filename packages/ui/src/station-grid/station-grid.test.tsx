@@ -106,12 +106,15 @@ describe('StationGrid', () => {
     expect(screen.getAllByRole('listitem')).toHaveLength(6)
   })
 
-  it('fits columns to the width by default and honours a fixed number', () => {
+  it('fits columns to the width by default and treats a fixed number as a ceiling', () => {
     const { rerender } = render(<StationGrid items={items} />)
-    expect(screen.getByRole('list').className).toContain('auto-fill')
-    expect(screen.getByRole('list').style.gridTemplateColumns).toBe('')
+    expect(screen.getByRole('list').className).toContain('minmax(190px,1fr)')
+    expect(screen.getByRole('list').style.getPropertyValue('--cols')).toBe('')
     rerender(<StationGrid items={items} columns={4} />)
-    expect(screen.getByRole('list').style.gridTemplateColumns).toBe('repeat(4, minmax(0, 1fr))')
+    // The number goes in a custom property; the class keeps tiles at least 130px wide so a phone gets fewer columns.
+    expect(screen.getByRole('list').style.getPropertyValue('--cols')).toBe('4')
+    expect(screen.getByRole('list').className).toContain('max(130px,calc(')
+    expect(screen.getByRole('list').className).not.toContain('minmax(190px,1fr)')
   })
 
   it('tints and pulses only critical tiles, and turns the pulse off for reduced motion', () => {

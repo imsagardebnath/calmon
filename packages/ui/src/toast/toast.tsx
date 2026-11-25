@@ -120,7 +120,7 @@ export function Toast({
         ) : null}
         {progress !== undefined ? <ProgressBar value={progress} severity={severity} intent={intent} aria-label={title} className="mt-2.5" /> : null}
         {action ? (
-          <div className="mt-2.5 flex gap-1.5">
+          <div className="mt-2.5 flex flex-wrap gap-1.5">
             <Button size="sm" onClick={action.onClick}>
               {action.label}
             </Button>

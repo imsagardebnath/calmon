@@ -47,9 +47,9 @@ export function scoreSeverity(value: number, bands?: HealthBands): Severity {
 }
 
 const SIZES = {
-  sm: { box: 'size-24', num: 'text-numeral-md', gap: 'gap-[18px]' },
-  md: { box: 'size-[108px]', num: 'text-numeral-md', gap: 'gap-8' },
-  lg: { box: 'size-[140px]', num: 'text-numeral-lg', gap: 'gap-8' },
+  sm: { box: 'size-24', num: 'text-numeral-md', gap: 'gap-x-[18px] gap-y-3' },
+  md: { box: 'size-[108px]', num: 'text-numeral-md', gap: 'gap-x-8 gap-y-4' },
+  lg: { box: 'size-[140px]', num: 'text-numeral-lg', gap: 'gap-x-8 gap-y-4' },
 }
 
 const R = 56
@@ -112,7 +112,8 @@ export function HealthScore({
         <Badge severity={band}>{bandLabel}</Badge>
         {meta && <span className="ml-auto text-ui-sm text-fg-muted">{meta}</span>}
       </div>
-      <div className={cn('grid grid-cols-[auto_1fr] items-center', s.gap)}>
+      {/* The factors sit beside the ring, and drop below it when the space is under about 20rem. */}
+      <div className={cn('flex flex-wrap items-center', s.gap)}>
         <div
           role="meter"
           aria-label={label}
@@ -142,7 +143,7 @@ export function HealthScore({
             </div>
           </div>
         </div>
-        <div className="flex min-w-0 flex-col gap-3">
+        <div className="flex min-w-40 flex-1 flex-col gap-3">
           {top && top.impact < 0 && (
             <p className="m-0 text-ui-sm text-fg-muted">
               Biggest factor: <span className="font-[550] text-fg">{top.label}</span>{' '}

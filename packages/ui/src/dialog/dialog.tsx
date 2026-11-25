@@ -90,7 +90,7 @@ export function Dialog({
             {dismissible && !icon && <CloseButton onClick={() => modal.change(false)} />}
           </div>
           {children && <div className="flex min-h-0 flex-col gap-4 overflow-auto px-[18px] pb-[18px]">{children}</div>}
-          {footer && <div className="flex justify-end gap-2 px-[18px] pt-3.5 pb-[18px]">{footer}</div>}
+          {footer && <div className="flex flex-wrap justify-end gap-2 px-[18px] pt-3.5 pb-[18px]">{footer}</div>}
         </div>
       )}
     </dialog>

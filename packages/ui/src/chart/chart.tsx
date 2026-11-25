@@ -359,29 +359,33 @@ export function Chart<T extends object>({
       <p role="status" className="sr-only">
         {idx === null ? '' : `${xs(idx)}: ${series.map((s) => `${s.label} ${show(val(idx, s.key))}`).join(', ')}`}
       </p>
-      <table className="sr-only">
-        <caption>{label ? `${label}: data` : 'Chart data'}</caption>
-        <thead>
-          <tr>
-            <th scope="col">{x}</th>
-            {series.map((s) => (
-              <th key={s.key} scope="col">
-                {s.label}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((_, i) => (
-            <tr key={i}>
-              <th scope="row">{xs(i)}</th>
+      {/* The hidden table sits in a wrapper that clips it. A table ignores width and overflow, so with the sr-only class on
+          the table itself a long caption or many series could widen the page. */}
+      <div className="sr-only">
+        <table>
+          <caption>{label ? `${label}: data` : 'Chart data'}</caption>
+          <thead>
+            <tr>
+              <th scope="col">{x}</th>
               {series.map((s) => (
-                <td key={s.key}>{val(i, s.key) === null ? '' : show(val(i, s.key))}</td>
+                <th key={s.key} scope="col">
+                  {s.label}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((_, i) => (
+              <tr key={i}>
+                <th scope="row">{xs(i)}</th>
+                {series.map((s) => (
+                  <td key={s.key}>{val(i, s.key) === null ? '' : show(val(i, s.key))}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

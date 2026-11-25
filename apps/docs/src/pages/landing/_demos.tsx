@@ -101,7 +101,7 @@ export function VitalDemo({ className }: { className?: string }) {
         value={density}
         onValueChange={(v) => setDensity(v as Density)}
         aria-label="Tile density"
-        className="self-start"
+        className="max-w-full self-start overflow-x-auto"
       >
         <Tab value="compact">Compact</Tab>
         <Tab value="comfortable">Comfortable</Tab>

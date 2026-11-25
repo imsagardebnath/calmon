@@ -92,7 +92,7 @@ export function Drawer({
             {dismissible && <CloseButton onClick={() => modal.change(false)} />}
           </div>
           <div className="min-h-0 flex-1 overflow-auto p-[18px]">{children}</div>
-          {footer && <div className="flex justify-end gap-2 border-t border-border px-[18px] py-3">{footer}</div>}
+          {footer && <div className="flex flex-wrap justify-end gap-2 border-t border-border px-[18px] py-3">{footer}</div>}
         </div>
       )}
     </dialog>

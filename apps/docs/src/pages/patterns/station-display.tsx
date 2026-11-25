@@ -15,12 +15,18 @@ const DENSITIES: { value: Density; label: string }[] = [
   { value: 'station', label: 'Station' },
 ]
 
-/** Whole class strings, so Tailwind can see them. Station density needs wide tiles for 88px numerals. */
+/**
+ * Whole class strings, so Tailwind can see them. The min(100%, ...) lets a single column shrink to the container, so
+ * on a phone the comfortable and compact tiles stay inside the demo. Station density is built for wall displays: its 88px
+ * numerals need a 400px tile, so there the demo scrolls sideways on a narrow screen instead of cutting a number off.
+ */
 const GRID: Record<Density, string> = {
-  comfortable: 'grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-3 p-4',
-  compact: 'grid-cols-[repeat(auto-fill,minmax(170px,1fr))] gap-2.5 p-3',
-  station: 'grid-cols-[repeat(auto-fill,minmax(360px,1fr))] gap-4 p-6',
+  comfortable: 'grid-cols-[repeat(auto-fill,minmax(min(100%,230px),1fr))] gap-3 p-4',
+  compact: 'grid-cols-[repeat(auto-fill,minmax(min(100%,170px),1fr))] gap-2.5 p-3',
+  station: 'grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-4 p-3 sm:p-6',
 }
+/** A scrollable area must be reachable by keyboard and have a name. */
+const SCROLLER = { tabIndex: 0, role: 'region', 'aria-label': 'Station tiles, scrolls sideways' } as const
 const TITLE: Record<Density, string> = {
   comfortable: 'text-lg',
   compact: 'text-ui',
@@ -82,10 +88,15 @@ function DensityDemo() {
           </div>
           <Button>Acknowledge alerts</Button>
         </div>
-        <div className={`grid ${GRID[density]}`}>
-          {worstFirst.map((m) => (
-            <VitalTile key={m.id} label={m.label} value={m.value} unit={m.unit} data={m.data} threshold={m.threshold} change={m.change} />
-          ))}
+        {density === 'station' && (
+          <p className="m-0 px-3 pt-2 text-xs text-fg-subtle sm:hidden">Station density is for wall displays. Scroll sideways to see a whole tile.</p>
+        )}
+        <div className="relative overflow-x-auto" {...(density === 'station' ? SCROLLER : {})}>
+          <div className={`grid ${GRID[density]}`}>
+            {worstFirst.map((m) => (
+              <VitalTile key={m.id} label={m.label} value={m.value} unit={m.unit} data={m.data} threshold={m.threshold} change={m.change} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

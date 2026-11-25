@@ -1,4 +1,4 @@
-import { BotIcon, GridIcon, InfoIcon, LayersIcon, RoomIcon } from '@openvanta/pikore-react/icons'
+import { BotIcon, GridIcon, InfoIcon, LayersIcon } from '@openvanta/pikore-react/icons'
 import { Callout, Lead, LinkCard, LinkCards } from '../../site/doc.tsx'
 import { PatternIcon } from '../../site/icons.tsx'
 import { docsHref } from '../../site/router.ts'
@@ -37,9 +37,6 @@ export default function Introduction() {
         </LinkCard>
         <LinkCard href={docsHref('components')} icon={<GridIcon className="size-[18px]" />} title="Components">
           {componentCount} components with examples, props and guidelines.
-        </LinkCard>
-        <LinkCard href={docsHref('dashboards')} icon={<RoomIcon className="size-[18px]" />} title="Example dashboards">
-          Patient monitoring, IT ops, business ops and admin screens.
         </LinkCard>
         <LinkCard href={docsHref('agents')} icon={<BotIcon className="size-[18px]" />} title="For AI agents">
           llms.txt and a ready prompt for coding agents.

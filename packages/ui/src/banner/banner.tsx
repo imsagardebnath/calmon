@@ -67,7 +67,7 @@ export function Banner({
         {children ? (
           <div className={cn('text-ui-sm leading-normal', !solid && 'text-fg-muted')}>{children}</div>
         ) : null}
-        {action ? <div className="mt-2.5 flex gap-1.5">{action}</div> : null}
+        {action ? <div className="mt-2.5 flex flex-wrap gap-1.5">{action}</div> : null}
       </div>
       {onDismiss ? (
         <IconButton

@@ -107,7 +107,7 @@ const CHECK =
 
 /* In the bulk bar the neutral tokens are swapped, so buttons inside read on the dark bar without extra props. */
 const BULK =
-  'flex items-center gap-2.5 px-3.5 py-2 text-ui-sm text-surface [--border-strong:var(--surface-sunken)] [--fg-muted:var(--surface)] [--fg:var(--surface)] [--ring:var(--surface)] [--surface-raised:var(--surface-sunken)] [--surface-sunken:color-mix(in_oklab,var(--surface),transparent_85%)]'
+  'flex flex-wrap items-center gap-2.5 px-3.5 py-2 text-ui-sm text-surface [--border-strong:var(--surface-sunken)] [--fg-muted:var(--surface)] [--fg:var(--surface)] [--ring:var(--surface)] [--surface-raised:var(--surface-sunken)] [--surface-sunken:color-mix(in_oklab,var(--surface),transparent_85%)]'
 
 const defaultId = (row: object, index: number): RowId => (row as { id?: RowId }).id ?? index
 const defaultSeverity = (row: object): Severity | undefined => (row as { severity?: Severity }).severity
@@ -357,7 +357,7 @@ export function Table<T extends object>({
             <b aria-hidden="true" className="font-semibold">
               {nSel} selected
             </b>
-            <div className="ml-auto flex items-center gap-2">
+            <div className="ml-auto flex flex-wrap items-center justify-end gap-2">
               {bulkActions}
               <button
                 type="button"
@@ -375,7 +375,7 @@ export function Table<T extends object>({
           </div>
         </div>
       ) : null}
-      <div ref={scroller} tabIndex={overflowing ? 0 : undefined} className="min-h-0 flex-1 overflow-auto focus-visible:outline-offset-[-2px]">
+      <div ref={scroller} tabIndex={overflowing ? 0 : undefined} className="relative min-h-0 flex-1 overflow-auto focus-visible:outline-offset-[-2px]">
         <table
           aria-label={ariaLabel}
           aria-labelledby={labelledBy}

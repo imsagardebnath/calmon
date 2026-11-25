@@ -33,7 +33,6 @@ export const TOP_LINKS: { id: TopLink; label: string; href: string }[] = [
   { id: 'docs', label: 'Docs', href: docsHref('introduction') },
   { id: 'patterns', label: 'Safety patterns', href: docsHref('alarm-fatigue') },
   { id: 'components', label: 'Components', href: docsHref('components') },
-  { id: 'dashboards', label: 'Dashboards', href: docsHref('dashboards') },
 ]
 
 /** The first page of a top link may not exist yet; fall back to the introduction. */

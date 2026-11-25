@@ -279,4 +279,12 @@ describe('NumberInput', () => {
   })
 })
 
+describe('narrow containers', () => {
+  it('keeps the stepper column and the unit label from shrinking below their content', () => {
+    render(<NumberInput aria-label="n" unit="ms" />)
+    expect(screen.getByRole('button', { name: 'Increase' }).parentElement?.className).toContain('shrink-0')
+    expect(screen.getByText('ms').className).toContain('shrink-0')
+  })
+})
+
 testExamplesAxe(examples)

@@ -126,7 +126,7 @@ const dos: DoDontPair[] = [
     ),
     dontPreview: (
       <div className="flex w-full max-w-[320px] flex-col gap-3">
-        <Tabs defaultValue="alerts" aria-label="Tools">
+        <Tabs defaultValue="alerts" aria-label="Tools" className="overflow-x-auto">
           <Tab value="alerts">Alerts</Tab>
           <Tab value="deploys">Deploys</Tab>
           <Tab value="config">Config</Tab>

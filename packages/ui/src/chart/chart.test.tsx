@@ -44,7 +44,9 @@ describe('Chart', () => {
   it('has a visually hidden data table with every value', () => {
     render(<Chart data={data} x="time" unit="ms" series={[...series]} />)
     const table = screen.getByRole('table', { name: 'Chart data' })
-    expect(table.className).toContain('sr-only')
+    // The wrapper carries sr-only: a table ignores width and overflow, so it must not be the hidden element itself.
+    expect(table.parentElement?.className).toContain('sr-only')
+    expect(table.className).not.toContain('sr-only')
     expect(within(table).getAllByRole('row')).toHaveLength(5)
     expect(within(table).getByRole('rowheader', { name: '12:00' })).toBeTruthy()
     expect(within(table).getByRole('cell', { name: '450 ms' })).toBeTruthy()

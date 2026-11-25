@@ -396,4 +396,13 @@ describe('Table', () => {
   })
 })
 
+describe('narrow screens', () => {
+  it('keeps absolutely positioned cell content inside the scroller and lets the bulk bar wrap', () => {
+    const { container } = render(<Table selectable defaultSelected={['b']} columns={columns} data={rows} />)
+    // Without a positioned scroller, sr-only text in a cell escapes it and makes the whole page scroll sideways.
+    expect(container.querySelector('div.overflow-auto')?.className).toContain('relative')
+    expect(screen.getByRole('region', { name: 'Bulk actions' }).className).toContain('flex-wrap')
+  })
+})
+
 testExamplesAxe(examples)
